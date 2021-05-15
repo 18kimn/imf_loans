@@ -1,0 +1,8 @@
+*.gdoc
+*.gslides
+readings/
+.Rproj.user
+.Rhistory
+*/desktop.ini
+*.tmp
+*DOT*
