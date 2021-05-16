@@ -26,7 +26,7 @@ var projection = d3.geoOrthographic()
 	.translate([width / 2, height / 2])
   .scale(width / 3);
 
-var path = d3.geoPath()
+const path = d3.geoPath()
 	.projection(projection);
 // Create and configure the graticule generator (one line every 20 degrees)
 var graticule = d3.geoGraticule()
@@ -102,20 +102,18 @@ Promise.all(promises).then(function(dataProd){
 		.on('mousemove', function(event, d) {
 			lastCountry = d;
 			centroid = path.centroid(d);
-			svg.selectAll(".countryLabel").remove();
-			if(countryLabel.size() == 0 ){
-				countryLabel = svg.append("text").text(d.properties.name)
+			svg.selectAll(".countryLabel").remove()
+			countryLabel = svg.append("text")
+					.text(lastCountry.properties.name)
 					.attr("class", "countryLabel")
 					.attr("font-color", "black")
 					.attr("opacity", 1)
 					.attr("x", centroid[0])
 					.attr("y", centroid[1])
 					.attr("font-size", 12);
-			}
-
-			}).on('mouseout', function() {
-					countryLabel.remove();
-			});
+		}).on("mouseout", function(event, d){
+			countryLabel.remove();
+		});
 
 
 
@@ -162,7 +160,11 @@ function rotateGlobe(){
 	gratLines.attr("d", path);
 	countryShapes.attr("d", path);
 	outline.attr("d", path);
-	if(countryLabel.size() > 0) svg.selectAll(".countryLabel").attr("x", path.centroid(lastCountry)[0]).attr("y", path.centroid(lastCountry)[1]);
+	if(countryLabel.size()){
+		//for some reason this is modifying path()????path = d3.geoPath()
+		centroid = d3.geoPath().projection(projection).centroid(lastCountry);
+		countryLabel.attr("x", centroid[0]).attr("y", centroid[1]);
+	}
 
 	tradeLines.attr("d", function(d){
 			//return projection(d.interp(t));
