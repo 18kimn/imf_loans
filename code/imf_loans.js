@@ -59,8 +59,9 @@ function restartTimer(){
 svg.call(zoom);
 //inertia/drag stuff taken from https://bl.ocks.org/Fil/f48de8e9207799017093a169031adb02 and https://codepen.io/jorin/pen/YNajXZ
 
-var dta, datasets, outline, countryShapes, gratLines, yr, tradeLines, traders,
-	globalElapsed = 0, elapsedVar,
+var dta, datasets, outline, countryShapes, centroid, lastCountry,
+ countryLabel = svg.selectAll(".countryLabel"), gratLines, yr, tradeLines, traders,
+	globalElapsed = 0, elapsedVar, pt,
 	v0, r0, q0,x, t=1, lastTime = d3.now(), timer;
 
 var filenames = ["data/imf.geojson", "data/export.json"],
@@ -97,7 +98,24 @@ Promise.all(promises).then(function(dataProd){
     .attr("d", path)
     .style("fill", "#7AB199")
     .style("stroke-width", "1")
-    .style("fill-opacity", 1);
+    .style("fill-opacity", 1)
+		.on('mousemove', function(event, d) {
+			lastCountry = d;
+			centroid = path.centroid(d);
+			svg.selectAll(".countryLabel").remove();
+			if(countryLabel.size() == 0 ){
+				countryLabel = svg.append("text").text(d.properties.name)
+					.attr("class", "countryLabel")
+					.attr("font-color", "black")
+					.attr("opacity", 1)
+					.attr("x", centroid[0])
+					.attr("y", centroid[1])
+					.attr("font-size", 12);
+			}
+
+			}).on('mouseout', function() {
+					countryLabel.remove();
+			});
 
 
 
@@ -144,6 +162,7 @@ function rotateGlobe(){
 	gratLines.attr("d", path);
 	countryShapes.attr("d", path);
 	outline.attr("d", path);
+	if(countryLabel.size() > 0) svg.selectAll(".countryLabel").attr("x", path.centroid(lastCountry)[0]).attr("y", path.centroid(lastCountry)[1]);
 
 	tradeLines.attr("d", function(d){
 			//return projection(d.interp(t));
