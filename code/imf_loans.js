@@ -61,7 +61,7 @@ svg.call(zoom);
 
 var dta, datasets, outline, countryShapes, centroid, lastCountry,
  countryLabel = svg.selectAll(".countryLabel"), gratLines, yr, tradeLines, traders,
-	globalElapsed = 0, elapsedVar, pt,
+	globalElapsed = 0, elapsedVar, pt, lastTransform,
 	v0, r0, q0,x, t=1, lastTime = d3.now(), timer;
 
 var filenames = ["data/imf.geojson", "data/export.json"],
@@ -105,6 +105,7 @@ Promise.all(promises).then(function(dataProd){
 			svg.selectAll(".countryLabel").remove()
 			countryLabel = svg.append("text")
 					.text(lastCountry.properties.name)
+					.attr("transform", lastTransform)
 					.attr("class", "countryLabel")
 					.attr("font-color", "black")
 					.attr("opacity", 1)
@@ -217,8 +218,12 @@ function highlightCountries() {
 
 
 function zoomed(event, d) {
+	lastTransform = event.transform;
 	g
 		.selectAll('path') // To prevent stroke width from scaling
 		.transition().duration(50)
 		.attr('transform', event.transform);
+
+	countryLabel.transition().duration(50).attr("transform", event.transform);
+
 }
