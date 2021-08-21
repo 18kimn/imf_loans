@@ -27,7 +27,8 @@ text {
   left: 1%;
   height: 99.5%;
   margin-top: 0.5%;
-  width: 30%;
+  width: 52ch;
+  overflow: hidden;
   z-index: 4;
   display: grid;
   grid-template-rows: [title] 10% [story-body] auto [nextButton] 5% [attribution] 5%;

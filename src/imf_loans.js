@@ -4,8 +4,6 @@ var width = window.innerWidth * 0.7,
 	.append("svg")
 	.attr("height", height);
 
-
-
 var slider = document.getElementById("slider");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
