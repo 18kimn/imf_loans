@@ -32,15 +32,12 @@ var graticule = d3.geoGraticule()
 
 var g = svg.append("g");
 //svg.call(drag).call(zoom);
-var inertia = d3.geoInertiaDrag(svg, function(){ rotateGlobe(); }, projection,
+var inertia = d3.geoInertiaDrag(svg, rotateGlobe, projection,
 	{
 		time: 1500,
     start: function(){
-			timer.stop();
-		},
-		move: function(){
-			rotateGlobe();
-		},
+      timer.stop()
+    },
     end: restartTimer,
 		stop: restartTimer,
 		finish: restartTimer,
@@ -76,6 +73,13 @@ Promise.all(promises).then(function(dataProd){
     d.interp = d3.geoInterpolate(d.centroids.coordinates, d.partner_centroids.coordinates)
 	}); // creates interpolation functions between the exporter and the export receiver
 
+  outline = g.append("path")
+    .datum({type: "Sphere"})
+    .attr("id", "outline")
+    .attr("fill", "#ffffff")
+    .attr("stroke", "black")
+    .attr("stroke-width", "1")
+    .attr("d", path);
   // Graticule lines (behind the land)
   gratLines = g.selectAll('path.graticule')
     .data([graticule()])
@@ -101,6 +105,7 @@ Promise.all(promises).then(function(dataProd){
 			lastCountry = d;
 			centroid = path.centroid(d);
 			svg.selectAll(".countryLabel").remove()
+      if(isNaN(centroid[0])) return
 			countryLabel = svg.append("text")
 					.text(lastCountry.properties.name)
 					.attr("transform", lastTransform)
@@ -114,19 +119,9 @@ Promise.all(promises).then(function(dataProd){
 			countryLabel.remove();
 		});
 
-
-
-  outline = g.append("path")
-      .datum({type: "Sphere"})
-      .attr("id", "outline")
-      .attr("fill", "none")
-      .attr("stroke", "black")
-      .attr("stroke-width", "1")
-      .attr("d", path);
-
-  //handle slider input
 	drawTradeLines();
 	highlightCountries();
+  //handle slider input
 	d3.select("input")
     .on("change", function(){
 			drawTradeLines();
@@ -154,11 +149,10 @@ function autorotate(elapsed) {
 }
 
 
-
 function rotateGlobe(){
+  outline.attr("d", path);
 	gratLines.attr("d", path);
 	countryShapes.attr("d", path);
-	outline.attr("d", path);
 	if(countryLabel.size()){
 		//for some reason this is modifying path()????path = d3.geoPath()
 		centroid = d3.geoPath().projection(projection).centroid(lastCountry);

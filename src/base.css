@@ -5,13 +5,15 @@ html, body {
    padding: 0;
    height: 100%;
    overflow-y: hidden;
+   font-family: Lato, 'sans-serif';
 }
 
 svg {
   left: 30%;
   width: 70%;
-  z-index: 3;
+  z-index: 2;
   position: fixed;
+  background: #eee8d5;
 }
 
 text {
@@ -26,13 +28,14 @@ text {
   top: 0;
   left: 1%;
   height: 99.5%;
-  margin-top: 0.5%;
+  /* margin-top: 0.5%; */
   width: 52ch;
   overflow: hidden;
   z-index: 4;
   display: grid;
-  grid-template-rows: [title] 10% [story-body] auto [nextButton] 5% [attribution] 5%;
+  grid-template-rows: [title] auto [story-body] auto [nextButton] 5% [attribution] 5%;
   justify-content: left;
+  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
 }
 
 #projectTitle{
@@ -60,7 +63,9 @@ text {
 
 /*slider stuff goes here */
 .slidecontainer {
+  position:absolute;
   width: 100%;
+  z-index: 3;
 }
 
 .slider {
@@ -71,7 +76,7 @@ text {
     height: 25px;
     background: #d3d3d3;
     outline: none;
-    opacity: 0.7;
+    opacity: 1;
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
