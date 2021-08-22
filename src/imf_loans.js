@@ -1,7 +1,8 @@
 var width = window.innerWidth * 0.7,
 	height = window.innerHeight,
-  svg = d3.select("body")
+  svg = d3.select("#mapcontainer")
 	.append("svg")
+  .attr("id", "map")
 	.attr("height", height);
 
 var slider = document.getElementById("slider");
@@ -20,6 +21,7 @@ const config = {
 var zoom = d3.zoom()
   .scaleExtent([0.1, 8])
 	.on('zoom', zoomed);
+
 var projection = d3.geoOrthographic()
 	.translate([width / 2, height / 2])
   .scale(width / 3);
@@ -30,8 +32,8 @@ const path = d3.geoPath()
 var graticule = d3.geoGraticule()
   .step([10, 10]);
 
-var g = svg.append("g");
-//svg.call(drag).call(zoom);
+var g = svg.append("g").style("cursor", "pointer");
+//inertia/drag stuff taken from https://bl.ocks.org/Fil/f48de8e9207799017093a169031adb02 and https://codepen.io/jorin/pen/YNajXZ
 var inertia = d3.geoInertiaDrag(svg, rotateGlobe, projection,
 	{
 		time: 1500,
@@ -52,7 +54,6 @@ function restartTimer(){
 }
 
 svg.call(zoom);
-//inertia/drag stuff taken from https://bl.ocks.org/Fil/f48de8e9207799017093a169031adb02 and https://codepen.io/jorin/pen/YNajXZ
 
 var dta, datasets, outline, countryShapes, centroid, lastCountry,
  countryLabel = svg.selectAll(".countryLabel"), gratLines, yr, tradeLines, traders,
@@ -65,6 +66,23 @@ var filenames = ["data/imf.geojson", "data/export.json"],
 filenames.forEach(function(url) {
 	promises.push(d3.json(url))
 });
+
+const mapWidth = d3.select('#mapcontainer').style('width')
+d3.select('#closeButton')
+  .on('click', () => {
+    d3.select('#story')
+      .style('display', 'none')
+    d3.select('#mapcontainer')
+      .style('width', '100%')
+    d3.select('#openButton').style('display', 'block')
+  })
+d3.select('#openButton')
+  .on('click', () => {
+    d3.select('#openButton').style('display', 'none')
+    d3.select('#story').style('display', 'block')
+    d3.select('#mapcontainer')
+      .style('width', mapWidth)
+  })
 
 Promise.all(promises).then(function(dataProd){
   datasets = dataProd;
@@ -156,7 +174,10 @@ function rotateGlobe(){
 	if(countryLabel.size()){
 		//for some reason this is modifying path()????path = d3.geoPath()
 		centroid = d3.geoPath().projection(projection).centroid(lastCountry);
-		countryLabel.attr("x", centroid[0]).attr("y", centroid[1]);
+    if(!isNaN(centroid[0])){
+      countryLabel.attr("x", centroid[0]).attr("y", centroid[1]);
+    }
+		
 	}
 
 	tradeLines.attr("d", function(d){
@@ -166,7 +187,7 @@ function rotateGlobe(){
 }
 
 function drawTradeLines(){
-	yr = +d3.select(".slider").node().value;
+	yr = +d3.select("#slider").node().value;
 	data = datasets[1].filter(function(d){return d.year === yr});
 	traders = data.map(function(d){return d.partner_code}); //to be used in highlightcountries
 	tradeLines = g.selectAll("path.tradeLines").data(data)
@@ -189,7 +210,7 @@ function drawTradeLines(){
 }
 
 function highlightCountries() {
-	yr = +d3.select(".slider").node().value;
+	yr = +d3.select("#slider").node().value;
 	countryShapes.transition().duration(250)
 		.style("fill", function(d){
 			//if the shapefile exists with no loan data (e.g. the country has not received any loans from the IMF at all) color it green
