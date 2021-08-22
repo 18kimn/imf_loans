@@ -2,8 +2,7 @@ var width = window.innerWidth * 0.7,
 	height = window.innerHeight,
   svg = d3.select("#mapcontainer")
 	.append("svg")
-  .attr("id", "map")
-	.attr("height", height);
+  .attr("id", "map");
 
 var slider = document.getElementById("slider");
 var output = document.getElementById("demo");
