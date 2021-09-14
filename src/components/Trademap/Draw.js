@@ -1,99 +1,21 @@
-import exports from './data/export.json'
-import imf from './data/imf.json'
-
-import * as d3Proj from 'd3-geo-projection'
 import * as d3Inertia from 'd3-inertia'
 import * as d3Main from 'd3'
-const d3 = {...d3Proj, ...d3Inertia, ...d3Main}
-/* globals */
+import updateMap from './Update'
+import exports from '../../data/export.json'
+import imf from '../../data/imf.json'
+
+const d3 = {...d3Inertia, ...d3Main}
+
 const config = {
   speed: 0.005,
   verticalTilt: -15,
   horizontalTilt: -15,
 }
-const projection = d3
-  .geoOrthographic()
-  .translate([(window.innerWidth * 0.7) / 2, window.innerHeight / 2])
-  .scale((window.innerWidth * 0.7) / 3)
-const path = d3.geoPath().projection(projection)
-const graticule = d3.geoGraticule().step([10, 10])
 
-/* drawTradeLines and highlightCountries: functions that help update the map */
-const drawTradeLines = (data) => {
-  console.log(data)
-  const d = data[0]
-  console.log({
-    d: d3.line()([
-      projection(d.centroids.coordinates),
-      projection(d.interp(0)),
-    ]),
-    strokewidth: 3 * d.export_value,
-  })
-  d3.select('svg#map')
-    .selectAll('path.tradeLines')
-    .data(data)
-    .join(
-      (enter) =>
-        enter
-          .append('path')
-          .attr('d', (d) =>
-            d3.line()([
-              projection(d.centroids.coordinates),
-              projection(d.interp(0)),
-            ]),
-          )
-          .attr('stroke-width', (d) => 3 * d.export_value)
-          .attr('stroke-opacity', (d) =>
-            Math.max(d.export_value / 7.2 + 0.4, 1),
-          )
-          .attr('stroke', 'black')
-          .attr('stroke-dasharray', '20 20')
-          .attr('fill', 'none')
-          .attr('class', 'tradeLines'),
-      (update) =>
-        update.attr('d', (d) =>
-          d3.line()([
-            projection(d.centroids.coordinates),
-            projection(d.partner_centroids.coordinates),
-          ]),
-        ),
-      (exit) =>
-        exit.transition().duration(100).attr('stroke-opacity', 0).remove(),
-    )
-}
+const drawMap = (projection) => {
+  const path = d3.geoPath().projection(projection)
+  const graticule = d3.geoGraticule().step([10, 10])
 
-const highlightCountries = (yr, data) => {
-  const traders = data.map((d) => d.partner_code)
-  d3.selectAll('path.nation')
-    .transition()
-    .duration(250)
-    .style('fill', (d) => {
-      const loans = d.properties.info[0]
-
-      //if there's a loan for this country that was given in
-      // the year matching the slider input, highlight it red
-      if (
-        Array.isArray(loans) &&
-        loans?.some((loan) => yr.toString() === loan.date.substring(0, 4))
-      ) {
-        return '#C93135'
-      }
-      //if it's a trade partner (i.e. one of the top
-      // export-receiving/importing countries) color it blue
-      if (traders.includes(d.properties.imf_code)) return '#1375B7'
-      //otherwise, color it green
-      return '#7AB199'
-    })
-}
-
-const updateMap = () => {
-  const yr = +d3.select('#slider').node().value
-  const data = exports.filter((d) => d.year === yr)
-  drawTradeLines(data)
-  highlightCountries(yr, data)
-}
-
-const drawMap = () => {
   const svg = d3.select('#mapcontainer').append('svg').attr('id', 'map')
   const g = svg.append('g')
   svg.call(() => d3.zoom().scaleExtent([0.1, 8]).on('zoom', zoomed))
@@ -150,7 +72,7 @@ const drawMap = () => {
       svg.selectAll('.countryLabel').remove()
     })
 
-  updateMap()
+  updateMap(projection)
 
   const rotateGlobe = (t) => {
     outline.attr('d', path)
@@ -226,4 +148,4 @@ const drawMap = () => {
   }
 }
 
-export {drawMap, updateMap}
+export default drawMap
