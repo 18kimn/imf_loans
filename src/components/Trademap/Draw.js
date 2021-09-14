@@ -12,6 +12,13 @@ const config = {
   horizontalTilt: -15,
 }
 
+/* 
+This function handles the initial draw, rotation, and drag elements of the 
+map depicting trade relationships between IMF loan recipient countries and 
+their export partners. 
+
+It relies on d3, which relies on direct DOM manipulation, so to use it in d3 it should be place in a call to useEffect(). 
+*/
 const drawMap = (projection) => {
   const path = d3.geoPath().projection(projection)
   const graticule = d3.geoGraticule().step([10, 10])

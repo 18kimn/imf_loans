@@ -9,6 +9,10 @@ const projection = geoOrthographic()
   .translate([(window.innerWidth * 0.7) / 2, window.innerHeight / 2])
   .scale((window.innerWidth * 0.7) / 3)
 
+  /*
+  This component contains the scaffolding and logic for the map depicting
+  trade relationships between IMF loan recipient countries and their export partners. 
+  */
 const Trademap = () => {
   const [year, setYear] = useState(1993)
   useEffect(() => {

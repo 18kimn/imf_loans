@@ -3,7 +3,15 @@ import * as d3Main from 'd3'
 import exports from '../../data/export.json'
 const d3 = {...d3Proj, ...d3Main}
 
-/* drawTradeLines and highlightCountries: functions that help update the map */
+/* 
+
+This file contains functions to update the map depicting trade relationships between 
+IMF loan recipient countries and their export partners. 
+
+By "update", I mean that when the slider for the year viewed changes, colors on the map and lines showing 
+which countries received loans where they sent their exports must change. This handles that logic.
+
+*/ 
 const drawTradeLines = (projection, data) => {
   d3.select('svg#map')
     .selectAll('path.tradeLines')
