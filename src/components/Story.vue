@@ -56,3 +56,34 @@ export default {
   },
 }
 </script>
+
+<style>
+#header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#story {
+  width: 52ch;
+  max-width: 52ch;
+  min-width: 52ch;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+    0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 2; /* needed for box shadow visibility */
+}
+
+#projectTitle {
+  margin-top: 0;
+}
+
+.nation:hover {
+  stroke: #000000;
+  stroke-width: 1px;
+}
+</style>
