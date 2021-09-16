@@ -1,0 +1,4 @@
+diff --git a/node_modules/versor/src/index.js b/node_modules/versor/src/versor.js
+similarity index 100%
+rename from node_modules/versor/src/index.js
+rename to node_modules/versor/src/versor.js

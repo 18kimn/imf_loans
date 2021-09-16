@@ -1,3 +1,4 @@
+import React from 'react'
 import '../../styles/App.css'
 import '../../styles/base.css'
 import {useEffect, useState} from 'react'
@@ -9,7 +10,7 @@ const projection = geoOrthographic()
   .translate([(window.innerWidth * 0.7) / 2, window.innerHeight / 2])
   .scale((window.innerWidth * 0.7) / 3)
 
-  /*
+/*
   This component contains the scaffolding and logic for the map depicting
   trade relationships between IMF loan recipient countries and their export partners. 
   */

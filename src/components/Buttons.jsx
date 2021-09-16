@@ -1,3 +1,4 @@
+import React from 'react'
 export const OpenButton = (props) => {
   return (
     <div id="openButton" onClick={props.onClick}>

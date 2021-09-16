@@ -11535,11 +11535,6 @@ versor@^0.1:
   resolved "https://registry.yarnpkg.com/versor/-/versor-0.1.2.tgz#0b145a22cd6376f222dace214ab1fd3b6369a8d9"
   integrity sha512-/XNJOGXeis3j7OOOkdTp3LXzWDTxo/33wvYNtXLLbNOZ5lkTgESzTMPeThU6albr14UupCottC6KTXjcGDO0Lg==
 
-versor@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/versor/-/versor-0.2.0.tgz#eb1121cc8bf194849fa00c9b82ae6378de02923e"
-  integrity sha512-2UJ32VNh+lMUP9RlLoneEdrnupW3eIM9TGdTuaa+HSUqKACt9Vvw+xoGFGdd0YsUnGidTNyuxdhQRhJVpDAvqw==
-
 vite@^2.5.7:
   version "2.5.7"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.5.7.tgz#e495be9d8bcbf9d30c7141efdccacde746ee0125"

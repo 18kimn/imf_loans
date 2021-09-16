@@ -25,7 +25,6 @@ const drawMap = (projection) => {
 
   const svg = d3.select('#mapcontainer').append('svg').attr('id', 'map')
   const g = svg.append('g')
-  svg.call(() => d3.zoom().scaleExtent([0.1, 8]).on('zoom', zoomed))
   let focusedCountry,
     lastTransform,
     lastTime = d3.now()
@@ -140,9 +139,13 @@ const drawMap = (projection) => {
     finish: restartTimer,
   })
 
+  const zoom = d3.zoom().scaleExtent([0.1, 8]).on('zoom', zoomed)
+  svg.call(zoom)
+
   function zoomed(event) {
     lastTransform = event.transform
-    g.selectAll('path') // To prevent stroke width from scaling
+    svg
+      .selectAll('path') // To prevent stroke width from scaling
       .transition()
       .duration(50)
       .attr('transform', event.transform)
