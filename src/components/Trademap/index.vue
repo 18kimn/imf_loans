@@ -56,6 +56,11 @@ export default {
   z-index: 3;
 }
 
+.nation:hover {
+  stroke: #000000;
+  stroke-width: 1px;
+}
+
 #slider {
   -webkit-appearance: none;
   width: 100%;

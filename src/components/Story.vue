@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #header {
   display: flex;
   justify-content: flex-end;
@@ -80,10 +80,5 @@ export default {
 
 #projectTitle {
   margin-top: 0;
-}
-
-.nation:hover {
-  stroke: #000000;
-  stroke-width: 1px;
 }
 </style>
