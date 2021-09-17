@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import drawMap from './Draw'
 import updateMap from './Update'
 import {geoOrthographic} from 'd3-geo'

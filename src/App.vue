@@ -3,7 +3,7 @@
   <Trademap />
 </template>
 
-<script>
+<script lang="ts">
 import Story from './components/Story.vue'
 import Trademap from './components/Trademap/index.vue'
 

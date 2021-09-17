@@ -3,9 +3,10 @@ import * as d3Main from 'd3'
 import updateMap from './Update'
 import exports from '../../data/export.json'
 import imf from '../../data/imf.json'
-
+import {Trade} from './types'
 const d3 = {...d3Inertia, ...d3Main}
-
+import {D3ZoomEvent} from 'd3-zoom'
+console.log(d3Inertia)
 const config = {
   speed: 0.005,
   verticalTilt: -15,
@@ -19,19 +20,19 @@ their export partners.
 
 It relies on d3, which relies on direct DOM manipulation, so to use it in d3 it should be place in a call to useEffect(). 
 */
-const drawMap = (projection) => {
-  const path = d3.geoPath().projection(projection)
+const drawMap = (projection: d3.GeoProjection) => {
+  const path: any = d3.geoPath().projection(projection)
   const graticule = d3.geoGraticule().step([10, 10])
 
   const svg = d3.select('#mapcontainer').append('svg').attr('id', 'map')
   const g = svg.append('g')
-  let focusedCountry,
-    lastTransform,
+  let focusedCountry: any,
+    lastTransform: any,
     lastTime = d3.now()
 
   // creates interpolation functions between the exporters and the importers
   // to determine how lines should be drawn
-  exports.forEach((d) => {
+  exports.forEach((d: any) => {
     d.interp = d3.geoInterpolate(
       d.centroids.coordinates,
       d.partner_centroids.coordinates,
@@ -60,7 +61,7 @@ const drawMap = (projection) => {
     .append('path')
     .attr('class', 'nation')
     .attr('d', path)
-    .on('mousemove', (_, d) => {
+    .on('mousemove', (_: any, d: any) => {
       focusedCountry = d
       const centroid = path.centroid(d)
       svg.selectAll('.countryLabel').remove()
@@ -73,6 +74,7 @@ const drawMap = (projection) => {
         .attr('class', 'countryLabel')
         .attr('x', centroid[0])
         .attr('y', centroid[1])
+      return null
     })
     .on('mouseout', () => {
       svg.selectAll('.countryLabel').remove()
@@ -80,7 +82,7 @@ const drawMap = (projection) => {
 
   updateMap(projection)
 
-  const rotateGlobe = (t) => {
+  const rotateGlobe = (t: number) => {
     outline.attr('d', path)
     gratLines.attr('d', path)
     countryShapes.attr('d', path)
@@ -98,10 +100,13 @@ const drawMap = (projection) => {
     }
     d3.select('svg#map')
       .selectAll('path.tradeLines')
-      .attr('d', (d) =>
+      .attr('d', (d: any) =>
         path({
           type: 'LineString',
-          coordinates: [d.interp(Math.min(t, 1)), d.centroids['coordinates']],
+          coordinates: [
+            d.interp && d.interp(Math.min(t, 1)),
+            d.centroids['coordinates'],
+          ],
         }),
       )
       .attr('stroke-dashoffset', 250 * Math.max(t, 1))
@@ -109,7 +114,7 @@ const drawMap = (projection) => {
 
   let stoppedTime = 0
   let currentTime = 0
-  const autorotate = (elapsed) => {
+  const autorotate = (elapsed: number) => {
     currentTime = elapsed
     const now = d3.now()
     const diff = now - lastTime
@@ -139,22 +144,22 @@ const drawMap = (projection) => {
     finish: restartTimer,
   })
 
-  const zoom = d3.zoom().scaleExtent([0.1, 8]).on('zoom', zoomed)
+  const zoom: any = d3.zoom().scaleExtent([0.1, 8]).on('zoom', zoomed)
   svg.call(zoom)
 
-  function zoomed(event) {
-    lastTransform = event.transform
+  function zoomed(event: D3ZoomEvent<Element, any>): void {
+    lastTransform = event.transform as any
     svg
       .selectAll('path') // To prevent stroke width from scaling
       .transition()
       .duration(50)
-      .attr('transform', event.transform)
+      .attr('transform', lastTransform)
 
     svg
       .selectAll('.countryLabel')
       .transition()
       .duration(50)
-      .attr('transform', event.transform)
+      .attr('transform', lastTransform)
   }
 }
 

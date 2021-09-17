@@ -1,7 +1,6 @@
 <template>
   <div id="header">
     <svg
-      onClick="{props.onClick}"
       id="closeButton"
       className="icons"
       width="16"
@@ -15,9 +14,7 @@
   </div>
 </template>
 
-<script>
-export default {}
-</script>
+<script lang="ts" setup></script>
 
 <style css>
 @import './Buttons.css';

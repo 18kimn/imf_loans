@@ -1,7 +1,7 @@
 <template>
   <div id="openButton">
     <svg
-      className="icons"
+      class="icons"
       width="17"
       height="17"
       viewBox="0 0 17 17"
@@ -16,9 +16,7 @@
   </div>
 </template>
 
-<script>
-export default {}
-</script>
+<script lang="ts" setup></script>
 
 <style css>
 @import './Buttons.css';
