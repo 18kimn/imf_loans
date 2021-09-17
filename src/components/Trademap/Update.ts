@@ -1,8 +1,9 @@
 import * as d3 from 'd3'
-import {Feature} from 'geojson'
 import exports from '../../data/export.json'
-import {Point, Trade} from './types'
-/* 
+import {Trade} from './types'
+
+const trades = exports as unknown as Trade[]
+/*
 
 This file contains functions to update the map depicting trade relationships between 
 IMF loan recipient countries and their export partners. 
@@ -20,7 +21,7 @@ const drawTradeLines = (projection: d3.GeoProjection, data: Trade[]) => {
       (enter) =>
         enter
           .append('path')
-          .attr('d', (d: any) => {
+          .attr('d', (d: Trade) => {
             return d3.line()([
               projection(d.centroids.coordinates) || [0, 0],
               projection(d.interp && d.interp(0)) || [0, 0],
@@ -35,7 +36,7 @@ const drawTradeLines = (projection: d3.GeoProjection, data: Trade[]) => {
           .attr('fill', 'none')
           .attr('class', 'tradeLines'),
       (update) =>
-        update.attr('d', (d: any) =>
+        update.attr('d', (d: Trade) =>
           d3.line()([
             projection(d.centroids.coordinates) || [0, 0],
             projection(d.partner_centroids.coordinates) || [0, 0],
@@ -53,7 +54,6 @@ const highlightCountries = (yr: number, data: Trade[]) => {
     .duration(250)
     .style('fill', (d: any) => {
       const loans = d.properties!.info[0]
-      console.log(yr)
       //if there's a loan for this country that was given in
       // the year matching the slider input, highlight it red
       if (
@@ -73,7 +73,7 @@ const highlightCountries = (yr: number, data: Trade[]) => {
 const updateMap = (projection: d3.GeoProjection) => {
   const {value} = d3.select('#slider').node() as HTMLInputElement
   const yr = +value
-  const data = exports.filter((d) => d.year === yr)
+  const data = trades.filter((d: Trade) => d.year === yr)
   drawTradeLines(projection, data)
   highlightCountries(yr, data)
 }

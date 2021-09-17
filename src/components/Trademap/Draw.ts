@@ -1,18 +1,20 @@
 import * as d3Inertia from 'd3-inertia'
 import * as d3Main from 'd3'
 import updateMap from './Update'
-import exports from '../../data/export.json'
-import imf from '../../data/imf.json'
-import {Trade} from './types'
+import exportsData from '../../data/export.json'
+import imfData from '../../data/imf.json'
+import {Countries, Country, Trade} from './types'
 const d3 = {...d3Inertia, ...d3Main}
-import {D3ZoomEvent} from 'd3-zoom'
-console.log(d3Inertia)
+import {D3ZoomEvent, ZoomTransform} from 'd3-zoom'
+
 const config = {
   speed: 0.005,
   verticalTilt: -15,
   horizontalTilt: -15,
 }
 
+const exports = exportsData as unknown as Trade[]
+const imf = imfData as unknown as Countries
 /* 
 This function handles the initial draw, rotation, and drag elements of the 
 map depicting trade relationships between IMF loan recipient countries and 
@@ -27,12 +29,12 @@ const drawMap = (projection: d3.GeoProjection) => {
   const svg = d3.select('#mapcontainer').append('svg').attr('id', 'map')
   const g = svg.append('g')
   let focusedCountry: any,
-    lastTransform: any,
+    lastTransform: string,
     lastTime = d3.now()
 
   // creates interpolation functions between the exporters and the importers
   // to determine how lines should be drawn
-  exports.forEach((d: any) => {
+  exports.forEach((d: Trade) => {
     d.interp = d3.geoInterpolate(
       d.centroids.coordinates,
       d.partner_centroids.coordinates,
@@ -61,11 +63,10 @@ const drawMap = (projection: d3.GeoProjection) => {
     .append('path')
     .attr('class', 'nation')
     .attr('d', path)
-    .on('mousemove', (_: any, d: any) => {
+    .on('mousemove', (_: any, d: Country) => {
       focusedCountry = d
       const centroid = path.centroid(d)
       svg.selectAll('.countryLabel').remove()
-
       if (isNaN(centroid[0])) return
       svg
         .append('text')
@@ -74,7 +75,6 @@ const drawMap = (projection: d3.GeoProjection) => {
         .attr('class', 'countryLabel')
         .attr('x', centroid[0])
         .attr('y', centroid[1])
-      return null
     })
     .on('mouseout', () => {
       svg.selectAll('.countryLabel').remove()
@@ -148,7 +148,7 @@ const drawMap = (projection: d3.GeoProjection) => {
   svg.call(zoom)
 
   function zoomed(event: D3ZoomEvent<Element, any>): void {
-    lastTransform = event.transform as any
+    lastTransform = event.transform as unknown as string
     svg
       .selectAll('path') // To prevent stroke width from scaling
       .transition()

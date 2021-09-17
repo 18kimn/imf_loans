@@ -16,7 +16,8 @@
     "start": "vite",
     "dev": "yarn start",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "render": "bash content/text/render.sh"
   },
   "eslintConfig": {},
   "browserslist": {
