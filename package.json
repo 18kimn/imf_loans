@@ -12,6 +12,7 @@
     "vue": "3.2.6"
   },
   "scripts": {
+    "preinstall": "git config core.hooksPath src/githooks",
     "postinstall": "patch-package",
     "start": "vite",
     "dev": "yarn start",
