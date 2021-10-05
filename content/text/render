@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# usage: 
+# this was working with 2.14.2
+# - `render.sh proposal.md html` produces a HTML version of proposal.md 
+# - cd ensures this can be called from any location
+cd "${0%/*}"
+basename=$(basename "$1" .md)
+extension=${2:-pdf} #uses pdf as the default value for extension
+bib=${3:-"../references/imf.bib"}
+
+pandoc -V geometry:margin=1in \
+  -f markdown \
+  -o "rendered/$basename.$extension" \
+  --citeproc \
+  --bibliography=$bib \
+  --variable urlcolor=blue \
+  --csl="../references/chicago-note-bibliography-with-ibid.csl" \
+  -V mainfont="EB Garamond" \
+  -V fontsize=12pt \
+  --pdf-engine=xelatex \
+  $1
+
+echo "file render for $basename finished"
+
+

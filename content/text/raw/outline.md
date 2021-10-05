@@ -1,0 +1,16 @@
+
+- Theoretical background on racial capitalism and debt
+  - Marx, Luxembourg, David Harvey 
+    - **basic background on Marx**: The starting theoretical point for this essay comes from David Harvey's foundational text _The New Imperialism_. Harvey extends traditional Marxist social theory and Rosa Luxemburg's theory of overaccumulation to describe our modern world. Since Marx's first volume of _Capital_ was published, economists and social theorists have noted capitalism's fundamental dynamic of capital ownership in the hands of a select, concentrated class. This class of capitalists, as the undisputed owners of the means of production, aim to grow their owned (word that means similar to capital) and thus attempt to reinvest it as much as possible.   
+     This accumulated set of capital must be reinvested for it to have any value at all (i.e. capital with no potential to reproduce itself is of no value), resulting in a self-fulfilling cycle of growth.  
+      - **Primitive accumulation:** A foundational aspect of this argument is in the story of its "beginning." At the time of Marx's writing, mainstream economists' view had been (and has been) that accumulation begins from relatively neutral forces of supply and demand, and of products moving into the hands of those that most value them. Marx provided historical counterarguments by noting that these processes were never "neutral." They instead occurred through the violent, seemingly non-economic processes of the privatization of land and the manipulation of property rights, colonial and neocolonial conquests, and the Transatlantic Slave Trade. 
+    - **Luxemburg**:  Rosa Luxemburg observes that this process of capital accumulation leads to inevitable crisis. Eventually, capitalists are faced with problems of underconsumption, because the supply of capital that they have generated can no longer be realized as additional capital or value simply due to a sheer limit of human consumers in one space. When the markets as they stand do not allow for expansion, capitalists instead must transform the market itself -- through colonization and war or "spheres of influence" that can take capitalism internation. 
+    - **Harvey**: Harvey's famous theory of accumulation by dispossession applies Luxemburg's writing to the neoliberal age by discussing the social implications of capital accumulation. He notes that accumulation does not exactly proceed solely by extending itself to areas and peoples "outside" of it, but also reorganizes itself spatially and temporally -- for example, through mass layoffs capitalism can create future potential for consumer and worker growth and thus solve one crisis with another. These fall along much of the same lines as the processes of primitive accumulation, as fueling the processes of accumulation through violent extra-economic means, but in no way do these processes occur at the "beginning" or at an "original" point. Thus Harvey calls this violently social aspect of capital accumulation _accumulation by dispossession_. 
+    - **footnotes/additions** (e.g. lenin): 
+  - Chakravartty and da Silva (_Accumulation, Dispossession, and Debt_)
+    - Chakravartty and da Silva make an intervention in their edited issue of _The American 
+- a history of the IMF
+  -
+- Postwar Korean history before the IMF
+- the IMF crisis in South Korea
+-
