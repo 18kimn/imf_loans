@@ -53,8 +53,9 @@ century.[@harveyNewImperialism2003; @smithImperialismTwentyFirstCentury2016]
 
 ### My project
 
-My project will begin with Paula Chakravartty and Denise da Silva's collection
-_Race, Empire, and the Crisis of the
+My project seeks to explore the racial logic embedded in the IMF's SAPs. This
+will begin with Paula Chakravartty and Denise da Silva's collection _Race,
+Empire, and the Crisis of the
 Subprime_.[@chakravarttyAccumulationDispossessionDebt2012a] They note that while
 Marxist geographer David Harvey's theory of _accumulation by dispossession_
 emphasizes the social processes of dispossession that are at capitalism's core,
