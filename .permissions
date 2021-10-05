@@ -1,4 +1,5 @@
 .gitignore;664;nathan;nathan
+.permissions;664;nathan;nathan
 README.md;664;nathan;nathan
 content/assets/presentation_cover.png;664;nathan;nathan
 content/references/chicago-note-bibliography-with-ibid.csl;664;nathan;nathan
@@ -6,7 +7,7 @@ content/references/imf.bib;664;nathan;nathan
 content/references/primary-sources.bib;664;nathan;nathan
 content/text/raw/outline.md;664;nathan;nathan
 content/text/raw/primary-sources.md;664;nathan;nathan
-content/text/raw/proposal.md;775;nathan;nathan
+content/text/raw/proposal.md;664;nathan;nathan
 content/text/raw/site_preview.png;664;nathan;nathan
 content/text/render;775;nathan;nathan
 content/text/rendered/paper.pdf;664;nathan;nathan
