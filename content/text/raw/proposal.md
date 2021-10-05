@@ -50,12 +50,8 @@ century.[@harveyNewImperialism2003; @smithImperialismTwentyFirstCentury2016]
 
 ### My project
 
-My project seeks to explore the racial logic embedded in SAPs, rejecting the
-exterior colorblindness of contemporary financial loans by questioning the
-racial assumptions they make and the world-reordering consequences they bring
-forth.
-
-This will begin with Paula Chakravartty and Denise da Silva's collection _Race,
+My project seeks to explore the racial logic embedded in the IMF's SAPs. This
+will begin with Paula Chakravartty and Denise da Silva's collection _Race,
 Empire, and the Crisis of the
 Subprime_.[@chakravarttyAccumulationDispossessionDebt2012a] They note that while
 Marxist geographer David Harvey's theory of _accumulation by dispossession_
