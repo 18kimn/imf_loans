@@ -9,6 +9,10 @@ indent: true
 header-includes:
   - \usepackage{setspace}
   - \onehalfspacing
+  - \newfontfamily\myregularfont{EB Garamond}
+  - \newfontfamily\koreanfont{Noto Serif CJK KR SemiBold}
+  - \usepackage[CJK]{ucharclasses}
+  - \setTransitionsForCJK{\koreanfont}{\myregularfont}
 ---
 
 ## Introduction
@@ -17,13 +21,13 @@ header-includes:
 
 Since its founding in 1944, the International Monetary Fund (IMF) has amassed a
 total of 705 billion Special Drawing Rights in spending capacity, or about \$1
-trillion. As opposed to the World Bank's extensive general lending system, IMF
-loans have played a pivotal role specifically during times of crisis. The
-relatively small Washington-based organization (of only \~2,300 staff members)
-with no subsidiary organizations is able to move the global economy through
-these loans, millions of people at a time. Its focus on low-to-middle-income
-countries during crises means that the most vulnerable of the global population
-are affected by its work.
+trillion. This spending capacity is deployed as loans during times of crisis,
+compared to the World Bank's extensive general lending system. Through these
+loans, relatively small Washington-based organization (of only \~2,300 staff
+members) with no subsidiary organizations is able to move the global economy,
+millions of people at a time. Its focus on low-to-middle-income countries during
+crises means that the most vulnerable of the global population are affected by
+its work.
 
 The IMF's loans are not without caveats. Under the stated purpose of ensuring
 loan repayment and financial stability, or "conditionality," the IMF requires
@@ -32,31 +36,25 @@ reforms known as Structural Adjustment Programs (SAPs). These include "purely"
 economic measures like currency devaluation, austerity measures, and
 restructuring or refinancing foreign debts, but also include liberalization of
 markets broadly, privatization of state-owned companies in particular, opening
-the country to foreign investment, and most relevantly to this project, a
-stipulation for the country to move towards resource extraction and export.
-Although the majority of IMF loans do come with market-rate interest rates and
-often require collateral, both of which can be a significant burden for
-countries requesting aid, SAPs are far more powerful in terms of creating
-long-term subjugating economic relations. SAPs push countries in the Global
-South to cheaply produce and export goods to the Global North, where only then
-they are realized as profit.[This is the main subject of
-@smithImperialismTwentyFirstCentury2016] SAPs push countries to denationalize
-basic necessities and turn them over to multinational corporations in order to
-qualify for loans.[See @ciafoneEndowingNeoliberalUniversity2005 for a detailed
-history on Yale's relationship with privatizing Indonesian power.] In more
-direct terms, SAPs push countries into a recapitulated racial hierarchy, a new
-imperialism, an imperialism for the twenty-first
+the country to foreign investment, and a stipulation for the country to move
+towards resource extraction and export. Although the majority of IMF loans do
+come with market-rate interest rates and often require collateral, both of which
+can be a significant burden for countries requesting aid, SAPs are far more
+powerful in terms of creating long-term subjugating economic relations. SAPs
+push countries in the Global South to cheaply produce and export goods to the
+Global North, where only then they are realized as profit.[This is the main
+subject of @smithImperialismTwentyFirstCentury2016] SAPs push countries to
+denationalize basic necessities and turn them over to multinational corporations
+in order to qualify for loans.[See @ciafoneEndowingNeoliberalUniversity2005 for
+a detailed history on Yale's relationship with privatizing Indonesian power.] In
+more direct terms, SAPs push countries into a recapitulated racial hierarchy, a
+new imperialism, an imperialism for the twenty-first
 century.[@harveyNewImperialism2003; @smithImperialismTwentyFirstCentury2016]
 
 ### My project
 
-My project seeks to explore the racial logic embedded in SAPs, rejecting the
-exterior colorblindness of contemporary financial loans by questioning the
-racial assumptions they make and the world-reordering consequences they bring
-forth.
-
-This will begin with Paula Chakravartty and Denise da Silva's collection _Race,
-Empire, and the Crisis of the
+My project will begin with Paula Chakravartty and Denise da Silva's collection
+_Race, Empire, and the Crisis of the
 Subprime_.[@chakravarttyAccumulationDispossessionDebt2012a] They note that while
 Marxist geographer David Harvey's theory of _accumulation by dispossession_
 emphasizes the social processes of dispossession that are at capitalism's core,
@@ -108,7 +106,9 @@ because Korea has cemented patriarchal norms through draft culture,^[Or
 "militarized modernity," as popularized by @moon2005], and it has only enjoyed
 "peace" because it sent almost a million troops to Vietnam in exchange for U.S.
 capital and technology during the Vietnam War.^[@chang2015] Other countries that
-do not experience the same economic
+do not experience the same level of economic "success" lie outside the bounds of
+capitalist modernity as result, and the "model modernity" of South Korea serves
+as a comparison against which other nations and races may be castigated.
 
 The economic crisis of 1997 exemplifies this dynamic and exposes a momentary
 contradiction in the march to capitalist modernity. Before the crisis, South
@@ -126,11 +126,9 @@ and quickly accepted the IMF's recommendation to put Korea's central banks up
 for sale.^[@chossudovsky2000] In other words, the glass image of capitalist
 stability was cracked and laid bare, as the IMF quickly opened the South Korean
 economy for outside financial institutions to buy up and the labor rights fought
-for by unions were reset after company acquisitions. My paper will uncover how
-this process was made possible -- what racial and national categories were
-present, how _race_ specifically was a relevant category, and why such a
-relationship between the IMF and the Korean government did not occur elsewhere
-in the world.
+for by unions were reset after company acquisitions. My paper will focus on the
+racial logic that made these events possible, and how they fit into the IMF's
+view of the world at large.
 
 More than just being a difference in topic or scope, I hope that this
 positioning will enable my project to connect Chakravartty and da Silva's
@@ -150,6 +148,23 @@ discussion has discussed how the racial and economic imbalances are not
 coincidental but part of the same fundamental process of capitalist
 dispossession. I hope that my thesis can fill this gap.
 
+### Summary of research questions
+
+My project seeks to explore the racial logic embedded in SAPs, rejecting the
+exterior colorblindness of contemporary financial loans by questioning the
+racial assumptions they make and the world-reordering consequences they bring
+forth. To do so, I will answer the following questions:
+
+- What are the criteria the IMF uses to give loans, and through what
+  decision-making processes are SAPs created?
+- How does the stated purpose of the IMF's SAPs compare to their consequences
+  and racial logic?
+- For the case of South Korea, how does _race_ specifically become a relevant
+  category in acquiring a bailout from the IMF?
+- How does the IMF's relationship with South Korea, a nation cast into a status
+  of "model modernity," compare with the IMF's relationship with other
+  countries?
+
 ## Methods
 
 ### Format of presentation
@@ -157,11 +172,13 @@ dispossession. I hope that my thesis can fill this gap.
 I will explore the IMF's processes of dispossession firstly through a paper that
 will give a history of the 1997 Asian financial crisis in South Korea and the
 IMF's response, focusing on the criteria the IMF uses to approve a loan and the
-policies they attach to it. These will mostly come from the IMF archives, found
-[here](https://www.imf.org/en/About/Archives), the South Korean government
-archives found [here](https://archives.go.kr/english/index.jsp), and South
-Korean newspapers from the 1997-2000 years (the "IMF era") hosted
-[here](https://newslibrary.naver.com/search/searchByDate.nhn#%7B%22mode%22%3A3%2C%22trans%22%3A1%2C%22pageSize%22%3A20%2C%22date%22%3A%221997-01-01%22%2C%22page%22%3A1%2C%22officeId%22%3A%2200032%22%2C%22fevt%22%3A5976%2C%22publishType%22%3A%2200010%22%7D)
+policies they attach to it. These will mostly come from the IMF archives, the
+National Archives of the Republic of Korea, and South Korean newspapers from the
+1997-2000 years (the "IMF era")^[These can be found at
+[https://www.imf.org/en/About/Archives](https://www.imf.org/en/About/Archives),
+[https://archives.go.kr/english/index.jsp](https://archives.go.kr/english/index.jsp),
+and
+[https://newslibrary.naver.com/search/searchByDate.nhn](https://newslibrary.naver.com/search/searchByDate.nhn)].
 
 I will explore this secondly in a creative medium, by creating a set of
 interactive visualizations of the relationships my paper will discuss. These
@@ -228,7 +245,7 @@ semester of Yale in Spring of 2023.
   - Main argument outline begun
 - December 15th
   - Draft of first section of paper complete
-- January 1st, _2023_
+- January 1st, 2023
   - Have visited the South Korean national archives and the IMF archives if they
     are available to the public.
   - Begun writing main body of paper
