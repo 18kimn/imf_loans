@@ -87,35 +87,36 @@ the 1997 Asian financial crisis, and as a case study focus on the crisis'
 escalation to catastrophe in South Korea.
 
 South Korea is relevant for a number of reasons. It was under the rule of four
-different states over the past one hundred and fifty years, was destroyed by war
-and four decades of dictatorship after its supposed "liberation" from Japan, and
-was separated arbitrarily from its northern half by the whim of two U.S. Navy
-Officers.^[Some useful thinkers here are @chang2015; @cho2008; and @cumings2002]
-Yet today the nation enjoys a sort of "model modernity" status of postindustrial
-success.^[While the term "model modernity" was said to me by Professor Lowe as a
-conversational, on-the-spot insight during an advising meeting, I believe others
-have deployed this term as well -- specifically @lye1999; but also @chettri2020
-and @wilks2008.] Like the much-discussed myth of Asian Americans as a "model
-minority" in the U.S., that status connotes a group that has endured hardship
-but ultimately has played by the (Western) rules of capitalist success to
-achieve some semblance of "prosperity" today. Not only does this rely on a false
-notion of prosperity, for neither the "model minority" Asian Americans nor the
-"model modernity" of South Korea are liberated from colonialism today, but the
-status also hides how the logic that led to the "success" of certain groups
-perpetuates the oppression of others. South Korea has only enjoyed "order"
-because Korea has cemented patriarchal norms through draft culture,^[Or
-"militarized modernity," as popularized by @moon2005], and it has only enjoyed
-"peace" because it sent almost a million troops to Vietnam in exchange for U.S.
-capital and technology during the Vietnam War.^[@chang2015] Other countries that
-do not experience the same level of economic "success" lie outside the bounds of
-capitalist modernity as result, and the "model modernity" of South Korea serves
-as a comparison against which other nations and races may be castigated.
+different states over the past one hundred and fifty years, destroyed by war and
+four decades of dictatorship after its supposed "liberation" from Japan, and
+separated arbitrarily from its northern half by the whim of two U.S. Navy
+Officers after World War II.^[Some useful thinkers here are @chang2015;
+@cho2008; and @cumings2002] Yet today the nation enjoys a sort of "model
+modernity" status of postindustrial success.^[While the term "model modernity"
+was said to me by Professor Lowe as a conversational, on-the-spot insight during
+an advising meeting, I believe others have deployed this term as well --
+specifically @lye1999; but also @chettri2020 and @wilks2008.] Like the
+much-discussed myth of Asian Americans as a "model minority" in the U.S., that
+status connotes a group that has endured hardship but ultimately has played by
+the (Western) rules of capitalist success to achieve some semblance of
+"prosperity" today. Not only does this rely on a false notion of prosperity, for
+neither the "model minority" Asian Americans nor the "model modernity" of South
+Korea are liberated from colonialism today, but the status also hides how the
+logic that led to the "success" of certain groups perpetuates the oppression of
+others. South Korea has only enjoyed "order" because Korea has cemented
+patriarchal norms through draft culture,^[Or "militarized modernity," as
+popularized by @moon2005], and it has only enjoyed "peace" because it sent
+almost a million troops to Vietnam in exchange for U.S. capital and technology
+during the Vietnam War.^[@chang2015] Other countries that do not experience the
+same level of economic "success" lie outside the bounds of capitalist modernity
+as result, and the "model modernity" of South Korea serves as a comparison
+against which other nations and races may be castigated.
 
 The economic crisis of 1997 exemplifies this dynamic and exposes a momentary
 contradiction in the march to capitalist modernity. Before the crisis, South
 Korea was boasting record low unemployment rates, had worker's rights and labor
 laws that were among the strongest of the OECD group, all with a consistently
-low inflation rate and was known for its cautious stance on foreign
+low inflation rate and while being known for its cautious stance on foreign
 investment.^[@cliftIMFPoliticsAusterity2018;
 @hwangLongTermImplicationsNeoliberal2015; @kim2001imf] But the unemployment rate
 in South Korea quadrupled in less than a year after the crisis began in October
@@ -229,9 +230,9 @@ the IMF librarians on this point.
 The most important scheduling point I should make known is that I hope to study
 abroad in South Korea for a year beginning in March of 2022, and have applied
 for the Light Fellowship in language study for this purpose. If I receive the
-fellowship, I will take a leave of absence from regular studies from January
-through December of 2022, and return to work on the thesis and finish my last
-semester of Yale in Spring of 2023.
+fellowship, which I will learn of next month, I will take a leave of absence
+from regular studies from January through December of 2022, and return to work
+on the thesis and finish my last semester of Yale in Spring of 2023.
 
 - November 1st
   - annotated wireframes for website completed
@@ -255,6 +256,12 @@ semester of Yale in Spring of 2023.
     from the in-progress paper)
 - March 1st
   - First draft completed
+
+## Budget
+
+If the IMF archives reopen or I am otherwise able to arrange a visit to the IMF
+archives, I plan to apply for $500 from the RITM fund so that I can visit the
+IMF archives over winter break.
 
 ![A preview of the current state of the site.](raw/site_preview.png)
 
