@@ -1,8 +1,8 @@
 #!/bin/sh
 
-# usage: 
+# usage:
 # this was working with 2.14.2
-# - `render.sh proposal.md html` produces a HTML version of proposal.md 
+# - `render.sh proposal.md html` produces a HTML version of proposal.md
 # - cd ensures this can be called from any location
 cd "${0%/*}"
 basename=$(basename "$1" .md)
@@ -19,8 +19,6 @@ pandoc -V geometry:margin=1in \
   -V mainfont="EB Garamond" \
   -V fontsize=12pt \
   --pdf-engine=xelatex \
-  $1
+  $1 #
 
 echo "file render for $basename finished"
-
-
