@@ -9,6 +9,10 @@ indent: true
 header-includes:
   - \usepackage{setspace}
   - \onehalfspacing
+  - \newfontfamily\myregularfont{EB Garamond}
+  - \newfontfamily\koreanfont{Noto Serif CJK KR SemiBold}
+  - \usepackage[CJK]{ucharclasses}
+  - \setTransitionsForCJK{\koreanfont}{\myregularfont}
 ---
 
 ## Introduction
@@ -17,13 +21,13 @@ header-includes:
 
 Since its founding in 1944, the International Monetary Fund (IMF) has amassed a
 total of 705 billion Special Drawing Rights in spending capacity, or about \$1
-trillion. As opposed to the World Bank's extensive general lending system, IMF
-loans have played a pivotal role specifically during times of crisis. The
-relatively small Washington-based organization (of only \~2,300 staff members)
-with no subsidiary organizations is able to move the global economy through
-these loans, millions of people at a time. Its focus on low-to-middle-income
-countries during crises means that the most vulnerable of the global population
-are affected by its work.
+trillion. This spending capacity is deployed as loans during times of crisis,
+compared to the World Bank's extensive general lending system. Through these
+loans, relatively small Washington-based organization (of only \~2,300 staff
+members) with no subsidiary organizations is able to move the global economy,
+millions of people at a time. Its focus on low-to-middle-income countries during
+crises means that the most vulnerable of the global population are affected by
+its work.
 
 The IMF's loans are not without caveats. Under the stated purpose of ensuring
 loan repayment and financial stability, or "conditionality," the IMF requires
@@ -32,20 +36,19 @@ reforms known as Structural Adjustment Programs (SAPs). These include "purely"
 economic measures like currency devaluation, austerity measures, and
 restructuring or refinancing foreign debts, but also include liberalization of
 markets broadly, privatization of state-owned companies in particular, opening
-the country to foreign investment, and most relevantly to this project, a
-stipulation for the country to move towards resource extraction and export.
-Although the majority of IMF loans do come with market-rate interest rates and
-often require collateral, both of which can be a significant burden for
-countries requesting aid, SAPs are far more powerful in terms of creating
-long-term subjugating economic relations. SAPs push countries in the Global
-South to cheaply produce and export goods to the Global North, where only then
-they are realized as profit.[This is the main subject of
-@smithImperialismTwentyFirstCentury2016] SAPs push countries to denationalize
-basic necessities and turn them over to multinational corporations in order to
-qualify for loans.[See @ciafoneEndowingNeoliberalUniversity2005 for a detailed
-history on Yale's relationship with privatizing Indonesian power.] In more
-direct terms, SAPs push countries into a recapitulated racial hierarchy, a new
-imperialism, an imperialism for the twenty-first
+the country to foreign investment, and a stipulation for the country to move
+towards resource extraction and export. Although the majority of IMF loans do
+come with market-rate interest rates and often require collateral, both of which
+can be a significant burden for countries requesting aid, SAPs are far more
+powerful in terms of creating long-term subjugating economic relations. SAPs
+push countries in the Global South to cheaply produce and export goods to the
+Global North, where only then they are realized as profit.[This is the main
+subject of @smithImperialismTwentyFirstCentury2016] SAPs push countries to
+denationalize basic necessities and turn them over to multinational corporations
+in order to qualify for loans.[See @ciafoneEndowingNeoliberalUniversity2005 for
+a detailed history on Yale's relationship with privatizing Indonesian power.] In
+more direct terms, SAPs push countries into a recapitulated racial hierarchy, a
+new imperialism, an imperialism for the twenty-first
 century.[@harveyNewImperialism2003; @smithImperialismTwentyFirstCentury2016]
 
 ### My project
@@ -84,33 +87,36 @@ the 1997 Asian financial crisis, and as a case study focus on the crisis'
 escalation to catastrophe in South Korea.
 
 South Korea is relevant for a number of reasons. It was under the rule of four
-different states over the past one hundred and fifty years, was destroyed by war
-and four decades of dictatorship after its supposed "liberation" from Japan, and
-was separated arbitrarily from its northern half by the whim of two U.S. Navy
-Officers.^[Some useful thinkers here are @chang2015; @cho2008; and @cumings2002]
-Yet today the nation enjoys a sort of "model modernity" status of postindustrial
-success.^[While the term "model modernity" was said to me by Professor Lowe as a
-conversational, on-the-spot insight during an advising meeting, I believe others
-have deployed this term as well -- specifically @lye1999; but also @chettri2020
-and @wilks2008.] Like the much-discussed myth of Asian Americans as a "model
-minority" in the U.S., that status connotes a group that has endured hardship
-but ultimately has played by the (Western) rules of capitalist success to
-achieve some semblance of "prosperity" today. Not only does this rely on a false
-notion of prosperity, for neither the "model minority" Asian Americans nor the
-"model modernity" of South Korea are liberated from colonialism today, but the
-status also hides how the logic that led to the "success" of certain groups
-perpetuates the oppression of others. South Korea has only enjoyed "order"
-because Korea has cemented patriarchal norms through draft culture,^[Or
-"militarized modernity," as popularized by @moon2005], and it has only enjoyed
-"peace" because it sent almost a million troops to Vietnam in exchange for U.S.
-capital and technology during the Vietnam War.^[@chang2015] Other countries that
-do not experience the same economic
+different states over the past one hundred and fifty years, destroyed by war and
+four decades of dictatorship after its supposed "liberation" from Japan, and
+separated arbitrarily from its northern half by the whim of two U.S. Navy
+Officers after World War II.^[Some useful thinkers here are @chang2015;
+@cho2008; and @cumings2002] Yet today the nation enjoys a sort of "model
+modernity" status of postindustrial success.^[While the term "model modernity"
+was said to me by Professor Lowe as a conversational, on-the-spot insight during
+an advising meeting, I believe others have deployed this term as well --
+specifically @lye1999; but also @chettri2020 and @wilks2008.] Like the
+much-discussed myth of Asian Americans as a "model minority" in the U.S., that
+status connotes a group that has endured hardship but ultimately has played by
+the (Western) rules of capitalist success to achieve some semblance of
+"prosperity" today. Not only does this rely on a false notion of prosperity, for
+neither the "model minority" Asian Americans nor the "model modernity" of South
+Korea are liberated from colonialism today, but the status also hides how the
+logic that led to the "success" of certain groups perpetuates the oppression of
+others. South Korea has only enjoyed "order" because Korea has cemented
+patriarchal norms through draft culture,^[Or "militarized modernity," as
+popularized by @moon2005], and it has only enjoyed "peace" because it sent
+almost a million troops to Vietnam in exchange for U.S. capital and technology
+during the Vietnam War.^[@chang2015] Other countries that do not experience the
+same level of economic "success" lie outside the bounds of capitalist modernity
+as result, and the "model modernity" of South Korea serves as a comparison
+against which other nations and races may be castigated.
 
 The economic crisis of 1997 exemplifies this dynamic and exposes a momentary
 contradiction in the march to capitalist modernity. Before the crisis, South
 Korea was boasting record low unemployment rates, had worker's rights and labor
 laws that were among the strongest of the OECD group, all with a consistently
-low inflation rate and was known for its cautious stance on foreign
+low inflation rate and while being known for its cautious stance on foreign
 investment.^[@cliftIMFPoliticsAusterity2018;
 @hwangLongTermImplicationsNeoliberal2015; @kim2001imf] But the unemployment rate
 in South Korea quadrupled in less than a year after the crisis began in October
@@ -122,11 +128,9 @@ and quickly accepted the IMF's recommendation to put Korea's central banks up
 for sale.^[@chossudovsky2000] In other words, the glass image of capitalist
 stability was cracked and laid bare, as the IMF quickly opened the South Korean
 economy for outside financial institutions to buy up and the labor rights fought
-for by unions were reset after company acquisitions. My paper will uncover how
-this process was made possible -- what racial and national categories were
-present, how _race_ specifically was a relevant category, and why such a
-relationship between the IMF and the Korean government did not occur elsewhere
-in the world.
+for by unions were reset after company acquisitions. My paper will focus on the
+racial logic that made these events possible, and how they fit into the IMF's
+view of the world at large.
 
 More than just being a difference in topic or scope, I hope that this
 positioning will enable my project to connect Chakravartty and da Silva's
@@ -146,6 +150,23 @@ discussion has discussed how the racial and economic imbalances are not
 coincidental but part of the same fundamental process of capitalist
 dispossession. I hope that my thesis can fill this gap.
 
+### Summary of research questions
+
+My project seeks to explore the racial logic embedded in SAPs, rejecting the
+exterior colorblindness of contemporary financial loans by questioning the
+racial assumptions they make and the world-reordering consequences they bring
+forth. To do so, I will answer the following questions:
+
+- What are the criteria the IMF uses to give loans, and through what
+  decision-making processes are SAPs created?
+- How does the stated purpose of the IMF's SAPs compare to their consequences
+  and racial logic?
+- For the case of South Korea, how does _race_ specifically become a relevant
+  category in acquiring a bailout from the IMF?
+- How does the IMF's relationship with South Korea, a nation cast into a status
+  of "model modernity," compare with the IMF's relationship with other
+  countries?
+
 ## Methods
 
 ### Format of presentation
@@ -153,11 +174,13 @@ dispossession. I hope that my thesis can fill this gap.
 I will explore the IMF's processes of dispossession firstly through a paper that
 will give a history of the 1997 Asian financial crisis in South Korea and the
 IMF's response, focusing on the criteria the IMF uses to approve a loan and the
-policies they attach to it. These will mostly come from the IMF archives, found
-[here](https://www.imf.org/en/About/Archives), the South Korean government
-archives found [here](https://archives.go.kr/english/index.jsp), and South
-Korean newspapers from the 1997-2000 years (the "IMF era") hosted
-[here](https://newslibrary.naver.com/search/searchByDate.nhn#%7B%22mode%22%3A3%2C%22trans%22%3A1%2C%22pageSize%22%3A20%2C%22date%22%3A%221997-01-01%22%2C%22page%22%3A1%2C%22officeId%22%3A%2200032%22%2C%22fevt%22%3A5976%2C%22publishType%22%3A%2200010%22%7D)
+policies they attach to it. These will mostly come from the IMF archives, the
+National Archives of the Republic of Korea, and South Korean newspapers from the
+1997-2000 years (the "IMF era")^[These can be found at
+[https://www.imf.org/en/About/Archives](https://www.imf.org/en/About/Archives),
+[https://archives.go.kr/english/index.jsp](https://archives.go.kr/english/index.jsp),
+and
+[https://newslibrary.naver.com/search/searchByDate.nhn](https://newslibrary.naver.com/search/searchByDate.nhn)].
 
 I will explore this secondly in a creative medium, by creating a set of
 interactive visualizations of the relationships my paper will discuss. These
@@ -207,9 +230,9 @@ the IMF librarians on this point.
 The most important scheduling point I should make known is that I hope to study
 abroad in South Korea for a year beginning in March of 2022, and have applied
 for the Light Fellowship in language study for this purpose. If I receive the
-fellowship, I will take a leave of absence from regular studies from January
-through December of 2022, and return to work on the thesis and finish my last
-semester of Yale in Spring of 2023.
+fellowship, which I will learn of next month, I will take a leave of absence
+from regular studies from January through December of 2022, and return to work
+on the thesis and finish my last semester of Yale in Spring of 2023.
 
 - November 1st
   - annotated wireframes for website completed
@@ -224,7 +247,7 @@ semester of Yale in Spring of 2023.
   - Main argument outline begun
 - December 15th
   - Draft of first section of paper complete
-- January 1st, _2023_
+- January 1st, 2023
   - Have visited the South Korean national archives and the IMF archives if they
     are available to the public.
   - Begun writing main body of paper
@@ -233,6 +256,12 @@ semester of Yale in Spring of 2023.
     from the in-progress paper)
 - March 1st
   - First draft completed
+
+## Budget
+
+If the IMF archives reopen or I am otherwise able to arrange a visit to the IMF
+archives, I plan to apply for $500 from the RITM fund so that I can visit the
+IMF archives over winter break.
 
 ![A preview of the current state of the site.](raw/site_preview.png)
 
