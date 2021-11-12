@@ -2,7 +2,6 @@
 title: The IMF and Global Dispossession
 subtitle: A senior project proposal
 author: Nathan Kim
-date: Advised by Professor Lisa Lowe
 nocite: '@*'
 indent: true
 # uncomment the below for double spacing
