@@ -161,6 +161,7 @@ const drawMap = (projection: d3.GeoProjection) => {
       .duration(50)
       .attr('transform', lastTransform)
   }
+  return timer
 }
 
 export default drawMap
