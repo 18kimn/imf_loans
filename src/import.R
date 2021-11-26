@@ -51,11 +51,14 @@ dta <- dta %>%
 xwalk <- read_excel("src/data/mona/co.xlsx", skip = 1) %>%
   select(imf_code = `IMF Code`, iso_code = `ISO Code`)
 
-merged <- wrld_simpl %>%
+shapes <- wrld_simpl %>%
   st_as_sf() %>%
   rmapshaper::ms_simplify() %>%
   select(iso_code = ISO3, name = NAME) %>%
-  left_join(xwalk, by = "iso_code") %>%
+  left_join(xwalk, by = "iso_code")
+geojson_write(shapes, file = "public/data/shapes.json")
+
+merged <- shapes %>%
   full_join(dta, by = c("imf_code" = "code"))
 file.remove("src/data/imf.json")
 geojson_write(merged, file = "public/data/imf.json")

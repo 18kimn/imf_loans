@@ -5,7 +5,7 @@ import exportsData from '../../data/export.json'
 import imfData from '../../data/imf.json'
 import {Countries, Country, Trade} from './types'
 const d3 = {...d3Inertia, ...d3Main}
-import {D3ZoomEvent, ZoomTransform} from 'd3-zoom'
+import {D3ZoomEvent} from 'd3-zoom'
 
 const config = {
   speed: 0.005,

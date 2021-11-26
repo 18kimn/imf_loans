@@ -1,7 +1,12 @@
 <template>
-  <div v-if="isShowing" id="story">
-    <CloseButton v-on:click="isShowing = false" />
-    <h2 id="projectTitle">The IMF and Global Dispossession</h2>
+  <div
+    v-if="isShowing"
+    id="story"
+  >
+    <CloseButton @click="isShowing = false" />
+    <h2 id="projectTitle">
+      The IMF and Global Dispossession
+    </h2>
     <p>
       The IMF’s loan packages require that recipient countries adapt Structural
       Adjustment Programs (SAPs), or macroeconomic policy changes. Although they
@@ -37,25 +42,18 @@
       code. Contact Nathan Kim at nathan.kim@yale.edu with any questions.
     </p>
   </div>
-  <OpenButton v-else v-on:click="isShowing = true" />
+  <OpenButton
+    v-else
+    @click="isShowing = true"
+  />
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import CloseButton from './Buttons/CloseButton.vue'
 import OpenButton from './Buttons/OpenButton.vue'
+import {ref} from 'vue'
 
-export default {
-  components: {
-    CloseButton,
-    OpenButton,
-  },
-  data() {
-    return {
-      isShowing: true,
-    }
-  },
-  methods: {},
-}
+const isShowing = ref(true)
 </script>
 
 <style scoped>

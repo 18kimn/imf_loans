@@ -29,16 +29,26 @@ index.html;664;nathan;nathan
 package.json;664;nathan;nathan
 patches/versor+0.1.2.patch;664;nathan;nathan
 public/data/export.json;664;nathan;nathan
+public/data/shapes.json;664;nathan;nathan
 public/favicon.ico;664;nathan;nathan
+public/slides.md;664;nathan;nathan
 src/App.vue;664;nathan;nathan
 src/components/Buttons/Buttons.css;664;nathan;nathan
 src/components/Buttons/CloseButton.vue;664;nathan;nathan
 src/components/Buttons/OpenButton.vue;664;nathan;nathan
 src/components/Story.vue;664;nathan;nathan
+src/components/Storymap/content.csv;664;nathan;nathan
+src/components/Titlemap/colorTweener.ts;664;nathan;nathan
+src/components/Titlemap/fadeInOut.ts;664;nathan;nathan
+src/components/Titlemap/index.ts;664;nathan;nathan
+src/components/Titlemap/opacityTweener.ts;664;nathan;nathan
+src/components/Titlemap/projectionTweener.ts;664;nathan;nathan
+src/components/Titlemap/render.ts;664;nathan;nathan
 src/components/Trademap/Draw.ts;664;nathan;nathan
 src/components/Trademap/Update.ts;664;nathan;nathan
 src/components/Trademap/index.vue;664;nathan;nathan
 src/components/Trademap/types.ts;664;nathan;nathan
+src/components/slides.js;664;nathan;nathan
 src/data/DOT_05-01-2021 20-16-16-70_timeSeries.csv;664;nathan;nathan
 src/data/export.json;664;nathan;nathan
 src/data/imf.json;664;nathan;nathan
@@ -68,8 +78,10 @@ src/githooks/sync.sh;664;nathan;nathan
 src/import.R;664;nathan;nathan
 src/index.ts;664;nathan;nathan
 src/pages/Exports.vue;664;nathan;nathan
+src/pages/Slides.vue;664;nathan;nathan
 src/pages/Title.vue;664;nathan;nathan
 src/router.ts;664;nathan;nathan
+src/utils/arrayShuffle.ts;664;nathan;nathan
 tsconfig.json;664;nathan;nathan
 vite.config.ts;664;nathan;nathan
 yarn.lock;664;nathan;nathan
@@ -89,7 +101,10 @@ public;775;nathan;nathan
 src;775;nathan;nathan
 src/components/Buttons;775;nathan;nathan
 src/components;775;nathan;nathan
+src/components/Storymap;775;nathan;nathan
+src/components/Titlemap;775;nathan;nathan
 src/components/Trademap;775;nathan;nathan
+src/components;775;nathan;nathan
 src/data;775;nathan;nathan
 .;775;nathan;nathan
 src/data;775;nathan;nathan
@@ -101,4 +116,5 @@ src/githooks;775;nathan;nathan
 src;775;nathan;nathan
 src/pages;775;nathan;nathan
 src;775;nathan;nathan
+src/utils;775;nathan;nathan
 .;775;nathan;nathan

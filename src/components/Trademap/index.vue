@@ -1,22 +1,32 @@
 <template>
   <div id="mapcontainer">
     <div id="slidecontainer">
-      <input type="range" min="1993" max="2020" step="1" v-model="year" id="slider" />
-      <p id="sliderLabel">Year: {{ year }}</p>
+      <input
+        id="slider"
+        v-model="year"
+        type="range"
+        min="1993"
+        max="2020"
+        step="1"
+      >
+      <p id="sliderLabel">
+        Year: {{ year }}
+      </p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import drawMap from './Draw'
-import updateMap from './Update'
 import { geoOrthographic } from 'd3-geo'
 import { ref } from '@vue/reactivity'
 import { onMounted, onUnmounted, onUpdated } from '@vue/runtime-core'
 import { Timer } from 'd3-timer'
+import updateMap from './Update'
+import drawMap from './Draw'
+
 const projection = geoOrthographic()
   .translate([(window.innerWidth * 0.7) / 2,
-  window.innerHeight / 2])
+    window.innerHeight / 2])
   .scale((window.innerWidth * 0.7) / 3)
 
 const year = ref(1993)
@@ -107,7 +117,6 @@ g {
 .nation {
   fill: #7ab199;
   stroke-width: 1;
-  fill-opacity: 1;
 }
 
 .countryLabel {
