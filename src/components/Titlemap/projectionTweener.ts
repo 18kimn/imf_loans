@@ -43,7 +43,7 @@ const projs = [
   and https://observablehq.com/@d3/projection-transitions
 */
 
-/** Interpolates between two geometries */
+/** Interpolates between two raw projections */
 function interp(
     [x0, y0]: [number, number],
     [x1, y1]: [number, number],
@@ -52,13 +52,27 @@ function interp(
   return [(1 - t) * x0 + t * x1, (1 - t) * y0 + t * y1]
 }
 
-/** this handles some "busy work", or timing calculations */
+/** Interpolates between two scales */
+function lerp1(x0: number, x1: number, t: number) {
+  return (1 - t) * x0 + t * x1
+}
+
+/** Hanldes timing calculations and setup */
 function tweenGenerator(
     shapes: ExtendedFeatureCollection,
     cycleTime: number,
 ) {
   let fromIndex = 0
   let toIndex = 1
+
+  const projInfo = projs.map((proj) => {
+    const p = geoProjection(proj)
+        .fitExtent([
+          [0, 0],
+          [1.5 * window.innerWidth, 1.5 * window.innerHeight],
+        ], shapes)
+    return {scale: p.scale(), translate: p.translate()}
+  })
 
   // inside the render function: every-frame calculations
   return (milliseconds: number) => {
@@ -72,13 +86,16 @@ function tweenGenerator(
       fromIndex = (fromIndex + 1) % projs.length
     }
 
-    return geoProjection((x, y) => interp(
-        projs[fromIndex](x, y), projs[toIndex](x, y),
-        easeCubicInOut(t - Math.floor(t)),
-    )).fitExtent([
-      [0, 0],
-      [window.innerWidth, window.innerHeight],
-    ], shapes)
+    const raw0 = projs[fromIndex]
+    const raw1 = projs[toIndex]
+
+    const eased = easeCubicInOut(t - Math.floor(t))
+    return geoProjection((x, y) => interp(raw0(x, y), raw1(x, y), eased))
+        .scale(lerp1(projInfo[fromIndex].scale, projInfo[toIndex].scale, eased))
+        .translate(interp(projInfo[fromIndex].translate,
+            projInfo[toIndex].translate, eased))
+        .precision(0.1)
+        .rotate([performance.now() / 100, 0, 0])
   }
 }
 

@@ -16,14 +16,13 @@ import {ref, onMounted} from 'vue'
 import {slides} from '../components/slides.js'
 const currentIndex = ref(0)
 
-// navigate slides with keys
+/** navigate slides with keys */
 function onKeyDown(event: Event): void {
-  console.log('slide navigation detected')
   const {code} = event as KeyboardEvent
   let nextIndex: number
-  if (['ArrowRight', 'ArrowDown'].includes(code)) {
+  if (['ArrowRight', 'ArrowDown', 'Space', 'PageDown'].includes(code)) {
     nextIndex = Math.min(currentIndex.value + 1, slides.length)
-  } else if (['ArrowLeft', 'ArrowUp'].includes(code)) {
+  } else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(code)) {
     nextIndex = Math.max(currentIndex.value - 1, 0)
   } else {
     nextIndex = currentIndex.value
@@ -31,11 +30,7 @@ function onKeyDown(event: Event): void {
   currentIndex.value = nextIndex
 }
 
-async function setupSlides() {
-  document.addEventListener('keydown', onKeyDown)
-}
-
-onMounted(setupSlides)
+onMounted(async () => document.addEventListener('keydown', onKeyDown))
 </script>
 
 <style scoped>
@@ -52,7 +47,8 @@ onMounted(setupSlides)
     0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
 }
 
-#container, #background {
+#container,
+#background {
   display: flex;
   flex-direction: column;
   place-content: center;
@@ -67,18 +63,19 @@ onMounted(setupSlides)
   font-weight: bold;
 }
 
-::v-deep(p), ::v-deep() {
+::v-deep(p),
+::v-deep() {
   font-size: 2rem;
 }
 
-::v-deep(div){
+::v-deep(div) {
   display: flex;
   flex-direction: column;
   place-content: center;
   place-items: center;
 }
 /*
-  fade transitions 
+  fade transitions
   don't adjust these, it took a while to make it work properly
 */
 .fade-enter-active,
@@ -93,7 +90,4 @@ onMounted(setupSlides)
 .fade-enter-to {
   opacity: 1;
 }
-
-
 </style>
-

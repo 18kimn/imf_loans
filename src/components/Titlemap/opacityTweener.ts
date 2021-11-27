@@ -1,3 +1,4 @@
+import {easeCubicInOut} from 'd3-ease'
 import {interpolateNumber} from 'd3-interpolate'
 
 /** Wrapper for the closure of the opacity tweener.
@@ -7,9 +8,7 @@ function tweenGenerator(n: number, cycleTime: number) {
   const fadeIn = interpolateNumber(0, 1)
   const fadeOut = interpolateNumber(1, 0)
 
-  const opacityAssignments = Array(n)
-      .fill(0)
-      .map(() => Math.floor(Math.random() * 2))
+  const opacityAssignments = Array(n).fill(1)
   const lastColorTimes = Array(n).fill(0)
 
   return (milliseconds: number) => {
@@ -17,7 +16,9 @@ function tweenGenerator(n: number, cycleTime: number) {
         .map((_, i) => {
           // stagger color generation so that no cycle is synced
           const staggeredTime = (milliseconds + i * 50) / cycleTime
-          const t = staggeredTime - Math.floor(staggeredTime)
+          const t = easeCubicInOut(
+              Math.min(2 * (staggeredTime - Math.floor(staggeredTime)), 1),
+          )
           // lastColorTimes[i] > t implies that
           // there was a rollover to the next cycle
           if (lastColorTimes[i] > t) {

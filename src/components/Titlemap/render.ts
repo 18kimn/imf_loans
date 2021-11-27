@@ -33,7 +33,7 @@ function render(
 ): void {
   const projectionTweener = projTweenGenerator(shapes, 5000)
   const colorTweener = colorTweenGenerator(shapes.features.length, 3500)
-  const opacityTweener = opacityTweenGenerator(shapes.features.length, 6000)
+  const opacityTweener = opacityTweenGenerator(shapes.features.length, 7500)
 
   // tried to do this the d3 way using d3.transition()
   // unfortunately it doesn't seem to work with mismatched cycles
