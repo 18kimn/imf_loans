@@ -4,13 +4,10 @@
 
 ---
 
-# Intro
-
-1. Theoretical background
-2. The history
-3. My argument
-4. The viz (sort of)
-5. Re: methods and grounding
+<List 
+    title='this presentation' 
+    items='["Theoretical background", "The history", "My argument", "The viz (sort of)", "Re: methods and grounding"]' 
+/>
 
 ---
 
@@ -27,5 +24,11 @@
 - David Harvey's _The New Imperialism_
 - A turn towards the social processes of capitalism
   - a.k.a. "dispossession"
+
+---
+
+---
+
+<Title />
 
 ---

@@ -12,25 +12,27 @@
 </template>
 
 <script setup lang="ts">
-import {ref, onMounted} from 'vue'
-import {slides} from '../components/slides.js'
+import {ref, shallowRef, onMounted} from 'vue'
+import getSlides from '../components/Slides/getSlides'
+import nextAction from '../utils/nextAction'
+
+const slides = shallowRef([])
 const currentIndex = ref(0)
 
 /** navigate slides with keys */
-function onKeyDown(event: Event): void {
-  const {code} = event as KeyboardEvent
-  let nextIndex: number
-  if (['ArrowRight', 'ArrowDown', 'Space', 'PageDown'].includes(code)) {
-    nextIndex = Math.min(currentIndex.value + 1, slides.length)
-  } else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(code)) {
-    nextIndex = Math.max(currentIndex.value - 1, 0)
-  } else {
-    nextIndex = currentIndex.value
-  }
-  currentIndex.value = nextIndex
+function onKeyDown(event: KeyboardEvent): void {
+  currentIndex.value =
+    nextAction(
+        event,
+        () => Math.min(currentIndex.value + 1, slides.value.length),
+        () => Math.max(currentIndex.value - 1, 0),
+    ) || currentIndex.value
 }
 
-onMounted(async () => document.addEventListener('keydown', onKeyDown))
+onMounted(async () => {
+  slides.value = (await getSlides('/slides.md')) as []
+  document.addEventListener('keydown', onKeyDown)
+})
 </script>
 
 <style scoped>

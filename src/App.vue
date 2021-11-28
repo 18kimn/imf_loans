@@ -13,24 +13,24 @@
 import {onMounted} from 'vue'
 import {ref} from '@vue/reactivity'
 import {routes, router} from './router'
+import nextAction from './utils/nextAction'
 
 const currentRouteIndex = ref(0)
 
 const mainRoutes = routes.filter((route) => route.name !== 'Slides')
-const onKeyDown = (event: KeyboardEvent) => {
-  if (router.currentRoute.value.name === 'Slides') return
-  const {code} = event
-  // if right or down arrow is pressed, go to next page
-  if (['ArrowRight', 'ArrowDown', 'Space', 'PageDown'].includes(code)) {
-    currentRouteIndex.value = Math.min(
-        currentRouteIndex.value + 1,
-        routes.length - 1,
-    )
-    // if left or down arrow is pressed, go to previous page
-  } else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(code)) {
-    currentRouteIndex.value = Math.max(currentRouteIndex.value - 1, 0)
-  }
-  router.push(mainRoutes[currentRouteIndex.value].path)
+/** Handles site navigation */
+function onKeyDown(event: KeyboardEvent): void {
+  const nextRoute = nextAction(
+      event,
+      () => Math.min(currentRouteIndex.value + 1, mainRoutes.length - 1),
+      () => Math.max(currentRouteIndex.value - 1, 0),
+      () => router.currentRoute.value.name === 'Slides',
+  )
+
+  if (!mainRoutes[nextRoute]) return
+  console.log(router)
+  router.push({path: mainRoutes[nextRoute].path})
+  currentRouteIndex.value = nextRoute
 }
 
 onMounted(() => document.addEventListener('keydown', onKeyDown))

@@ -17,6 +17,7 @@
   "plugins": ["vue", "@typescript-eslint", "vue-a11y"],
   "rules": {
     "semi": ["error", "never"],
-    "valid-jsdoc": "off"
+    "valid-jsdoc": "off",
+    "linebreak-style": "off"
   }
 }
