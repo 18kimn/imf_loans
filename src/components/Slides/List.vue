@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import {ref, toRefs, defineProps, onMounted, onBeforeUnmount} from 'vue'
+import {ref, toRefs, onMounted, onBeforeUnmount} from 'vue'
 const props = defineProps({
   items: String,
   ordered: Boolean,

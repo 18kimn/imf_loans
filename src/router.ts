@@ -16,8 +16,8 @@ export const routes = [
   {
     path: '/slides',
     name: 'Slides',
-    component: Slides
-  }
+    component: Slides,
+  },
 ]
 
 export const router = createRouter({

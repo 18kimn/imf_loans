@@ -28,18 +28,20 @@ import {Timer} from 'd3-timer'
 import updateMap from './Update'
 import drawMap from './Draw'
 
-const projection = geoOrthographic()
-    .translate([(window.innerWidth * 0.7) / 2,
-      window.innerHeight / 2])
-    .scale((window.innerWidth * 0.7) / 3)
 
 const year = ref(1993)
 const timer = ref({} as unknown as Timer)
+
 onMounted(() => {
   timer.value = drawMap(projection)
 })
 onUpdated(() => updateMap(projection))
 onUnmounted(() => timer.value.stop())
+
+const projection = geoOrthographic()
+    .translate([(window.innerWidth * 0.7) / 2,
+      window.innerHeight / 2])
+    .scale((window.innerWidth * 0.7) / 3)
 
 </script>
 

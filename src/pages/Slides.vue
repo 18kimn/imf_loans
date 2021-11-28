@@ -1,36 +1,43 @@
 <template>
   <div id="container">
-    <div id="background">
+    <div class="background">
       <transition
         name="fade"
         mode="out-in"
       >
-        <component :is="slides[currentIndex]" />
+        <component
+          :is="slides[currentIndex]"
+          :key="currentIndex"
+        />
       </transition>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import {defineComponent} from '@vue/runtime-dom'
 import {ref, shallowRef, onMounted} from 'vue'
 import getSlides from '../components/Slides/getSlides'
 import nextAction from '../utils/nextAction'
 
-const slides = shallowRef([])
+const slides = shallowRef([defineComponent({template: '<div/>'})])
 const currentIndex = ref(0)
 
 /** navigate slides with keys */
 function onKeyDown(event: KeyboardEvent): void {
+  const nextIndex = nextAction(
+      event,
+      () => Math.min(currentIndex.value + 1, slides.value.length - 1),
+      () => Math.max(currentIndex.value - 1, 0),
+  )
+
   currentIndex.value =
-    nextAction(
-        event,
-        () => Math.min(currentIndex.value + 1, slides.value.length),
-        () => Math.max(currentIndex.value - 1, 0),
-    ) || currentIndex.value
+    typeof nextIndex !== 'undefined' ? nextIndex : currentIndex.value
 }
 
 onMounted(async () => {
-  slides.value = (await getSlides('/slides.md')) as []
+  slides.value = await getSlides('/slides.md')
+  console.log(slides.value)
   document.addEventListener('keydown', onKeyDown)
 })
 </script>
@@ -41,19 +48,24 @@ onMounted(async () => {
   height: 100%;
 }
 
-#background {
-  height: 100%;
-  margin: 5%;
+.background {
+  height: 90%;
+  margin: 3%;
   background-color: white;
   box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
     0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
 }
 
-#container,
-#background {
-  display: flex;
-  flex-direction: column;
-  place-content: center;
+::v-deep(.text-background){
+  width: 45%;
+  height: 80%;
+  background-color: white;
+  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+    0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+  z-index: 1;
+}
+::v-deep(.content) {
+  height: 80%;
 }
 
 ::v-deep(h1),
@@ -65,8 +77,8 @@ onMounted(async () => {
   font-weight: bold;
 }
 
-::v-deep(p),
-::v-deep() {
+::v-deep(p), ::v-deep(h3),
+::v-deep(li) {
   font-size: 2rem;
 }
 
@@ -75,21 +87,5 @@ onMounted(async () => {
   flex-direction: column;
   place-content: center;
   place-items: center;
-}
-/*
-  fade transitions
-  don't adjust these, it took a while to make it work properly
-*/
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.1s ease;
-}
-
-.fade-leave-to {
-  opacity: 0;
-}
-
-.fade-enter-to {
-  opacity: 1;
 }
 </style>

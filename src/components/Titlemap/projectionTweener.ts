@@ -69,7 +69,7 @@ function tweenGenerator(
     const p = geoProjection(proj)
         .fitExtent([
           [0, 0],
-          [1.5 * window.innerWidth, 1.5 * window.innerHeight],
+          [1.3 * window.innerWidth, 1.2 * window.innerHeight],
         ], shapes)
     return {scale: p.scale(), translate: p.translate()}
   })

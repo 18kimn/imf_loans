@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import {onMounted} from 'vue'
+import {onUpdated, onMounted} from 'vue'
 import {ref} from '@vue/reactivity'
 import {routes, router} from './router'
 import nextAction from './utils/nextAction'
@@ -28,11 +28,13 @@ function onKeyDown(event: KeyboardEvent): void {
   )
 
   if (!mainRoutes[nextRoute]) return
-  console.log(router)
+  console.log(mainRoutes[nextRoute].path)
   router.push({path: mainRoutes[nextRoute].path})
   currentRouteIndex.value = nextRoute
 }
 
+onUpdated(() => console.log(console.log(router.currentRoute.value.name),
+))
 onMounted(() => document.addEventListener('keydown', onKeyDown))
 </script>
 

@@ -25,10 +25,15 @@
 - A turn towards the social processes of capitalism
   - a.k.a. "dispossession"
 
----
-
----
+---showcase
 
 <Title />
 
----
+<div style="position: absolute; height: 100%; width: 100%; flex-direction: row;">
+  <div class="text-background">
+
+  # the logic of the IMF
+
+  </div>
+  <div style="width: 50%;">
+</div>

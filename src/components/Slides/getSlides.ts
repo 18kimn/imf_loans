@@ -1,7 +1,8 @@
 import {marked} from 'marked'
 import Trademap from '../Trademap/index.vue'
-import Title from '../../pages/Title.vue'
+import Title from '../Titlemap/index.vue'
 import List from './List.vue'
+import {defineComponent} from '@vue/runtime-dom'
 export const slideComponents = {
   Trademap,
   Title,
@@ -25,14 +26,17 @@ async function getSlides(path: string) {
             ...prev}
         }, {})
 
-    console.log({matches: text.match(compPatterns)})
-
-    // console.log({componentsUsed, text,
-    //   compPatterns, match: text.match(compPatterns)})
-    return {
-      template: `<div>\n\n${marked(text)}\n\n</div>`,
-      ...(componentsUsed ? {components: componentsUsed} : {}),
+    let isShowcase = false
+    if (text.match('^showcase')) {
+      text = text.split('showcase')[1]
+      isShowcase = true
     }
+
+    return defineComponent({
+      name: isShowcase ? 'showcase' : '',
+      template: `<div class="content">\n\n${marked(text)}\n\n</div>`,
+      ...(componentsUsed ? {components: componentsUsed} : {}),
+    })
   })
 }
 

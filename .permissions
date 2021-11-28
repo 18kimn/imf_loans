@@ -41,7 +41,6 @@ src/components/Slides/getSlides.ts;664;nathan;nathan
 src/components/Story.vue;664;nathan;nathan
 src/components/Storymap/content.csv;664;nathan;nathan
 src/components/Titlemap/colorTweener.ts;664;nathan;nathan
-src/components/Titlemap/fadeInOut.ts;664;nathan;nathan
 src/components/Titlemap/index.ts;664;nathan;nathan
 src/components/Titlemap/index.vue;664;nathan;nathan
 src/components/Titlemap/opacityTweener.ts;664;nathan;nathan
