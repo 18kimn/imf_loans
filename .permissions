@@ -28,6 +28,7 @@ imf_loans.Rproj;664;nathan;nathan
 index.html;664;nathan;nathan
 package.json;664;nathan;nathan
 patches/versor+0.1.2.patch;664;nathan;nathan
+public/_redirects;664;nathan;nathan
 public/data/content.csv;664;nathan;nathan
 public/data/export.json;664;nathan;nathan
 public/data/shapes.json;664;nathan;nathan
@@ -105,6 +106,7 @@ content/text;775;nathan;nathan
 content/text/rendered;775;nathan;nathan
 .;775;nathan;nathan
 patches;775;nathan;nathan
+public;775;nathan;nathan
 public/data;775;nathan;nathan
 public;775;nathan;nathan
 public/slides;775;nathan;nathan
