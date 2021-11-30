@@ -1,5 +1,4 @@
-/// <reference types="vite/client" />
-/// <reference types="reveal" />
+// / <reference types="vite/client" />
 declare module 'd3-inertia' {
   import * as d3 from 'd3'
   import * as Inertia from 'd3-inertia'
