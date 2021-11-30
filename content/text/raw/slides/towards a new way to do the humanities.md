@@ -13,10 +13,10 @@ have to be torn down. We need to open up the humanities.
 These are some reflections on how I am doing this project in this pursuit. In
 this project, they have boiled down so far to four claims:
 
-1. We should document the process
-2. We should use freely accessible tools to make research
-3. We should make our resources and research freely accessible
-4. We should use accessible mediums of presentation
+1. Accessible tools
+2. Accessible products
+3. Accessible processes
+4. Accessible presentations
 
 Or to state it in a single sentence, _we should open up the humanities_.
 

@@ -26,9 +26,6 @@ const drawMap = (projection: d3.GeoProjection) => {
   const path: any = d3.geoPath().projection(projection)
   const graticule = d3.geoGraticule().step([10, 10])
 
-  console.log({
-    node: d3.select('#mapcontainer'),
-  })
   const svg = d3.select('#mapcontainer').append('svg').attr('id', 'map')
   const g = svg.append('g')
   let focusedCountry: any

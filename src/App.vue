@@ -10,32 +10,35 @@
 </template>
 
 <script setup lang="ts">
-import {onUpdated, onMounted} from 'vue'
+import {onMounted} from 'vue'
 import {ref} from '@vue/reactivity'
 import {routes, router} from './router'
 import nextAction from './utils/nextAction'
 
 const currentRouteIndex = ref(0)
-
 const mainRoutes = routes.filter((route) => route.name !== 'Slides')
 /** Handles site navigation */
 function onKeyDown(event: KeyboardEvent): void {
+  // triple-check that we're on the correct route
+  // mismatch could occur bc currentRouteIndex starts at 0
+  // while we might be on a non-home page
+  currentRouteIndex.value = mainRoutes.findIndex((route) => {
+    return route.path === router.currentRoute.value.path
+  })
   const nextRoute = nextAction(
       event,
       () => Math.min(currentRouteIndex.value + 1, mainRoutes.length - 1),
       () => Math.max(currentRouteIndex.value - 1, 0),
       () => router.currentRoute.value.name === 'Slides',
   )
-
   if (!mainRoutes[nextRoute]) return
-  console.log(mainRoutes[nextRoute].path)
   router.push({path: mainRoutes[nextRoute].path})
   currentRouteIndex.value = nextRoute
 }
 
-onUpdated(() => console.log(console.log(router.currentRoute.value.name),
-))
-onMounted(() => document.addEventListener('keydown', onKeyDown))
+onMounted(() => {
+  window.addEventListener('keydown', onKeyDown)
+})
 </script>
 
 <style>
@@ -51,6 +54,8 @@ onMounted(() => document.addEventListener('keydown', onKeyDown))
   --blue: #268db2;
   --cyan: #2aa198;
   --green: #869900;
+  --shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+    0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
 }
 /* ignore */
 html,
@@ -83,7 +88,7 @@ h2 {
 */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .fade-enter-active,

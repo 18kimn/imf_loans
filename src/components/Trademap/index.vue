@@ -8,7 +8,6 @@
         <input
           id="slider"
           v-model="year"
-          name="yearPicker"
           type="range"
           min="1993"
           max="2020"
@@ -22,26 +21,32 @@
 
 <script setup lang="ts">
 import {geoOrthographic} from 'd3-geo'
-import {ref} from '@vue/reactivity'
-import {onMounted, onUnmounted, onUpdated} from '@vue/runtime-core'
-import {Timer} from 'd3-timer'
+import {onMounted, onUnmounted, onUpdated, ref, toRefs} from 'vue'
 import updateMap from './Update'
 import drawMap from './Draw'
+import {Timer} from 'd3-timer'
 
+interface Props {
+  xMulti: number,
+}
+const props = withDefaults(defineProps<Props>(), {
+  xMulti: 1,
+})
+const {xMulti} = toRefs(props)
+
+const projection = geoOrthographic()
+    .translate([(window.innerWidth * xMulti.value) / 2,
+      window.innerHeight / 2])
+    .scale((window.innerWidth * 0.7) / 3)
 
 const year = ref(1993)
-const timer = ref({} as unknown as Timer)
+const timer = ref({} as Timer)
 
 onMounted(() => {
   timer.value = drawMap(projection)
 })
-onUpdated(() => updateMap(projection))
+onUpdated(() => updateMap(projection, year.value))
 onUnmounted(() => timer.value.stop())
-
-const projection = geoOrthographic()
-    .translate([(window.innerWidth * 0.7) / 2,
-      window.innerHeight / 2])
-    .scale((window.innerWidth * 0.7) / 3)
 
 </script>
 
@@ -49,6 +54,7 @@ const projection = geoOrthographic()
 #mapcontainer {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 #map {
   width: 100%;
@@ -57,6 +63,7 @@ const projection = geoOrthographic()
 }
 #slidecontainer {
   position: absolute;
+  top: 1%;
   left: 50%;
   transform: translate(-50%, 0);
   width: 70%;

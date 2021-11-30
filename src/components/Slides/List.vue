@@ -46,7 +46,7 @@ function onKeyDown(event) {
   }
 }
 
-onMounted(() => document.addEventListener('keydown', onKeyDown))
+onMounted(() => window.addEventListener('keydown', onKeyDown))
 
 onBeforeUnmount(() => document.removeEventListener('keydown', onKeyDown))
 </script>

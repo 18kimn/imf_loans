@@ -1,17 +1,37 @@
 <template>
-  <div id="container">
-    <div class="background">
-      <transition
-        name="fade"
-        mode="out-in"
-      >
-        <component
-          :is="slides[currentIndex]"
-          :key="currentIndex"
-        />
-      </transition>
+  <transition
+    name="fade"
+    mode="out-in"
+  >
+    <div
+      v-if="slides[currentIndex].name !== 'showcase'"
+      id="container"
+      class="content"
+    >
+      <div class="background">
+        <transition
+          name="fade"
+          mode="out-in"
+        >
+          <component
+            :is="slides[currentIndex]"
+            :key="currentIndex"
+          />
+        </transition>
+      </div>
     </div>
-  </div>
+    <transition
+      v-else
+      style="height: 100%; width: 100%"
+      name="fade"
+      mode="out-in"
+    >
+      <component
+        :is="slides[currentIndex]"
+        :key="currentIndex"
+      />
+    </transition>
+  </transition>
 </template>
 
 <script setup lang="ts">
@@ -37,8 +57,7 @@ function onKeyDown(event: KeyboardEvent): void {
 
 onMounted(async () => {
   slides.value = await getSlides('/slides.md')
-  console.log(slides.value)
-  document.addEventListener('keydown', onKeyDown)
+  window.addEventListener('keydown', onKeyDown)
 })
 </script>
 
@@ -46,28 +65,38 @@ onMounted(async () => {
 #container {
   width: 100%;
   height: 100%;
+  display: flex;
+  place-content: center;
+  place-items: center;
 }
 
 .background {
   height: 90%;
-  margin: 3%;
+  width: 80%;
   background-color: white;
-  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
-    0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+  box-shadow: var(--shadow);
 }
 
-::v-deep(.text-background){
-  width: 45%;
-  height: 80%;
+::v-deep(.text-background) {
+  padding: 4%;
+  width: 30%;
+  height: 70%;
   background-color: white;
-  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
-    0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+  box-shadow: var(--shadow);
   z-index: 1;
 }
-::v-deep(.content) {
+.content {
   height: 80%;
 }
 
+::v-deep(.overlay) {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  top: 0;
+  pointer-events: none;
+}
 ::v-deep(h1),
 ::v-deep(h2) {
   text-align: center;
@@ -77,7 +106,8 @@ onMounted(async () => {
   font-weight: bold;
 }
 
-::v-deep(p), ::v-deep(h3),
+::v-deep(p),
+::v-deep(h3),
 ::v-deep(li) {
   font-size: 2rem;
 }

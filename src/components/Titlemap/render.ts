@@ -15,8 +15,8 @@ function draw(
     context: CanvasRenderingContext2D,
     projection: GeoProjection,
     shapes: ExtendedFeatureCollection,
-    currentColors: string[],
-    currentOpacities: number[],
+    colors: string[],
+    opacities: number[],
 ) {
   context.clearRect(0, 0, window.innerWidth, window.innerHeight)
   const path = geoPath().projection(projection).context(context)
@@ -40,8 +40,8 @@ function draw(
   shapes.features.forEach((shape, i) => {
     context.beginPath()
     path(shape)
-    context.globalAlpha = currentOpacities[i]
-    context.fillStyle = currentColors[i]
+    context.globalAlpha = opacities[i]
+    context.fillStyle = colors[i]
     context.fill()
     context.restore()
   })
@@ -60,7 +60,7 @@ function render(
 
   context.save()
   // tried to do this the d3 way using d3.transition()
-  // unfortunately it doesn't seem to work with mismatched cycles
+  // unfortunately it doesn't seem to work with mismatched cycles on a canvas
   // so going with the more imperative timer approach
   timer((elapsed) =>
     draw(
