@@ -1,11 +1,11 @@
 // / <reference types="vite/client" />
 declare module 'd3-inertia' {
-  import * as d3 from 'd3'
+  import {GeoProjection} from 'd3'
   import * as Inertia from 'd3-inertia'
   export function geoInertiaDrag(
     svg: any,
     rotater: Function,
-    projection: d3.GeoProjection,
+    projection: GeoProjection,
     opts: object,
   ): void
 }

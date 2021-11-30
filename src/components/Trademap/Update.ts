@@ -1,8 +1,5 @@
-import * as d3 from 'd3'
-import exports from '../../data/export.json'
 import {Trade} from './types'
-
-const trades = exports as unknown as Trade[]
+import {select, selectAll, line, geoInterpolate, GeoProjection} from 'd3'
 /*
 
 This file contains functions to update the map
@@ -17,7 +14,7 @@ This handles that logic.
 */
 
 const drawTradeLines = (projection: d3.GeoProjection, data: Trade[]) => {
-  d3.select('svg#map')
+  select('svg#map')
       .selectAll('path.tradeLines')
       .data(data)
       .join(
@@ -25,7 +22,7 @@ const drawTradeLines = (projection: d3.GeoProjection, data: Trade[]) => {
             enter
                 .append('path')
                 .attr('d', (d: Trade) => {
-                  return d3.line()([
+                  return line()([
                     projection(d.centroids.coordinates) || [0, 0],
                     projection(d.interp && d.interp(0)) || [0, 0],
                   ])
@@ -40,7 +37,7 @@ const drawTradeLines = (projection: d3.GeoProjection, data: Trade[]) => {
                 .attr('class', 'tradeLines'),
           (update) =>
             update.attr('d', (d: Trade) =>
-              d3.line()([
+              line()([
                 projection(d.centroids.coordinates) || [0, 0],
                 projection(d.partner_centroids.coordinates) || [0, 0],
               ]),
@@ -52,7 +49,7 @@ const drawTradeLines = (projection: d3.GeoProjection, data: Trade[]) => {
 
 const highlightCountries = (yr: number, data: Trade[]) => {
   const traders = data.map((d) => d.partner_code)
-  d3.selectAll('path.nation')
+  selectAll('path.nation')
       .transition()
       .duration(250)
       .style('fill', (d: any) => {
@@ -73,8 +70,21 @@ const highlightCountries = (yr: number, data: Trade[]) => {
       })
 }
 
-const updateMap = (projection: d3.GeoProjection, year = 1993) => {
-  const data = trades.filter((d: Trade) => d.year === year)
+
+const updateMap = async (projection: GeoProjection, year = 1993) => {
+  const trades = (await fetch('/data/export.json')
+      .then((res) => res.json())
+) as unknown as Trade[]
+
+  const data = trades.filter((d: Trade) => d.year === Number(year))
+
+  data.forEach((d: Trade) => {
+    d.interp = geoInterpolate(
+        d.centroids.coordinates,
+        d.partner_centroids.coordinates,
+    )
+  })
+  console.log({trades, data, year})
   drawTradeLines(projection, data)
   highlightCountries(year, data)
 }

@@ -1,10 +1,25 @@
 import * as d3Inertia from 'd3-inertia'
-import * as d3Main from 'd3'
+import {
+  now,
+  select,
+  geoPath,
+  geoGraticule,
+  geoInterpolate,
+  timer,
+  zoom,
+} from 'd3'
 import updateMap from './Update'
-import exportsData from '../../data/export.json'
-import imfData from '../../data/imf.json'
-import {Countries, Country, Trade} from './types'
-const d3 = {...d3Inertia, ...d3Main}
+import {Countries, Country} from './types'
+const d3 = {
+  ...d3Inertia,
+  now,
+  select,
+  geoPath,
+  geoGraticule,
+  geoInterpolate,
+  timer,
+  zoom,
+}
 import {D3ZoomEvent} from 'd3-zoom'
 
 const config = {
@@ -13,16 +28,18 @@ const config = {
   horizontalTilt: -15,
 }
 
-const exports = exportsData as unknown as Trade[]
-const imf = imfData as unknown as Countries
-
 /*
 This function handles the initial draw, rotation, and drag elements of the
 map depicting trade relationships between IMF loan recipient countries and
 their export partners.
 
 */
-const drawMap = (projection: d3.GeoProjection) => {
+const drawMap = async (projection: d3.GeoProjection) => {
+  // const exports = (await fetch('/data/export.json')
+  //     .then((res) => res.json())) as unknown as Trade[]
+  const imf = (await fetch('/data/imf.json')
+      .then((res) => res.json())) as unknown as Countries
+
   const path: any = d3.geoPath().projection(projection)
   const graticule = d3.geoGraticule().step([10, 10])
 
@@ -32,14 +49,6 @@ const drawMap = (projection: d3.GeoProjection) => {
   let lastTransform: string
   let lastTime = d3.now()
 
-  // creates interpolation functions between the exporters and the importers
-  // to determine how lines should be drawn
-  exports.forEach((d: Trade) => {
-    d.interp = d3.geoInterpolate(
-        d.centroids.coordinates,
-        d.partner_centroids.coordinates,
-    )
-  })
 
   const outline = g
       .append('path')

@@ -144,4 +144,4 @@ dot <- dot %>%
       (max(export_value) - min(export_value)) * 7 + .1
   )
 # scale export value to between .1 and 8 approx
-jsonlite::write_json(dot, "public/data/export.json", dataframe = "columns")
+jsonlite::write_json(dot, "public/data/export.json")

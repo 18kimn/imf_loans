@@ -116,6 +116,7 @@ onMounted(async () => {
   window.addEventListener('keydown', changeLocation)
   story.value = await csv('/data/content.csv')
   drawMap(store.state.shapes)
+  emit('new-location', story.value[0])
 })
 </script>
 

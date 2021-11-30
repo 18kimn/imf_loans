@@ -42,8 +42,8 @@ const projection = geoOrthographic()
 const year = ref(1993)
 const timer = ref({} as Timer)
 
-onMounted(() => {
-  timer.value = drawMap(projection)
+onMounted(async () => {
+  timer.value = await drawMap(projection)
 })
 onUpdated(() => updateMap(projection, year.value))
 onUnmounted(() => timer.value.stop())
