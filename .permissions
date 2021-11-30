@@ -15,8 +15,8 @@ content/text/raw/paper/annotated-bib.md;664;nathan;nathan
 content/text/raw/paper/primary-source-analysis.md;664;nathan;nathan
 content/text/raw/paper/proposal.md;664;nathan;nathan
 content/text/raw/paper/site_preview.png;664;nathan;nathan
-content/text/raw/slides/erm491_presentation.md;664;nathan;nathan
-content/text/raw/slides/towards a new way to do the humanities.md;664;nathan;nathan
+content/text/raw/slides/slides-notes.md;664;nathan;nathan
+content/text/raw/slides/slides-notes.pdf;664;nathan;nathan
 content/text/render;775;nathan;nathan
 content/text/rendered/12-04-97.png;664;nathan;nathan
 content/text/rendered/annotated-bib-sources.pdf;664;nathan;nathan
@@ -31,6 +31,7 @@ patches/versor+0.1.2.patch;664;nathan;nathan
 public/_redirects;664;nathan;nathan
 public/data/content.csv;664;nathan;nathan
 public/data/export.json;664;nathan;nathan
+public/data/imf.json;664;nathan;nathan
 public/data/shapes.json;664;nathan;nathan
 public/favicon.ico;664;nathan;nathan
 public/slides.md;664;nathan;nathan
@@ -58,8 +59,6 @@ src/components/Trademap/Update.ts;664;nathan;nathan
 src/components/Trademap/index.vue;664;nathan;nathan
 src/components/Trademap/types.ts;664;nathan;nathan
 src/data/DOT_05-01-2021 20-16-16-70_timeSeries.csv;664;nathan;nathan
-src/data/export.json;664;nathan;nathan
-src/data/imf.json;664;nathan;nathan
 src/data/mona/ArchDescription.csv;664;nathan;nathan
 src/data/mona/Combined.xlsx;664;nathan;nathan
 src/data/mona/Description.xlsx;664;nathan;nathan
@@ -101,7 +100,6 @@ content/references;775;nathan;nathan
 content/text/raw/notes;775;nathan;nathan
 content/text/raw/paper;775;nathan;nathan
 content/text/raw/slides;775;nathan;nathan
-.;775;nathan;nathan
 content/text;775;nathan;nathan
 content/text/rendered;775;nathan;nathan
 .;775;nathan;nathan
@@ -119,7 +117,6 @@ src/components/Titlemap;775;nathan;nathan
 src/components/Trademap;775;nathan;nathan
 src/data;775;nathan;nathan
 .;775;nathan;nathan
-src/data;775;nathan;nathan
 src/data/mona;775;nathan;nathan
 src/data/natural_earth;775;nathan;nathan
 src/data;775;nathan;nathan
