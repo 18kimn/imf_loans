@@ -5,77 +5,78 @@ import {Trade} from './types'
 const trades = exports as unknown as Trade[]
 /*
 
-This file contains functions to update the map depicting trade relationships between 
-IMF loan recipient countries and their export partners. 
+This file contains functions to update the map
+depicting trade relationships between
+IMF loan recipient countries and their export partners.
 
-By "update", I mean that when the slider for the year viewed changes, colors on the map and lines showing 
-which countries received loans where they sent their exports must change. This handles that logic.
+By "update", I mean that when the slider for the year viewed changes
+colors on the map and lines showing which countries received
+loans where they sent their exports must change.
+This handles that logic.
 
 */
 
 const drawTradeLines = (projection: d3.GeoProjection, data: Trade[]) => {
   d3.select('svg#map')
-    .selectAll('path.tradeLines')
-    .data(data)
-    .join(
-      (enter) =>
-        enter
-          .append('path')
-          .attr('d', (d: Trade) => {
-            return d3.line()([
-              projection(d.centroids.coordinates) || [0, 0],
-              projection(d.interp && d.interp(0)) || [0, 0],
-            ])
-          })
-          .attr('stroke-width', (d) => 3 * d.export_value)
-          .attr('stroke-opacity', (d) =>
-            Math.max(d.export_value / 7.2 + 0.4, 1),
-          )
-          .attr('stroke', 'black')
-          .attr('stroke-dasharray', '20 20')
-          .attr('fill', 'none')
-          .attr('class', 'tradeLines'),
-      (update) =>
-        update.attr('d', (d: Trade) =>
-          d3.line()([
-            projection(d.centroids.coordinates) || [0, 0],
-            projection(d.partner_centroids.coordinates) || [0, 0],
-          ]),
-        ),
-      (exit) =>
-        exit.transition().duration(100).attr('stroke-opacity', 0).remove(),
-    )
+      .selectAll('path.tradeLines')
+      .data(data)
+      .join(
+          (enter) =>
+            enter
+                .append('path')
+                .attr('d', (d: Trade) => {
+                  return d3.line()([
+                    projection(d.centroids.coordinates) || [0, 0],
+                    projection(d.interp && d.interp(0)) || [0, 0],
+                  ])
+                })
+                .attr('stroke-width', (d) => 3 * d.export_value)
+                .attr('stroke-opacity', (d) =>
+                  Math.max(d.export_value / 7.2 + 0.4, 1),
+                )
+                .attr('stroke', 'black')
+                .attr('stroke-dasharray', '20 20')
+                .attr('fill', 'none')
+                .attr('class', 'tradeLines'),
+          (update) =>
+            update.attr('d', (d: Trade) =>
+              d3.line()([
+                projection(d.centroids.coordinates) || [0, 0],
+                projection(d.partner_centroids.coordinates) || [0, 0],
+              ]),
+            ),
+          (exit) =>
+            exit.transition().duration(100).attr('stroke-opacity', 0).remove(),
+      )
 }
 
 const highlightCountries = (yr: number, data: Trade[]) => {
   const traders = data.map((d) => d.partner_code)
   d3.selectAll('path.nation')
-    .transition()
-    .duration(250)
-    .style('fill', (d: any) => {
-      const loans = d.properties!.info[0]
-      //if there's a loan for this country that was given in
-      // the year matching the slider input, highlight it red
-      if (
-        Array.isArray(loans) &&
+      .transition()
+      .duration(250)
+      .style('fill', (d: any) => {
+        const loans = d.properties!.info[0]
+        // if there's a loan for this country that was given in
+        // the year matching the slider input, highlight it red
+        if (
+          Array.isArray(loans) &&
         loans?.some((loan) => yr.toString() === loan.date.substring(0, 4))
-      ) {
-        return '#C93135'
-      }
-      //if it's a trade partner (i.e. one of the top
-      // export-receiving/importing countries) color it blue
-      if (traders.includes(d.properties!.imf_code)) return '#1375B7'
-      //otherwise, color it green
-      return '#7AB199'
-    })
+        ) {
+          return '#C93135'
+        }
+        // if it's a trade partner (i.e. one of the top
+        // export-receiving/importing countries) color it blue
+        if (traders.includes(d.properties!.imf_code)) return '#1375B7'
+        // otherwise, color it green
+        return '#7AB199'
+      })
 }
 
-const updateMap = (projection: d3.GeoProjection) => {
-  const {value} = d3.select('#slider').node() as HTMLInputElement
-  const yr = +value
-  const data = trades.filter((d: Trade) => d.year === yr)
+const updateMap = (projection: d3.GeoProjection, year = 1993) => {
+  const data = trades.filter((d: Trade) => d.year === year)
   drawTradeLines(projection, data)
-  highlightCountries(yr, data)
+  highlightCountries(year, data)
 }
 
 export default updateMap

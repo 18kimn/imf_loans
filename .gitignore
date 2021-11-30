@@ -22,7 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
 desktop.ini
 .Rhistory
 /.Rproj.user
@@ -31,3 +30,4 @@ desktop.ini
 content/references/full_texts
 content/erm491_docs
 
+dist/

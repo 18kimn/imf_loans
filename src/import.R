@@ -10,45 +10,58 @@ data(wrld_simpl)
 ne <- read_sf("src/data/natural_earth/ne_110m_admin_0_countries.shp") %>%
   rename(iso_code = ISO_A3, name = SOVEREIGNT)
 
-#descriptions of loans, 2003-present
+# descriptions of loans, 2003-present
 dta <- read_excel("src/data/mona/Description.xlsx") %>%
-  select(loan_id = `Arrangement Number`, code = `Country Code`,
-          amt = Totalaccess, date = `Approval Date`, Sort)
-#the 1993-2003 dataset
+  select(
+    loan_id = `Arrangement Number`, code = `Country Code`,
+    amt = Totalaccess, date = `Approval Date`, Sort
+  )
+# the 1993-2003 dataset
 dta_93 <- read_csv("src/data/mona/ArchDescription.csv") %>%
-  select(loan_id = `Arrangement Number`, code = `Country Code`,
-          amt = Totalaccess,
-         date = `Approval Date`, Sort) %>%
-  mutate(date = anytime::anytime(date),
-         code = as.character(code))
+  select(
+    loan_id = `Arrangement Number`, code = `Country Code`,
+    amt = Totalaccess,
+    date = `Approval Date`, Sort
+  ) %>%
+  mutate(
+    date = anytime::anytime(date),
+    code = as.character(code)
+  )
 
 dta <- bind_rows(dta, dta_93) %>%
-  mutate(year  = lubridate::year(date)) %>%
+  mutate(year = lubridate::year(date)) %>%
   group_by(loan_id) %>%
   slice_max(n = 1, order_by = Sort)
-#only use the most revised version of the loan information
+# only use the most revised version of the loan information
 
 # assemble loan information into one column,
 # where each element of the column is a list of three items (loan id, date, amt)
 dta <- dta %>%
-  mutate(info = pmap(lst(loan_id = loan_id,
-                         date =  date, amt = amt),
-                     list)) %>%
+  mutate(info = pmap(
+    lst(
+      loan_id = loan_id,
+      date = date, amt = amt
+    ),
+    list
+  )) %>%
   group_by(code) %>%
   summarize(info = list(info)) # combine each country's data into a single row
-  
-#the ISO-IMF coutnry code crosswalk
-xwalk <- read_excel("src/data/mona/co.xlsx", skip = 1)  %>%
+
+# the ISO-IMF coutnry code crosswalk
+xwalk <- read_excel("src/data/mona/co.xlsx", skip = 1) %>%
   select(imf_code = `IMF Code`, iso_code = `ISO Code`)
 
-merged <- wrld_simpl %>%
+shapes <- wrld_simpl %>%
   st_as_sf() %>%
-  rmapshaper::ms_simplify(keep = .2) %>%
+  rmapshaper::ms_simplify() %>%
   select(iso_code = ISO3, name = NAME) %>%
-  left_join(xwalk, by = "iso_code") %>%
+  left_join(xwalk, by = "iso_code")
+geojson_write(shapes, file = "public/data/shapes.json")
+
+merged <- shapes %>%
   full_join(dta, by = c("imf_code" = "code"))
 file.remove("src/data/imf.json")
-geojson_write(merged, file = "src/data/imf.json")
+geojson_write(merged, file = "public/data/imf.json")
 
 
 
@@ -56,14 +69,17 @@ geojson_write(merged, file = "src/data/imf.json")
 
 
 
-#trade information from the direction of trade statistics (dots) dataset
+# trade information from the direction of trade statistics (dots) dataset
 dot <- read_csv("src/data/DOT_05-01-2021 20-16-16-70_timeSeries.csv",
-                col_types = cols(.default = "c"))
+  col_types = cols(.default = "c")
+)
 dot <- dot %>%
   filter(`Indicator Code` == "TXG_FOB_USD") %>%
-  select(imf_code = `Country Code`,
-         partner_code = `Counterpart Country Code`,
-         `1948`:`2020`) %>%
+  select(
+    imf_code = `Country Code`,
+    partner_code = `Counterpart Country Code`,
+    `1948`:`2020`
+  ) %>%
   pivot_longer(`1948`:`2020`, names_to = "year")
 
 # compute a 5-year rolling diff left-centered for the "value" column
@@ -73,11 +89,13 @@ dot <- dot %>%
   group_by(imf_code, partner_code) %>%
   mutate(value = as.numeric(value), value = value - lag(value, 5))
 
-country_locations <-  wrld_simpl %>%
+country_locations <- wrld_simpl %>%
   st_as_sf() %>%
-  mutate(centroids = poi(geometry),
-         x = unlist(map(centroids, ~.$x)),
-         y = unlist(map(centroids, ~.$y))) %>%
+  mutate(
+    centroids = poi(geometry),
+    x = unlist(map(centroids, ~ .$x)),
+    y = unlist(map(centroids, ~ .$y))
+  ) %>%
   st_drop_geometry() %>%
   st_as_sf(coords = c("x", "y")) %>%
   left_join(xwalk, by = c("ISO3" = "iso_code")) %>%
@@ -92,16 +110,18 @@ loans <- dta %>%
 
 dot <- dot %>%
   mutate(year = as.numeric(year)) %>%
-  filter(unlist(map(imf_code, ~ . %in% xwalk$imf_code)),
-         unlist(map(partner_code, ~ . %in% xwalk$imf_code))) %>%
-  #in the DOT dataset there's 001 for world,
+  filter(
+    unlist(map(imf_code, ~ . %in% xwalk$imf_code)),
+    unlist(map(partner_code, ~ . %in% xwalk$imf_code))
+  ) %>%
+  # in the DOT dataset there's 001 for world,
   #   other special codes for trade regions and other stuff
   group_by(imf_code, year) %>%
   slice_max(order_by = value, n = 5) %>%
-  #every row is a partner country,
+  # every row is a partner country,
   #  select the top 5 by value (meaning export amt)
   right_join(loans, by = c("year", "imf_code" = "code")) %>%
-  #assigns loan IDs and a filter for only those
+  # assigns loan IDs and a filter for only those
   #   country-year combinations referring to a loan
   left_join(country_locations, by = c("partner_code" = "imf_code")) %>%
   rename(partner_centroids = centroids) %>%
@@ -109,13 +129,19 @@ dot <- dot %>%
 
 dot <- dot %>%
   ungroup() %>%
-  select(export_value = value, loan_id,
-  centroids, partner_centroids,
-  year, partner_code) %>%
-  filter(!st_is_empty(centroids),
-  !st_is_empty(partner_centroids), export_value > 0) %>%
-  mutate(export_value = log(export_value)^8,
-         export_value = (export_value - min(export_value)) /
-         (max(export_value) - min(export_value)) * 7 + .1)
-#scale export value to between .1 and 8 approx
-jsonlite::write_json(dot, "data/export.json")
+  select(
+    export_value = value, loan_id,
+    centroids, partner_centroids,
+    year, partner_code
+  ) %>%
+  filter(
+    !st_is_empty(centroids),
+    !st_is_empty(partner_centroids), export_value > 0
+  ) %>%
+  mutate(
+    export_value = log(export_value)^8,
+    export_value = (export_value - min(export_value)) /
+      (max(export_value) - min(export_value)) * 7 + .1
+  )
+# scale export value to between .1 and 8 approx
+jsonlite::write_json(dot, "public/data/export.json", dataframe = "columns")

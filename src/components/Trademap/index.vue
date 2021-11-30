@@ -1,47 +1,60 @@
 <template>
   <div id="mapcontainer">
     <div id="slidecontainer">
-      <input
-        type="range"
-        min="1993"
-        max="2020"
-        step="1"
-        v-model="year"
-        id="slider"
-      />
-      <p id="sliderLabel">Year: {{ year }}</p>
+      <label
+        id="sliderLabel"
+        for="slider"
+      >
+        <input
+          id="slider"
+          v-model="year"
+          type="range"
+          min="1993"
+          max="2020"
+          step="1"
+        >
+        Year: {{ year }}
+      </label>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import drawMap from './Draw'
-import updateMap from './Update'
+<script setup lang="ts">
 import {geoOrthographic} from 'd3-geo'
+import {onMounted, onUnmounted, onUpdated, ref, toRefs} from 'vue'
+import updateMap from './Update'
+import drawMap from './Draw'
+import {Timer} from 'd3-timer'
+
+interface Props {
+  xMulti: number,
+}
+const props = withDefaults(defineProps<Props>(), {
+  xMulti: 1,
+})
+const {xMulti} = toRefs(props)
 
 const projection = geoOrthographic()
-  .translate([(window.innerWidth * 0.7) / 2, window.innerHeight / 2])
-  .scale((window.innerWidth * 0.7) / 3)
+    .translate([(window.innerWidth * xMulti.value) / 2,
+      window.innerHeight / 2])
+    .scale((window.innerWidth * 0.7) / 3)
 
-export default {
-  data: function () {
-    return {
-      year: 1993,
-    }
-  },
-  mounted() {
-    drawMap(projection)
-  },
-  updated() {
-    updateMap(projection)
-  },
-}
+const year = ref(1993)
+const timer = ref({} as Timer)
+
+onMounted(() => {
+  timer.value = drawMap(projection)
+})
+onUpdated(() => updateMap(projection, year.value))
+onUnmounted(() => timer.value.stop())
+
 </script>
 
 <style>
 #mapcontainer {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 #map {
   width: 100%;
@@ -50,6 +63,7 @@ export default {
 }
 #slidecontainer {
   position: absolute;
+  top: 1%;
   left: 50%;
   transform: translate(-50%, 0);
   width: 70%;
@@ -116,7 +130,6 @@ g {
 .nation {
   fill: #7ab199;
   stroke-width: 1;
-  fill-opacity: 1;
 }
 
 .countryLabel {
