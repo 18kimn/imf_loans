@@ -16,20 +16,21 @@ import {routes, router} from './router'
 import nextAction from './utils/nextAction'
 
 const currentRouteIndex = ref(0)
-const mainRoutes = routes.filter((route) => route.name !== 'Slides')
-/** Handles site navigation */
+const mainRoutes = routes.filter((route) => !route.name.match(/slides-/))
+console.log(mainRoutes)
+/** Handles site navigation via arrow keys */
 function onKeyDown(event: KeyboardEvent): void {
   // triple-check that we're on the correct route
   // mismatch could occur bc currentRouteIndex starts at 0
-  // while we might be on a non-home page
+  // while we might start on a non-home page
   currentRouteIndex.value = mainRoutes.findIndex((route) => {
     return route.path === router.currentRoute.value.path
   })
+  if (currentRouteIndex.value === -1) return
   const nextRoute = nextAction(
       event,
       () => Math.min(currentRouteIndex.value + 1, mainRoutes.length - 1),
       () => Math.max(currentRouteIndex.value - 1, 0),
-      () => router.currentRoute.value.name === 'Slides',
   )
   if (!mainRoutes[nextRoute]) return
   router.push({path: mainRoutes[nextRoute].path})

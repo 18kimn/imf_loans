@@ -87,8 +87,9 @@ From dispossessive start for economic process, to a process that is
   - Scholars note a rightward shift during this era
   - This is culturally known as the "IMF era"
 
-Emblematic of the IMF's "colorblind" logic permeating and uniting all into a single system,
-that differentiates each into their own places in the global racial hierarchy.
+Emblematic of the IMF's "colorblind" logic permeating and uniting all into a
+single system, that differentiates each into their own places in the global
+racial hierarchy.
 
 ---
 

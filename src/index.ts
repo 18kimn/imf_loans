@@ -7,7 +7,7 @@ const app = createApp(App)
 
 const store = createStore({
   state: {
-    shapes: fetch('./data/shapes.json').then((res) => res.json()),
+    shapes: fetch('/data/shapes.json').then((res) => res.json()),
   },
 })
 

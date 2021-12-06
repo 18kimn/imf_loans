@@ -1,8 +1,14 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import Title from './pages/Title.vue'
 import Exports from './pages/Exports.vue'
-import Slides from './pages/Slides.vue'
+import slides from './pages/slides'
 import Story from './pages/Story.vue'
+
+const slideRoutes = slides.map((slide) => ({
+  path: `/slides/${slide.name}`,
+  name: `slides-${slide.name}`,
+  component: slide,
+}))
 
 export const routes = [
   {
@@ -20,11 +26,7 @@ export const routes = [
     name: 'Story',
     component: Story,
   },
-  {
-    path: '/slides',
-    name: 'Slides',
-    component: Slides,
-  },
+  ...slideRoutes,
 ]
 
 export const router = createRouter({

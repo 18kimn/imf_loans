@@ -37,12 +37,15 @@
 <script setup lang="ts">
 import {defineComponent} from '@vue/runtime-dom'
 import {ref, shallowRef, onMounted} from 'vue'
-import getSlides from '../components/Slides/getSlides'
-import nextAction from '../utils/nextAction'
+import getSlides from './getSlides'
+import nextAction from '../../utils/nextAction'
 
 const slides = shallowRef([defineComponent({template: '<div/>'})])
 const currentIndex = ref(0)
 
+const props = defineProps({
+  path: String,
+})
 /** navigate slides with keys */
 function onKeyDown(event: KeyboardEvent): void {
   const nextIndex = nextAction(
@@ -56,7 +59,8 @@ function onKeyDown(event: KeyboardEvent): void {
 }
 
 onMounted(async () => {
-  slides.value = await getSlides('/slides.md')
+  if (!props.path) return
+  slides.value = await getSlides(props.path)
   window.addEventListener('keydown', onKeyDown)
 })
 </script>
