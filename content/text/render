@@ -17,7 +17,7 @@ pandoc -V geometry:margin=1in \
   --bibliography=$bib \
   --variable urlcolor=blue \
   --csl="../references/chicago-note-bibliography-with-ibid.csl" \
-  -V mainfont="EB Garamond" \
+  -V mainfont="Koreamond" \
   -V fontsize=12pt \
   --pdf-engine=xelatex \
   $1

@@ -12,6 +12,8 @@ content/references/primary-sources.bib;664;nathan;nathan
 content/text/raw/notes/outline.md;664;nathan;nathan
 content/text/raw/paper/12-04-97.png;664;nathan;nathan
 content/text/raw/paper/annotated-bib.md;664;nathan;nathan
+content/text/raw/paper/lit-review-outline.md;664;nathan;nathan
+content/text/raw/paper/lit-review.md;664;nathan;nathan
 content/text/raw/paper/primary-source-analysis.md;664;nathan;nathan
 content/text/raw/paper/proposal.md;664;nathan;nathan
 content/text/raw/paper/site_preview.png;664;nathan;nathan
@@ -22,6 +24,7 @@ content/text/render;775;nathan;nathan
 content/text/rendered/12-04-97.png;664;nathan;nathan
 content/text/rendered/annotated-bib-sources.pdf;664;nathan;nathan
 content/text/rendered/annotated-bib.pdf;664;nathan;nathan
+content/text/rendered/lit-review.pdf;664;nathan;nathan
 content/text/rendered/paper.pdf;664;nathan;nathan
 content/text/rendered/primary-source-analysis.pdf;664;nathan;nathan
 content/text/rendered/proposal.pdf;664;nathan;nathan

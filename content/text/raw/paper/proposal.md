@@ -8,10 +8,6 @@ indent: true
 header-includes:
   - \usepackage{setspace}
   - \onehalfspacing
-  - \newfontfamily\myregularfont{EB Garamond}
-  - \newfontfamily\koreanfont{Noto Serif CJK KR SemiBold}
-  - \usepackage[CJK]{ucharclasses}
-  - \setTransitionsForCJK{\koreanfont}{\myregularfont}
 ---
 
 ## Introduction
