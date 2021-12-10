@@ -5,8 +5,7 @@
   >
     <div
       v-if="slides[currentIndex].name !== 'showcase'"
-      id="container"
-      class="content"
+      class="container"
     >
       <div class="background">
         <transition
@@ -39,7 +38,7 @@ import {defineComponent} from '@vue/runtime-dom'
 import {ref, shallowRef, onMounted} from 'vue'
 import getSlides from './getSlides'
 import nextAction from '../../utils/nextAction'
-
+import Titlemap from '../Titlemap/index.vue'
 const slides = shallowRef([defineComponent({template: '<div/>'})])
 const currentIndex = ref(0)
 
@@ -66,7 +65,7 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-#container {
+.container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -91,6 +90,7 @@ onMounted(async () => {
 }
 .content {
   height: 80%;
+  z-index: 3;
 }
 
 ::v-deep(.overlay) {
@@ -121,5 +121,10 @@ onMounted(async () => {
   flex-direction: column;
   place-content: center;
   place-items: center;
+}
+
+::v-deep(td), ::v-deep(th) {
+  font-size: 18pt;
+  padding-left: 1rem;
 }
 </style>

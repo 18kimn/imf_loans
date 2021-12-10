@@ -34,6 +34,7 @@ marked.use({renderer})
  *  marked and defineComponent
  */
 function parseMd(text: string) {
+  console.log(text)
   const componentsUsed = text.match(compPatterns)
       ?.map((pattern) => pattern.substring(1))
       .reduce((prev, curr) => {
@@ -61,7 +62,8 @@ function parseMd(text: string) {
 async function getSlides(path: string) {
   const fetched = await fetch(`/slides/${path}.md`)
       .then((res) => res.text())
-  return fetched.split('---').map(parseMd)
+  console.log(fetched)
+  return fetched.split('---\n').map(parseMd)
 }
 
 export default getSlides

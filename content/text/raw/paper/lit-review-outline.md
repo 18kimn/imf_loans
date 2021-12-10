@@ -5,3 +5,7 @@
 - IMF and global financial capitalism (2p)
 - korea history (3p)
 - asian financial crisis (3p)
+
+---
+
+-

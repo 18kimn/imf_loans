@@ -1,70 +1,81 @@
+<div style="opacity: 50%;">
+  <Title />
+</div>
+
+<div class="overlay">
+  <div class="text-background" style="width: 80%;">
+  <h1 style="font-size: 48pt;">한국의 "IMF"시대</h1>
+  <div style="text-align: center; font-size: 24pt;"> 
+    김찬영<br/>
+    한국어152<br/>
+    2021년 12월 9일<br/>
+  </div>
+  </div>
+</div>
+
+---
+
 # 중요한 단어
 
-- 경제 위기 - economic crisis
-- 신자유주의 - neoliberalism (신 = new; 자유 = freedom; 주의 = “ism”)
-- 투자(자들) - invest(ors)
-- 파업 - strike, (worker’s strike, hunger strike)
+| 한국으로   | 영어로                                   |
+| ---------- | ---------------------------------------- |
+| 경제 위기  | economic crisis                          |
+| 투자(자들) | invest(ors)                              |
+| 융자금     | loan                                     |
+| 정책       | policy                                   |
+| 파업       | strike, (worker’s strike, hunger strike) |
 
-| 한국으로   | 영어로                                                 |
-| ---------- | ------------------------------------------------------ |
-| 경제 위기  | economic crisis                                        |
-| 신자유주의 | neoliberalism (신 = new; 자유 = freedom; 주의 = “ism”) |
-| 투자(자들) | invest(ors)                                            |
-| 파업       | strike, (worker’s strike, hunger strike)               |
-
-——
+---
 
 # 연구 목차 (table of contents):
 
-- IMF과 World Bank
-- 한국의 역사
-- 1953-1997 아시아에 경제 위치
-- 한국에 위치
+- IMF의 배경과 역사
+- 아시아의 경제 위기
+- 한국의 경제 위기
 
-——
+---
 
-# IMF과 World Bank
+<img style="width: 20%;" src="/slides/assets/imf-logo.png" />
 
-아시아의 경제 위기 전에는 IMF과 World Bank의 정책들을 어떻게 였는지를 얘기할거다
-. 이런 그룹이 어떻게 시작했는지와 따른 위기에서 어떻게 햬결했는지를 설명할 거다.
+# IMF의 배경과 역사
 
-1950: 미국이 IMF을 시작하고 싶었다 (Bretton Woods) 1980s: 라틴 아메리카의 경제위
-치 (“Washington Consensus”) 1991: 러시아와 공산주의의 폭포
+- 1944: 미국이 IMF을 시작하고 싶었다 (Bretton Woods)
+  - "structural adjustment programs"
+- 1980s: 라틴 아메리카의 경제 위기 ( => “Washington Consensus”)
+- 1991: 러시아와 공산주의의 폭포
 
 이런 사적 때문에 1997에는 IMF가 정말 강했고 IMF의 정책들이 전세계가 확실히 알게
 되었다.
 
 ---
 
-# 한국의 역사, 1953-1997
+# 아시아에 경제 위기
 
-아시아의 경제위기 전에는 한국의 경제와 문화의 대해서 짧게 얘기할 거다. 특히 박정
-희 대통령의 정책들을 얘기할거고 미국의 정치와 경제의 관계를 설명할거다. 또한 전
-두환 대통령과 김대중 대통령의 정책들을 얘기할 거다.
+<img style="width: 40%;" src="/slides/assets/asia-map.png" />
 
-박정희의 정책 일본과 경제적 관계 10월 유신 재벌 계층전두환과 김대중의 정책들 “민
-중”운동과 인권
-
----
-
-# 아시아에 경제 위치
-
-아시아에는 외국인 투자자들이 많았는데 1997에는 이 투자자들이 자기의 돈을 꺼내서
-아시아의 경제가 빨리 낮아졌다.
-
-1980s: 외국인 투자자들이 아시아의 수출에 관심이 생겼다 1990s: 미국의 경제가 강해
-서 아시아의 수출들이 낮아졌다 1997 봄: 외국인 투자자들이 자기의 투자를 꺼냈다
-1997 여름: 타이랜드가 먼저 자기의 통화를 미국 달라에서 분리한다
+- 1980s: 외국인 투자자들이 아시아의 수출에 관심이 생겼다
+- 1990s: 미국의 경제가 강해서 아시아의 수출들이 낮아졌다
+- 1997 봄: 외 국인 투자자들이 자기의 투자를 꺼냈다
 
 ---
 
 # 한국의 위기
 
-- 1997 - 한라그룹, 기아가 파산을 신청을 한다한국의 투자가 점점 낮아진다특히 외국
-  에서 온 투자자들이 나간다타이랜드와 인도니샤가
+- 1997 - 한라그룹, 기아
 - 1997 12 3일
   - IMF와 한국이 계약을만든다 100억 달러가 들어온다
   - 외국 투자의 제한을 70%으로 올리고, 그다음에는 없애버린다
+  - 한국회사위해 심한 규칙이 생겼다
+  - 한국의 노동자들의 보호하는 규칙이 없앴다
 - 1998 봄
-
   - 큰 파업 - 10만명
+
+---
+
+<img src="/slides/assets/12-04-97.png" />
+
+---
+
+<img src="/slides/assets/renegotiate.jpg">
+
+_Citizen's Coalition for Economic Justice_<br/>_경제정의실천시민연합_ (1998)
