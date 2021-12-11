@@ -99,7 +99,7 @@ onMounted(async () => {
   width: 100%;
   flex-direction: row;
   top: 0;
-  pointer-events: none;
+  pointer-events: all;
 }
 ::v-deep(h1),
 ::v-deep(h2) {
@@ -114,6 +114,7 @@ onMounted(async () => {
 ::v-deep(h3),
 ::v-deep(li) {
   font-size: 2rem;
+  max-width: 57ch;
 }
 
 ::v-deep(div) {
