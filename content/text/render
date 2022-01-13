@@ -12,12 +12,12 @@ bib=${3:-"../references/imf.bib"}
 
 pandoc -V geometry:margin=1in \
   -f markdown \
-  -o "rendered/$basename.$extension" \
+  -o "$basename.$extension" \
   --citeproc \
   --bibliography=$bib \
   --variable urlcolor=blue \
   --csl="../references/chicago-note-bibliography-with-ibid.csl" \
-  -V mainfont="Koreamond" \
+  -V mainfont="EB Garamond" \
   -V fontsize=12pt \
   --pdf-engine=xelatex \
   $1
