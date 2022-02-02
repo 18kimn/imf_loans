@@ -1,0 +1,1 @@
+[Moon. 2005. *Militarized Modernity and Gendered Citizenship in South Korea*](zotero://select/items/1_ALDI5LLG)[[moon2005]]

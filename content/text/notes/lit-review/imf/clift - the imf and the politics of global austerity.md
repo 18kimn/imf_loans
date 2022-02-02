@@ -1,0 +1,1 @@
+[Clift. 2018. *The IMF and the Politics of Austerity in the Wake of the Global Financial Crisis*](zotero://select/items/1_GM3GVBU3)[[cliftIMFPoliticsAusterity2018]]

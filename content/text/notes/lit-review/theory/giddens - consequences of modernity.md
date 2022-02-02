@@ -1,0 +1,1 @@
+[Giddens. 1990. *The Consequences of Modernity*](zotero://select/items/1_YHCFGGEG)[[giddensConsequencesModernity1990]]

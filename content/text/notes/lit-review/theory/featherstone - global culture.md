@@ -1,0 +1,1 @@
+[Featherstone. 1990. *Global Culture: Nationalism, Globalization and Modernity*](zotero://select/items/1_Y86GFS2K)[[featherstoneGlobalCultureNationalism1990]]

@@ -1,0 +1,1 @@
+[Sargent. 2019. *Debt and Entanglements Between the Wars*](zotero://select/items/1_E6DLZN9V)[[sargentDebtEntanglementsWars2019]]

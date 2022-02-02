@@ -4,22 +4,25 @@
 
 # usage:
 # - `./render.sh proposal.md html` produces a HTML version of proposal.md
-# - cd ensures this can be called from any location
-cd "${0%/*}"
-basename=$(basename "$1" .md)
-extension=${2:-pdf} #uses pdf as the default value for extension
-bib=${3:-"../references/imf.bib"}
 
+cd "$(dirname "$0")"
+basename=$(basename "$1" .md)
+extension=${2:-pdf} #uses pdf as the default extension
+bib=${3:-"../references/imf.bib"}
+bib=$(readlink -f $bib) #get full path
+csl=$(readlink -f ../references/chicago-note-bibliography-with-ibid.csl)
+
+cd $(dirname $1)
 pandoc -V geometry:margin=1in \
   -f markdown \
   -o "$basename.$extension" \
   --citeproc \
   --bibliography=$bib \
-  --variable urlcolor=blue \
-  --csl="../references/chicago-note-bibliography-with-ibid.csl" \
+  --csl=$csl \
+  --filter pandoc-include \
   -V mainfont="EB Garamond" \
   -V fontsize=12pt \
   --pdf-engine=xelatex \
-  $1
+  $(basename $1)
 
 echo "file render for $basename finished"

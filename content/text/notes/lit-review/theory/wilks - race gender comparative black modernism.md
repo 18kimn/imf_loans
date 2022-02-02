@@ -1,0 +1,1 @@
+[Wilks. 2008. *Race, Gender, and Comparative Black Modernism: Suzanne Lacascade, Marita Bonner, Suzanne CÃ©saire, Dorothy West*](zotero://select/items/1_7HK9KP9J)[[wilks2008]]

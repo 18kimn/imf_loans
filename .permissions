@@ -1,42 +1,128 @@
+.Rprofile;644;nathan;nathan
 .eslintrc.json;644;nathan;nathan
 .gitignore;644;nathan;nathan
 .permissions;644;nathan;nathan
-.yarnclean;644;nathan;nathan
 README.md;644;nathan;nathan
 content/assets/presentation_cover.png;644;nathan;nathan
+content/figures/code/conditions.R;644;nathan;nathan
+content/figures/code/loans.R;644;nathan;nathan
+content/figures/code/macro.R;644;nathan;nathan
 content/references/annotated.bib;644;nathan;nathan
 content/references/blank.bib;644;nathan;nathan
 content/references/chicago-note-bibliography-with-ibid.csl;644;nathan;nathan
 content/references/imf.bib;644;nathan;nathan
 content/references/primary-sources.bib;644;nathan;nathan
+content/text/.prettierignore;644;nathan;nathan
+content/text/.prettierrc;644;nathan;nathan
 content/text/assignments/12-04-97.png;644;nathan;nathan
 content/text/assignments/annotated-bib-sources.pdf;644;nathan;nathan
 content/text/assignments/annotated-bib.md;644;nathan;nathan
 content/text/assignments/annotated-bib.pdf;644;nathan;nathan
 content/text/assignments/assets/12-04-97.png;644;nathan;nathan
 content/text/assignments/assets/site_preview.png;644;nathan;nathan
-content/text/assignments/lit-review.md;644;nathan;nathan
 content/text/assignments/lit-review.pdf;644;nathan;nathan
 content/text/assignments/paper.pdf;644;nathan;nathan
 content/text/assignments/primary-source-analysis.md;644;nathan;nathan
 content/text/assignments/primary-source-analysis.pdf;644;nathan;nathan
 content/text/assignments/proposal.md;644;nathan;nathan
 content/text/assignments/proposal.pdf;644;nathan;nathan
-content/text/notes/outline.md;644;nathan;nathan
+content/text/notes/erm491/10-19.md;644;nathan;nathan
+content/text/notes/erm491/10-26.md;644;nathan;nathan
+content/text/notes/erm491/10-5.md;644;nathan;nathan
+content/text/notes/erm491/11-02.md;644;nathan;nathan
+content/text/notes/erm491/11-17.md;644;nathan;nathan
+content/text/notes/erm491/11-9.md;644;nathan;nathan
+content/text/notes/erm491/9-28 - meghanlata and tyler.md;644;nathan;nathan
+content/text/notes/fleeters/korea/political trends/during IMF crisis.md;644;nathan;nathan
+content/text/notes/index.md;644;nathan;nathan
+content/text/notes/lit-review/crisis.md;644;nathan;nathan
+content/text/notes/lit-review/imf/clift - the imf and the politics of global austerity.md;644;nathan;nathan
+content/text/notes/lit-review/imf/data/world bank WITS.md;644;nathan;nathan
+content/text/notes/lit-review/imf/latin-america/antonio-ocampo_in-historical-perspective.md;644;nathan;nathan
+content/text/notes/lit-review/imf/latin-america/frenkel_emerging-markets_euro-zone.md;644;nathan;nathan
+content/text/notes/lit-review/imf/latin-america/kay_latam-theories-development.md;644;nathan;nathan
+content/text/notes/lit-review/imf/latin-america/marichal_century-debt.md;644;nathan;nathan
+content/text/notes/lit-review/imf/latin-america/overview.md;644;nathan;nathan
+content/text/notes/lit-review/imf/lee - to thine own self be true.md;644;nathan;nathan
+content/text/notes/lit-review/imf/mccleery and de paolis - washington consensus a postmortem.md;644;nathan;nathan
+content/text/notes/lit-review/imf/mueller - the imf neoliberalism and hegemony.md;644;nathan;nathan
+content/text/notes/lit-review/imf/primary/kohler - congratulates korea on early repayment.md;644;nathan;nathan
+content/text/notes/lit-review/imf/reinhart-rogoff_from-crash-to-crisis.md;644;nathan;nathan
+content/text/notes/lit-review/imf/riley - the politics of global debt.md;644;nathan;nathan
+content/text/notes/lit-review/imf/sargent et al - debt and entanglements between the wras.md;644;nathan;nathan
+content/text/notes/lit-review/imf/stuelke the ruse of repair.md;644;nathan;nathan
+content/text/notes/lit-review/korea/crisis/Two years of the IMF, as seen through statistics.md;644;nathan;nathan
+content/text/notes/lit-review/korea/crisis/kim and finch - living with rhetoric living against rhetoric.md;644;nathan;nathan
+content/text/notes/lit-review/korea/crisis/kim and hong - the imf globalization and the media power structure in korea.md;644;nathan;nathan
+content/text/notes/lit-review/korea/crisis/martinjones - decompressing modernity.md;644;nathan;nathan
+content/text/notes/lit-review/korea/crisis/medley - east asian financial crisis surging us imperialism.md;644;nathan;nathan
+content/text/notes/lit-review/korea/crisis/noble and ravenhill - the good bad ugly korea taiwan asian financial crisis.md;644;nathan;nathan
+content/text/notes/lit-review/korea/crisis/radelet and sachs - the onset of the east asian financial crisis.md;644;nathan;nathan
+content/text/notes/lit-review/korea/item.md;644;nathan;nathan
+content/text/notes/lit-review/korea/post-1987/chossudovsky - the recolonization of korea.md;644;nathan;nathan
+content/text/notes/lit-review/korea/post-crisis/choi - discourse of decolonization and popular memory.md;644;nathan;nathan
+content/text/notes/lit-review/korea/post-crisis/hwang - longterm implications of neoliberal reform.md;644;nathan;nathan
+content/text/notes/lit-review/korea/post-crisis/lim - racing from the bottom.md;644;nathan;nathan
+content/text/notes/lit-review/korea/post-crisis/park - the labor market and social safety net in kroea.md;644;nathan;nathan
+content/text/notes/lit-review/korea/pre-1987/chang - protest dialectics.md;644;nathan;nathan
+content/text/notes/lit-review/korea/pre-1987/cho - haunting the korean diaspora.md;644;nathan;nathan
+content/text/notes/lit-review/korea/pre-1987/cumings - the origins of the korean war.md;644;nathan;nathan
+content/text/notes/lit-review/korea/pre-1987/moon - militarized modernity.md;644;nathan;nathan
+content/text/notes/lit-review/theory/amin - capitalism in the age of globalization.md;644;nathan;nathan
+content/text/notes/lit-review/theory/beck - risk society.md;644;nathan;nathan
+content/text/notes/lit-review/theory/chakravartty and da silva - accumulation dispossession and debt.md;644;nathan;nathan
+content/text/notes/lit-review/theory/chettri and mcduie-ra - delinquent borderlands.md;644;nathan;nathan
+content/text/notes/lit-review/theory/ciafone - endowing the neoliberal university.md;644;nathan;nathan
+content/text/notes/lit-review/theory/da silva - towards a global idea of race.md;644;nathan;nathan
+content/text/notes/lit-review/theory/eichengren - exorbitant privilege us dollar.md;644;nathan;nathan
+content/text/notes/lit-review/theory/escobar - encountering development.md;644;nathan;nathan
+content/text/notes/lit-review/theory/featherstone - global culture.md;644;nathan;nathan
+content/text/notes/lit-review/theory/ferguson - antipolitics machine.md;644;nathan;nathan
+content/text/notes/lit-review/theory/giddens - consequences of modernity.md;644;nathan;nathan
+content/text/notes/lit-review/theory/gruneau and horne - mega-events and globalization.md;644;nathan;nathan
+content/text/notes/lit-review/theory/haggard - pathways from the periphery.md;644;nathan;nathan
+content/text/notes/lit-review/theory/harvey - the new imperialism.md;644;nathan;nathan
+content/text/notes/lit-review/theory/jenkins - the bonds of inequality.md;644;nathan;nathan
+content/text/notes/lit-review/theory/lazzarato - the making of the indebted man.md;644;nathan;nathan
+content/text/notes/lit-review/theory/lee and lipuma - financial derivatives and the globalization of risk.md;644;nathan;nathan
+content/text/notes/lit-review/theory/loomba - colonialism postcolonialism.md;644;nathan;nathan
+content/text/notes/lit-review/theory/lye - model modernity.md;644;nathan;nathan
+content/text/notes/lit-review/theory/morris et al - media and globalization.md;644;nathan;nathan
+content/text/notes/lit-review/theory/muga - the marxist problematic as a model interdisciplinary approach to ethnic studies.md;644;nathan;nathan
+content/text/notes/lit-review/theory/rankin - how the visual is spatial.md;644;nathan;nathan
+content/text/notes/lit-review/theory/robertson - globalization social theory and global culture.md;644;nathan;nathan
+content/text/notes/lit-review/theory/sassen - globalization and its discontents.md;644;nathan;nathan
+content/text/notes/lit-review/theory/smith - imperialism in the twenty-first century.md;644;nathan;nathan
+content/text/notes/lit-review/theory/vasudevan - finance, imperialism and the hegemony of the US dollar.md;644;nathan;nathan
+content/text/notes/lit-review/theory/veltmeyer - development and globalization as imperialism.md;644;nathan;nathan
+content/text/notes/lit-review/theory/wilks - race gender comparative black modernism.md;644;nathan;nathan
+content/text/notes/meeting notes/12-1.md;644;nathan;nathan
 content/text/paper/after.md;644;nathan;nathan
 content/text/paper/asia-crisis.md;644;nathan;nathan
+content/text/paper/conclusion.md;644;nathan;nathan
+content/text/paper/frontmatter.tex;644;nathan;nathan
 content/text/paper/imf-background.md;644;nathan;nathan
+content/text/paper/index.md;644;nathan;nathan
+content/text/paper/index.pdf;644;nathan;nathan
 content/text/paper/intro.md;644;nathan;nathan
-content/text/paper/korea-intervention.md;644;nathan;nathan
-content/text/paper/theory.md;644;nathan;nathan
+content/text/paper/lit-review.md;644;nathan;nathan
 content/text/render;755;nathan;nathan
 content/text/slides/kr.md;644;nathan;nathan
 content/text/slides/slides-notes.md;644;nathan;nathan
 content/text/slides/slides-notes.pdf;644;nathan;nathan
+content/text/test;644;nathan;nathan
+data/ArchDescription.csv;644;nathan;nathan
+data/ArchMecon.csv;644;nathan;nathan
+data/ArchQPC_Codes.docx;644;nathan;nathan
+data/ArchSPCPASB.csv;644;nathan;nathan
+data/inetdataset_main.dta;644;nathan;nathan
+data/inetdataset_raw.xlsx;644;nathan;nathan
+frontmatter.tex;644;nathan;nathan
 imf_loans.Rproj;644;nathan;nathan
 index.html;644;nathan;nathan
 package.json;644;nathan;nathan
 patches/versor+0.1.2.patch;644;nathan;nathan
+pnpm-lock.yaml;644;nathan;nathan
 public/_redirects;644;nathan;nathan
 public/data/content.csv;644;nathan;nathan
 public/data/export.json;644;nathan;nathan
@@ -54,6 +140,10 @@ public/slides/assets/renegotiate.jpg;644;nathan;nathan
 public/slides/kr.md;644;nathan;nathan
 public/slides/kr_symposium.md;644;nathan;nathan
 public/slides/mainSlides.md;644;nathan;nathan
+renv.lock;644;nathan;nathan
+renv/.gitignore;644;nathan;nathan
+renv/activate.R;644;nathan;nathan
+renv/settings.dcf;644;nathan;nathan
 src/App.vue;644;nathan;nathan
 src/components/Buttons/Buttons.css;644;nathan;nathan
 src/components/Buttons/CloseButton.vue;644;nathan;nathan
@@ -109,24 +199,146 @@ src/utils/arrayShuffle.ts;644;nathan;nathan
 src/utils/nextAction.ts;644;nathan;nathan
 tsconfig.json;644;nathan;nathan
 vite.config.ts;644;nathan;nathan
-yarn.lock;644;nathan;nathan
 .;755;nathan;nathan
 content/assets;755;nathan;nathan
+content/figures/code;755;nathan;nathan
 content/references;755;nathan;nathan
+content/text;755;nathan;nathan
 content/text/assignments;755;nathan;nathan
 content/text/assignments/assets;755;nathan;nathan
 content/text/assignments;755;nathan;nathan
+content/text/notes/erm491;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/fleeters/korea;755;nathan;nathan
+trends;
+.;755;nathan;nathan
 content/text/notes;755;nathan;nathan
+content/text/notes/lit-review;755;nathan;nathan
+content/text/notes/lit-review/imf;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/imf/data;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/imf/latin-america;755;nathan;nathan
+content/text/notes/lit-review/imf;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/imf;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/imf;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/imf/primary;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/imf;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/imf;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/imf;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea;755;nathan;nathan
+content/text/notes/lit-review/korea/post-1987;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/post-crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/post-crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/post-crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/post-crisis;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/pre-1987;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/pre-1987;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/pre-1987;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/korea/pre-1987;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes/lit-review/theory;755;nathan;nathan
+.;755;nathan;nathan
+content/text/notes;755;nathan;nathan
+notes;
 content/text/paper;755;nathan;nathan
 content/text;755;nathan;nathan
 content/text/slides;755;nathan;nathan
+content/text;755;nathan;nathan
+data;755;nathan;nathan
 .;755;nathan;nathan
 patches;755;nathan;nathan
+.;755;nathan;nathan
 public;755;nathan;nathan
 public/data;755;nathan;nathan
 public;755;nathan;nathan
 public/slides/assets;755;nathan;nathan
 public/slides;755;nathan;nathan
+.;755;nathan;nathan
+renv;755;nathan;nathan
 src;755;nathan;nathan
 src/components/Buttons;755;nathan;nathan
 src/components/Slides;755;nathan;nathan

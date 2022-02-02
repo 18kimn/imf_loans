@@ -1,0 +1,1 @@
+[Noble. 2000. *The Good, the Bad and the Ugly: Korea, Taiwan and the Asian Financial Crisis*](zotero://select/items/1_7W5CWSM2)[[noble2000]]

@@ -1,0 +1,1 @@
+[Gruneau. 2015. *Mega-Events and Globalization: Capital and Spectacle in a Changing World Order*](zotero://select/items/1_QMF4KI57)[[gruneauMegaEventsGlobalizationCapital2015]]
