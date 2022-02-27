@@ -149,8 +149,9 @@
 
 - THE KOREAN RESPONSE
 
-  - LOSS IN ECONOMIC OUTPUT
+  - LOSS IN ECONOMIC OUTPUT (due to fiscal austerity)
   - GOLD COLLECTING CAMPAIGN
+  -
 
 - the reforms were useless
   - IMF reforms (as signaled by s&p ratings) only finalized at
@@ -204,3 +205,37 @@ those reforms:
       than commonly... to the masses, outwardly ? ) understood
       functions of race as a set of psychological biases
   - model minority <-> model modernity
+
+  - kim dae-jung
+
+    - historical explanation is that he, as a liberal, was
+      opposed to the conservative nationalists of the time that
+      prided themselves on the _chaebol_ systems. When the IMF
+      indicted those large corporations, that was aligned with
+      him politically
+    - that explanation feels circumstance, though, rather than
+      a deeper moral opposition...like why couldn't he be
+      opposed simultaneously to the conservative groups and the
+      IMF-imposed policies? I'm hoping to argue it was because
+      this was unthinkable for him; in his eyes freedom
+      socially meant following the path of the West, meaning a
+      liberal notion of freedom that relied on keeping the
+      government out of the free market etc.
+
+- nationalist interest in korean development might have aligned
+- presidents often have little power
+  - coerced to go along with state machinery
+  - the state
+  - individuals have limited power
+- cpaitalism and global forces move them to their own ends
+
+- harry white - communist/ not communist
+  - imf policies come from race
+    - straightforward enough to say because you can sort of
+      unpack the motivations and the roles used as suggested by
+      the language of their memos and meeting notes
+- imf policies produce and reinforce race
+  - one argument im going to use is that the imf was able to
+    point towards the rapid recovery as
+  - difficult to see exactly how to justify this
+- specialist in korean politics

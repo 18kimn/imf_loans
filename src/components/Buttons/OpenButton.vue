@@ -19,5 +19,5 @@
 <script lang="ts" setup></script>
 
 <style css>
-@import './Buttons.css';
+@import "./Buttons.css";
 </style>

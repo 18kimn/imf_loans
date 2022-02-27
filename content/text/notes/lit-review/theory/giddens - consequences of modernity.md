@@ -1,1 +1,1 @@
-[Giddens. 1990. *The Consequences of Modernity*](zotero://select/items/1_YHCFGGEG)[[giddensConsequencesModernity1990]]
+[Giddens. 1990. _The Consequences of Modernity_](zotero://select/items/1_YHCFGGEG)[[giddensConsequencesModernity1990]]

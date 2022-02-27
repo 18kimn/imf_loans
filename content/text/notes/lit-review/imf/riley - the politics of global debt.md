@@ -1,1 +1,1 @@
-[Riley. 2016. *The Politics of Global Debt*](zotero://select/items/1_LXSQMZZA)[[rileyPoliticsGlobalDebt2016]]
+[Riley. 2016. _The Politics of Global Debt_](zotero://select/items/1_LXSQMZZA)[[rileyPoliticsGlobalDebt2016]]

@@ -44,8 +44,8 @@
 - 1980s: 라틴 아메리카의 경제 위기 ( => “Washington Consensus”)
 - 1991: 러시아와 공산주의의 폭포
 
-이런 사적 때문에 1997에는 IMF가 정말 강했고 IMF의 정책들이 전세계가 확실히 알게
-되었다.
+이런 사적 때문에 1997에는 IMF가 정말 강했고 IMF의 정책들이 전세계가 확
+실히 알게되었다.
 
 ---
 
@@ -78,4 +78,5 @@
 
 <img src="/slides/assets/renegotiate.jpg">
 
-_Citizen's Coalition for Economic Justice_<br/>_경제정의실천시민연합_ (1998)
+_Citizen's Coalition for Economic Justice_<br/>_경제정의실천시민연합_
+(1998)

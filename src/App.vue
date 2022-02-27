@@ -1,22 +1,21 @@
 <template>
-  <router-view v-slot="{Component}">
-    <transition
-      name="fade"
-      mode="out-in"
-    >
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
       <component :is="Component" />
     </transition>
   </router-view>
 </template>
 
 <script setup lang="ts">
-import {onMounted} from 'vue'
-import {ref} from '@vue/reactivity'
-import {routes, router} from './router'
-import nextAction from './utils/nextAction'
+import { onMounted } from "vue"
+import { ref } from "@vue/reactivity"
+import { routes, router } from "./router"
+import nextAction from "./utils/nextAction"
 
 const currentRouteIndex = ref(0)
-const mainRoutes = routes.filter((route) => !route.name.match(/slides-/))
+const mainRoutes = routes.filter(
+  (route) => !route.name.match(/slides-/)
+)
 console.log(mainRoutes)
 /** Handles site navigation via arrow keys */
 function onKeyDown(event: KeyboardEvent): void {
@@ -28,17 +27,18 @@ function onKeyDown(event: KeyboardEvent): void {
   })
   if (currentRouteIndex.value === -1) return
   const nextRoute = nextAction(
-      event,
-      () => Math.min(currentRouteIndex.value + 1, mainRoutes.length - 1),
-      () => Math.max(currentRouteIndex.value - 1, 0),
+    event,
+    () =>
+      Math.min(currentRouteIndex.value + 1, mainRoutes.length - 1),
+    () => Math.max(currentRouteIndex.value - 1, 0)
   )
   if (!mainRoutes[nextRoute]) return
-  router.push({path: mainRoutes[nextRoute].path})
+  router.push({ path: mainRoutes[nextRoute].path })
   currentRouteIndex.value = nextRoute
 }
 
 onMounted(() => {
-  window.addEventListener('keydown', onKeyDown)
+  window.addEventListener("keydown", onKeyDown)
 })
 </script>
 
@@ -65,8 +65,8 @@ body {
   padding: 0;
   height: 100%;
   overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   background: var(--mainbg);
 }
 

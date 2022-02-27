@@ -1,10 +1,7 @@
 <template>
   <div id="mapcontainer">
     <div id="slidecontainer">
-      <label
-        id="sliderLabel"
-        for="slider"
-      >
+      <label id="sliderLabel" for="slider">
         <input
           id="slider"
           v-model="year"
@@ -12,7 +9,7 @@
           min="1993"
           max="2020"
           step="1"
-        >
+        />
         Year: {{ year }}
       </label>
     </div>
@@ -20,24 +17,26 @@
 </template>
 
 <script setup lang="ts">
-import {geoOrthographic} from 'd3-geo'
-import {onMounted, onUnmounted, onUpdated, ref, toRefs} from 'vue'
-import updateMap from './Update'
-import drawMap from './Draw'
-import {Timer} from 'd3-timer'
+import { geoOrthographic } from "d3-geo"
+import { onMounted, onUnmounted, onUpdated, ref, toRefs } from "vue"
+import updateMap from "./Update"
+import drawMap from "./Draw"
+import { Timer } from "d3-timer"
 
 interface Props {
-  xMulti: number,
+  xMulti: number
 }
 const props = withDefaults(defineProps<Props>(), {
   xMulti: 1,
 })
-const {xMulti} = toRefs(props)
+const { xMulti } = toRefs(props)
 
 const projection = geoOrthographic()
-    .translate([(window.innerWidth * xMulti.value) / 2,
-      window.innerHeight / 2])
-    .scale((window.innerWidth * 0.7) / 3)
+  .translate([
+    (window.innerWidth * xMulti.value) / 2,
+    window.innerHeight / 2,
+  ])
+  .scale((window.innerWidth * 0.7) / 3)
 
 const year = ref(1993)
 const timer = ref({} as Timer)
@@ -47,7 +46,6 @@ onMounted(async () => {
 })
 onUpdated(() => updateMap(projection, year.value))
 onUnmounted(() => timer.value.stop())
-
 </script>
 
 <style>

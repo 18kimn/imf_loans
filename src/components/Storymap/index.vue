@@ -3,11 +3,11 @@
 </template>
 
 <script setup lang="ts">
-import {onMounted, ref} from 'vue'
-import {useStore} from 'vuex'
-import {select} from 'd3-selection'
-import {ExtendedFeatureCollection, GeoProjection} from 'd3-geo'
-import drawFrame from './drawFrame'
+import { onMounted, ref } from "vue"
+import { useStore } from "vuex"
+import { select } from "d3-selection"
+import { ExtendedFeatureCollection, GeoProjection } from "d3-geo"
+import drawFrame from "./drawFrame"
 import {
   zoom,
   zoomIdentity,
@@ -15,18 +15,21 @@ import {
   geoEquirectangular,
   geoPath,
   timer,
-} from 'd3'
+} from "d3"
 
 const activeIndex = ref(0)
 const story = ref([] as any)
 const currentTransform = ref(zoomIdentity)
 
-const emit = defineEmits(['new-location'])
-const changeLocation = ({code}) => {
+const emit = defineEmits(["new-location"])
+const changeLocation = ({ code }) => {
   let nextIndex: number
-  if (code === 'KeyN') {
-    nextIndex = Math.min(activeIndex.value + 1, story.value.length - 1)
-  } else if (code === 'KeyB') {
+  if (code === "KeyN") {
+    nextIndex = Math.min(
+      activeIndex.value + 1,
+      story.value.length - 1
+    )
+  } else if (code === "KeyB") {
     nextIndex = Math.max(activeIndex.value - 1, 0)
   } else {
     return
@@ -38,8 +41,8 @@ const changeLocation = ({code}) => {
  * appropriate (projected and transformed) pixel coordinate
  */
 function getCoords(
-    projection: GeoProjection,
-    {x, y},
+  projection: GeoProjection,
+  { x, y }
 ): [number, number] | undefined {
   const coords = projection([x, y])
   if (!coords) return
@@ -50,45 +53,51 @@ function getCoords(
 }
 
 const baseZoom = zoom()
-    .scaleExtent([0.1, 12])
-    .on('zoom', ({transform}) => {
-      currentTransform.value = transform
-    })
+  .scaleExtent([0.1, 12])
+  .on("zoom", ({ transform }) => {
+    currentTransform.value = transform
+  })
 
 /** Draws ...the...map... */
-async function drawMap(dataPromise: Promise<ExtendedFeatureCollection>) {
+async function drawMap(
+  dataPromise: Promise<ExtendedFeatureCollection>
+) {
   const shapes = await dataPromise
-  const canvas = select('#storyMapContainer')
-      .append('canvas')
-      .attr('width', window.innerWidth)
-      .attr('height', window.innerHeight)
-      .style('position', 'absolute')
-      .style('width', '100%')
-      .style('height', '100%')
-      .style('cursor', 'pointer')
-  const context = canvas.node()?.getContext('2d')
+  const canvas = select("#storyMapContainer")
+    .append("canvas")
+    .attr("width", window.innerWidth)
+    .attr("height", window.innerHeight)
+    .style("position", "absolute")
+    .style("width", "100%")
+    .style("height", "100%")
+    .style("cursor", "pointer")
+  const context = canvas.node()?.getContext("2d")
   if (!canvas || !context) return
 
   const projection = geoEquirectangular().fitExtent(
-      [
-        [0, 0],
-        [window.innerWidth, window.innerHeight],
-      ],
-      shapes,
+    [
+      [0, 0],
+      [window.innerWidth, window.innerHeight],
+    ],
+    shapes
   )
   const path2d = new Path2D() as any
   const path = geoPath().projection(projection).context(path2d)
   path(shapes)
 
-  const zoomTo = ({x, y}) => {
+  const zoomTo = ({ x, y }) => {
     const coords = projection([x, y])
     if (!coords) return
     const zoomerTo = zoomIdentity
-        .translate(1.5 * window.innerWidth / 2, window.innerHeight / 2)
-        .translate(-coords[0], -coords[1])
-    canvas.transition()
-        .duration(500)
-        .call(baseZoom.transform as any, zoomerTo)
+      .translate(
+        (1.5 * window.innerWidth) / 2,
+        window.innerHeight / 2
+      )
+      .translate(-coords[0], -coords[1])
+    canvas
+      .transition()
+      .duration(500)
+      .call(baseZoom.transform as any, zoomerTo)
   }
   // typescript throws a nonsensical error here without as any
   canvas.call(baseZoom as any)
@@ -102,21 +111,27 @@ async function drawMap(dataPromise: Promise<ExtendedFeatureCollection>) {
     const location = story.value[activeIndex.value]
     const pixelCoords = getCoords(projection, location)
     if (activeIndex.value !== lastIndex && pixelCoords) {
-      emit('new-location', location)
+      emit("new-location", location)
       zoomTo(location)
       lastIndex = activeIndex.value
     }
-    drawFrame(context, path2d, time, pixelCoords, currentTransform.value)
+    drawFrame(
+      context,
+      path2d,
+      time,
+      pixelCoords,
+      currentTransform.value
+    )
   })
 }
 
 const store = useStore()
 // on mount, draw the intitial map and listen for updates
 onMounted(async () => {
-  window.addEventListener('keydown', changeLocation)
-  story.value = await csv('/data/content.csv')
+  window.addEventListener("keydown", changeLocation)
+  story.value = await csv("/data/content.csv")
   drawMap(store.state.shapes)
-  emit('new-location', story.value[0])
+  emit("new-location", story.value[0])
 })
 </script>
 

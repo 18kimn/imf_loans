@@ -45,7 +45,7 @@ in Korea during the 1997 Asian Financial Crisis. The Asian
 Financial Crisis was the worst economic crisis Indonesia,
 Thailand, and South Korea experienced since being formally
 liberated, overtaking even the 2008 global economic crisis in
-severity and scope. 
+severity and scope.
 
 Despite being a history, my main contribution is not an
 unveilment of a series of events of the crisis, but instead a

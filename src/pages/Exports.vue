@@ -6,10 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import Story from '../components/Story.vue'
-import Trademap from '../components/Trademap/index.vue'
-
-
+import Story from "../components/Story.vue"
+import Trademap from "../components/Trademap/index.vue"
 </script>
 
 <style scoped>

@@ -3,14 +3,13 @@
 </template>
 
 <script setup lang="ts">
-import {onMounted} from 'vue'
-import {useStore} from 'vuex'
-import drawMap from './index'
+import { onMounted } from "vue"
+import { useStore } from "vuex"
+import drawMap from "./index"
 
 const store = useStore()
 
 onMounted(() => drawMap(store.state.shapes))
-
 </script>
 
 <style scoped>

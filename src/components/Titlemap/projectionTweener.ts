@@ -1,10 +1,11 @@
-import {easeCubicInOut} from 'd3-ease'
+import { easeCubicInOut } from "d3-ease"
 import {
   geoProjection,
   GeoRawProjection,
   ExtendedFeatureCollection,
-  geoEqualEarthRaw, geoNaturalEarth1Raw,
-} from 'd3-geo'
+  geoEqualEarthRaw,
+  geoNaturalEarth1Raw,
+} from "d3-geo"
 import {
   geoHammerRaw,
   geoBoggsRaw,
@@ -19,7 +20,7 @@ import {
   geoWinkel3Raw,
   geoHealpixRaw,
   geoHammerRetroazimuthalRaw,
-} from 'd3-geo-projection'
+} from "d3-geo-projection"
 const projs = [
   geoNaturalEarth1Raw,
   geoVanDerGrinten4Raw,
@@ -34,7 +35,7 @@ const projs = [
   geoWinkel3Raw,
   geoHomolosineRaw,
   geoSinuMollweideRaw,
-  geoWagnerRaw(65 / 180 * Math.PI, 60 / 180 * Math.PI, 0, 200),
+  geoWagnerRaw((65 / 180) * Math.PI, (60 / 180) * Math.PI, 0, 200),
   geoHammerRaw(2),
 ] as GeoRawProjection[]
 
@@ -45,9 +46,9 @@ const projs = [
 
 /** Interpolates between two raw projections */
 function interp(
-    [x0, y0]: [number, number],
-    [x1, y1]: [number, number],
-    t: number,
+  [x0, y0]: [number, number],
+  [x1, y1]: [number, number],
+  t: number
 ): [number, number] {
   return [(1 - t) * x0 + t * x1, (1 - t) * y0 + t * y1]
 }
@@ -59,19 +60,21 @@ function lerp1(x0: number, x1: number, t: number) {
 
 /** Hanldes timing calculations and setup */
 function tweenGenerator(
-    shapes: ExtendedFeatureCollection,
-    cycleTime: number,
+  shapes: ExtendedFeatureCollection,
+  cycleTime: number
 ) {
   let fromIndex = 0
   let toIndex = 1
 
   const projInfo = projs.map((proj) => {
-    const p = geoProjection(proj)
-        .fitExtent([
-          [0, 0],
-          [1.3 * window.innerWidth, 1.2 * window.innerHeight],
-        ], shapes)
-    return {scale: p.scale(), translate: p.translate()}
+    const p = geoProjection(proj).fitExtent(
+      [
+        [0, 0],
+        [1.3 * window.innerWidth, 1.2 * window.innerHeight],
+      ],
+      shapes
+    )
+    return { scale: p.scale(), translate: p.translate() }
   })
 
   // inside the render function: every-frame calculations
@@ -90,14 +93,26 @@ function tweenGenerator(
     const raw1 = projs[toIndex]
 
     const eased = easeCubicInOut(t - Math.floor(t))
-    return geoProjection((x, y) => interp(raw0(x, y), raw1(x, y), eased))
-        .scale(lerp1(projInfo[fromIndex].scale, projInfo[toIndex].scale, eased))
-        .translate(interp(projInfo[fromIndex].translate,
-            projInfo[toIndex].translate, eased))
-        .precision(0.1)
-        .rotate([performance.now() / 100, 0, 0])
+    return geoProjection((x, y) =>
+      interp(raw0(x, y), raw1(x, y), eased)
+    )
+      .scale(
+        lerp1(
+          projInfo[fromIndex].scale,
+          projInfo[toIndex].scale,
+          eased
+        )
+      )
+      .translate(
+        interp(
+          projInfo[fromIndex].translate,
+          projInfo[toIndex].translate,
+          eased
+        )
+      )
+      .precision(0.1)
+      .rotate([performance.now() / 100, 0, 0])
   }
 }
-
 
 export default tweenGenerator

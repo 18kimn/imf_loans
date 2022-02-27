@@ -1,1 +1,1 @@
-[Hwang. 2015. *Long-Term Implications of Neoliberal Restructuring and Rising Inequality :South Korea after the 1997 Asian Financial Crisis*](zotero://select/items/1_PWX2IURB)[[hwangLongTermImplicationsNeoliberal2015]]
+[Hwang. 2015. _Long-Term Implications of Neoliberal Restructuring and Rising Inequality :South Korea after the 1997 Asian Financial Crisis_](zotero://select/items/1_PWX2IURB)[[hwangLongTermImplicationsNeoliberal2015]]

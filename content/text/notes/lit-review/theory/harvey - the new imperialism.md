@@ -1,1 +1,1 @@
-[Harvey. 2003. *The New Imperialism*](zotero://select/items/1_QI5P8SSU)[[harveyNewImperialism2003]]
+[Harvey. 2003. _The New Imperialism_](zotero://select/items/1_QI5P8SSU)[[harveyNewImperialism2003]]

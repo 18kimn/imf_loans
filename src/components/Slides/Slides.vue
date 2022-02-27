@@ -1,21 +1,12 @@
 <template>
-  <transition
-    name="fade"
-    mode="out-in"
-  >
+  <transition name="fade" mode="out-in">
     <div
       v-if="slides[currentIndex].name !== 'showcase'"
       class="container"
     >
       <div class="background">
-        <transition
-          name="fade"
-          mode="out-in"
-        >
-          <component
-            :is="slides[currentIndex]"
-            :key="currentIndex"
-          />
+        <transition name="fade" mode="out-in">
+          <component :is="slides[currentIndex]" :key="currentIndex" />
         </transition>
       </div>
     </div>
@@ -25,21 +16,18 @@
       name="fade"
       mode="out-in"
     >
-      <component
-        :is="slides[currentIndex]"
-        :key="currentIndex"
-      />
+      <component :is="slides[currentIndex]" :key="currentIndex" />
     </transition>
   </transition>
 </template>
 
 <script setup lang="ts">
-import {defineComponent} from '@vue/runtime-dom'
-import {ref, shallowRef, onMounted} from 'vue'
-import getSlides from './getSlides'
-import nextAction from '../../utils/nextAction'
-import Titlemap from '../Titlemap/index.vue'
-const slides = shallowRef([defineComponent({template: '<div/>'})])
+import { defineComponent } from "@vue/runtime-dom"
+import { ref, shallowRef, onMounted } from "vue"
+import getSlides from "./getSlides"
+import nextAction from "../../utils/nextAction"
+import Titlemap from "../Titlemap/index.vue"
+const slides = shallowRef([defineComponent({ template: "<div/>" })])
 const currentIndex = ref(0)
 
 const props = defineProps({
@@ -48,19 +36,19 @@ const props = defineProps({
 /** navigate slides with keys */
 function onKeyDown(event: KeyboardEvent): void {
   const nextIndex = nextAction(
-      event,
-      () => Math.min(currentIndex.value + 1, slides.value.length - 1),
-      () => Math.max(currentIndex.value - 1, 0),
+    event,
+    () => Math.min(currentIndex.value + 1, slides.value.length - 1),
+    () => Math.max(currentIndex.value - 1, 0)
   )
 
   currentIndex.value =
-    typeof nextIndex !== 'undefined' ? nextIndex : currentIndex.value
+    typeof nextIndex !== "undefined" ? nextIndex : currentIndex.value
 }
 
 onMounted(async () => {
   if (!props.path) return
   slides.value = await getSlides(props.path)
-  window.addEventListener('keydown', onKeyDown)
+  window.addEventListener("keydown", onKeyDown)
 })
 </script>
 
@@ -124,7 +112,8 @@ onMounted(async () => {
   place-items: center;
 }
 
-::v-deep(td), ::v-deep(th) {
+::v-deep(td),
+::v-deep(th) {
   font-size: 18pt;
   padding-left: 1rem;
 }

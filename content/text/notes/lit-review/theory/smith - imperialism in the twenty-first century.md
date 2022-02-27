@@ -1,1 +1,1 @@
-[Smith. 2016. *Imperialism in the Twenty-First Century: Globalization, Super-Exploitation, and Capitalismâ€™s Final Crisis*](zotero://select/items/1_SCRECNZE)[[smithImperialismTwentyFirstCentury2016]]
+[Smith. 2016. _Imperialism in the Twenty-First Century: Globalization, Super-Exploitation, and Capitalismâ€™s Final Crisis_](zotero://select/items/1_SCRECNZE)[[smithImperialismTwentyFirstCentury2016]]

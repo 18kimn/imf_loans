@@ -44,7 +44,8 @@ From dispossessive start for economic process, to a process that is
 - Ferreira da Silva and Chakravartty (2012)
 - Harvey tries to turn from "primitive" to ongoing social processes
   - but leaves race as a coincidental, preexisting category
-- Others: Lorenzo Veracini, Ania Loomba, Max Haiven, Gargi Bhattacharyya
+- Others: Lorenzo Veracini, Ania Loomba, Max Haiven, Gargi
+  Bhattacharyya
 
 ---
 
@@ -57,8 +58,8 @@ From dispossessive start for economic process, to a process that is
 - **1980s**: Southeast Asia had a ton of foreign investment
 - **1990s**: US dollar catches up quickly in value
   - This makes Asian exports more expensive (because of the peg)
-- **Throughout 1997**: The peg forces Thailand, Indonesia, and Korea to float
-  their currencies
+- **Throughout 1997**: The peg forces Thailand, Indonesia, and Korea
+  to float their currencies
 - **Late 1997**: Financial crisis
 
 ---
@@ -80,28 +81,29 @@ From dispossessive start for economic process, to a process that is
 
 - Korea responded a lot
   - Korea implemented more than necessary
-  - IMF notes that Korea "has been exemplary and in many respects serves as a
-    model for other countries."
+  - IMF notes that Korea "has been exemplary and in many respects
+    serves as a model for other countries."
   - **model modernity produced by and produces racial hierarchy**
 - This isn't just an economic crisis, but a cultural one
   - Scholars note a rightward shift during this era
   - This is culturally known as the "IMF era"
 
-Emblematic of the IMF's "colorblind" logic permeating and uniting all into a
-single system, that differentiates each into their own places in the global
-racial hierarchy.
+Emblematic of the IMF's "colorblind" logic permeating and uniting all
+into a single system, that differentiates each into their own places
+in the global racial hierarchy.
 
 ---
 
 ## Research questions
 
-- For the case of South Korea, how does _race_ specifically become a relevant
-  category in acquiring a bailout from the IMF?
-- How does the IMF's relationship with South Korea, a nation cast into a status
-  of "model modernity," compare with the IMF's relationship with other
-  countries?
+- For the case of South Korea, how does _race_ specifically become a
+  relevant category in acquiring a bailout from the IMF?
+- How does the IMF's relationship with South Korea, a nation cast into
+  a status of "model modernity," compare with the IMF's relationship
+  with other countries?
 
-**What is the racial logic undergirding the IMF intervention in Korea?**
+**What is the racial logic undergirding the IMF intervention in
+Korea?**
 
 ---
 
@@ -144,8 +146,8 @@ racial hierarchy.
 
 # reflections and conclusions
 
-Wishing that the humanities could open up, in terms of accessibility and scope,
-our
+Wishing that the humanities could open up, in terms of accessibility
+and scope, our
 
 1. tools
 2. products

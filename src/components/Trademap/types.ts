@@ -1,4 +1,4 @@
-import {MultiPolygon} from 'geojson'
+import { MultiPolygon } from "geojson"
 
 interface Point {
   type: String
@@ -29,8 +29,8 @@ interface Country {
   geometry: MultiPolygon
 }
 interface Countries {
-  type: 'FeatureCollection'
-  'features': Country[]
+  type: "FeatureCollection"
+  features: Country[]
 }
 
-export {Point, Trade, Country, Countries}
+export { Point, Trade, Country, Countries }

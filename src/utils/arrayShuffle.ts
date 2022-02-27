@@ -7,10 +7,10 @@ function shuffle(array: Array<any>) {
   while (currentIndex !== 0) {
     // Pick a remaining element...
     randomIndex = Math.floor(Math.random() * currentIndex)
-    currentIndex -= 1; // semicolon is actually needed here
+    currentIndex -= 1 // semicolon is actually needed here
 
     // And swap it with the current element.
-    [arrayCopy[currentIndex], arrayCopy[randomIndex]] = [
+    ;[arrayCopy[currentIndex], arrayCopy[randomIndex]] = [
       arrayCopy[randomIndex],
       arrayCopy[currentIndex],
     ]

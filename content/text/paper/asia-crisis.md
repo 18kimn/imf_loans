@@ -341,21 +341,31 @@ only do so with an IMF-supported program.
 
 ## Intervention
 
-The crisis was nearly at hand. Kyong Shik Kang knew that
-without additional funds, Korean banks would not be able to
-repay its lenders, and that situation would only become worse.
-On November 16th, IMF Managing Director Michael Camdessus held
-an impromptu secret meeting with Kyong Shik Kang while on a
-trip to Asia to discuss a possible IMF package. On December
-4th, the IMF and Korean authorities finalized a $55 billion
-loan package, of which $21 billion would come from the IMF, $10
-billion would come from the World Bank, $4 billion from the
-Asian Develpopment Bank, and the remaining $20 billion as a
-contingency pledge from banks in twelve nations. Both the
+The crisis was nearly at hand. If the trend of foreign
+investment withholding rollvers continued, Korean banks would
+not be able to repay its next batches of payments, and that
+situation would only become worse as investors would see and
+then pull out in turn. On November 16th, IMF Managing Director
+Michael Camdessus held an impromptu secret meeting with Kyong
+Shik Kang while on a trip to Asia to discuss a possible IMF
+package. The IMF at this time also began orchestrating an
+international maneuver to prevent an all-out crisis, with most
+of Camdessus' staff spending their days and nights calling
+international banks and attempting to convince them to roll
+over their loans so that the crisis in Korea would avoid
+becoming a catastrophe. Korea would owe $9 billion by the end
+of December if the banks did not take the IMF's word that Korea
+could repay at a later time
+
+On December 4th, the IMF and Korean authorities finalized a $55
+billion loan package, of which $21 billion would come from the
+IMF, $10 billion would come from the World Bank, $4 billion
+from the Asian Develpopment Bank, and the remaining $20 billion
+as a contingency pledge from banks in twelve nations. Both the
 overall loan amount and the IMF's contribution were
 unprecedented. This was also one of the first times the IMF
-would lend to a nation in the OECD instead of a "developing"
-country.
+would lend to a nation in the OECD instead of a firmly
+designated "developing" country.
 
 In other words, the loan amount itself was massive. But the
 IMF's strategy was not to provide enough cash for Korea's debt
@@ -363,28 +373,101 @@ troubles to pass. Of the stated loan amount, only $5 billion
 was available in December 1997, with the rest being distributed
 through 1998 and most of the loans not even used at all.^[Of
 course, $5 billion is still massive, being (for comparison) the
-entire amount provided to Mexico first phase of the Latin
-American debt crisis.] They certainly weren't enough to pay off
-the $130 billion Korea owed, and the initial infusion was not
-even enough for Korea to make its loan deadlines in
+entire amount provided to Mexico during the first phase of the
+Latin American debt crisis.] They certainly weren't enough to
+pay off the $130 billion Korea owed, and the initial infusion
+was not even enough for Korea to make its loan deadlines in
 December 1997. Instead, the loans were mostly an attempted
 message to foreign creditors that Korea was safe; the IMF and
 the World Bank were intervening, so Korea was a safe
 investment.
 
-This was quite literal in the first months of the crisis for
-Korea. Over the course of December, most of Camdessus' staff
-spent their days and nights calling international banks and
-attempting to convince them to stay. [discuss the weeks of
-phone calls]
+At first, foreign banks did not find this adequate, not even to
+fulfill Korea's short-term payments. This judgment continued
+the cyclical self-fulfilling prophecy at the heart of the
+crisis: as foreign investors lost confidence, they pulled their
+money out, putting Korea into the dire economic situation that
+the investors had worried about. For much of December the
+rollover rate remained at around 15% -- much lower than what
+was needed for Korea to avoid declaring bankruptcy. On December
+19th, the Korean government begged the United States government
+to in turn persuade the IMF to orchestrate another round of
+negotiations. By December 23rd, the IMF was able to orchestrate
+this international maneuver, where the IMF directed central
+banks in twelve countries, and those central banks in turn
+pushed banks in their own countries to roll over loans to
+Korean debtors. All of these efforts were joined through daily
+reporting requirements to the IMF, and resulted in about 95% of
+Korea's debt being rolled over.
 
-In the broader sense, and most painful for Korea, the message
-to foreigners was communicated through policy prescriptions.
+Most important in this appeal to creditors were the harsh
+policy prescriptions the IMF attached to Korea's loan package.
 The IMF believed that the crisis came about because of decades
 of "crony capitalism" hidden by the strong arm of the Korean
-state, and that deep reform was needed to fix the fundamental
-economic problems that had led to the crisis and ultimately
-scared off investors.
+state which ultimately scared off investors. The solution was
+the converse of this: foreign confidence had to be restored
+through strong reforms. Importantly, the IMF recognized at
+these points that the immediate triggers and solutions to the
+crisis were not any fundamental problems, but the beliefs of
+foreigners in Korea as a safe investment. In the words of
+Canadian Finance Minister Paul Martin on behalf of the G-7
+nations, "A successful program will require a continued
+sustained commitment to reform by the Korean authorities,
+appropriate financial support from the official sector as
+outlined above conditioned on the strong policies necessary to
+restore confidence, and a successful effort by the Korean
+authorities to secure longer term financing from private
+creditors and the international capital markets."
+
+The appeals between the IMF and partner banks thus meant
+pitching to these institutions the reforms the IMF would
+implement in Korea. From the first phase of the crisis that
+resulted in the December 4th loan package, these reforms [were
+quite harsh], with Camdessus and even President Clinton urging
+Korean President Young Sam Kim and Secretary of Treasury Kihwan
+Kim to publicly announce they would adopt extensive reforms.
+They escalated further over the course of December, first by
+IMF administrators that viewed the initial policies as too
+soft, then by Kihwan Kim as a desperate bid after banks still
+appeared hesitant to roll over their loans.
+
+These reforms entailed the immediate suspension of nine
+financial institutions, and their closure if they did not
+submit "appropriate restructuring plans." With the euphemistic
+caveat that it would "entail losses to shareholders," the IMF
+declared in a December 4th press release that many financial
+institutions of any standing would be subject to mergers and
+acquisitions as from both domestic and foreign investors. The
+IMF conclues this section with a standalone paragraph stating
+simply that "to promote competition and efficiency in the
+financial sector, the authorities will allow foreigners to
+establish bank subsidiaries and brokerage houses by mid-1998."
+
+Besides reforms specifically for the financial sector, the IMF
+also prescribed general structural reforms. These all center
+around a program of economic "liberalization" that mainly
+involved opening the country for foreign investment. The
+ceiling on foreign ownership in Korean equities and listed
+Korean shares would be raised from 7 percent and 26 percent to
+fifty percent by the end of 1997, which would entail quite a
+dramatic shift considering this agreement was finalized at the
+beginning of December 1997.^[Fifty percent sounds ridiculous to
+me, but even crazier is that the ceiling on foreign investment
+in listed shares would actually be removed by the Korean
+government altogether in 1998. I haven't been able to find data
+on if the proportion of foreign investment even approached any
+of these limits, but the fact that the Korean government saw it
+fit and useful to raise the limits indicates that a very high
+proportion of foreign investment was desired.] Besides these
+general ceiling adjustments, other major barriers to foreign
+investment were also modified, including foreign access to
+domestic money market instruments^[Money market instruments are
+short-term loans, typically to bridge two payments. A company
+might use this kind of device if they had to pay a supplier one
+week to make a product but would only receive customer payment
+for that product in the next week after.], foreign access to
+corporate bonds, and general simplification of approval
+procedures.
 
 - both candidates pledge to soften imf reforms, but kiwhan kim
   asks larry summers to help persuade banks to roll over loans
@@ -393,22 +476,69 @@ scared off investors.
 - kim dae-jung wins election
 - joseph stiglitz, jeffrey sachs, and others start protesting
 
-## Dispossession
+## Racialized accumulation by dispossession
 
-The prevailing opinion of the crisis after
+There are generally two opposing views of the crisis that
+emerged in 1997 and remain unreconciled today. Should the
+crisis be attributed to "crony capitalism" and flaws in the
+economic systems in Asian countries, or to a series of
+self-fulfilling prophecies, whereby foreign investors predicted
+a crisis and then caused it by pulling out their funds in one
+gigantic wave? The former view was put forth by the IMF and its
+economists including Timothy Lanee, Atish Ghosh, Javier Hamann,
+and Steven Phillips. This group asserts mainly that the drought
+of investment renewals in 1997 was due to a lack of
+transparency from the Korean, Thai, and Indonesian governments
+and a justified view from investors from the information that
+they did have that their investments would turn sour. The
+opposing view is held by economists Jeffrey Sachs, Joseph
+Stiglitz, Jason Furnan, and others, who argue that [fill
+in]^[Also useful is to note that "nontransparency" from Asian
+countries, as noted above in the case of Thailand, was often
+held out of fear from governments that revealing their hand
+would trigger a massive sell-off. The lack of transparency
+seemed to fuel the collective withdrawal of investments, but
+the alternative to these governments was to have disaster
+strike.]
 
-The miracle of the Han River, or its various aliases including
-the "East Asian miracle" or the success of the "Asian Tigers,"
-symbolized not only the perceived economic success of Korea and
-its neighbors but how unexpected they were. The success of
-these countries to outside observers should not have happened;
-they seemed supernatural and beyond reason. To use the language
-of da Silva, Korea was preconfigured as a nation of improper
-economic subjects. To use the language of Alice Amsden,
-prominent scholar of the "Asian Tigers," [quote form asias next
-giant].
+Among many other social and historical reasons, this division
+still exists because both arguments have large elements of
+truth and it is difficult to measure which side holds more
+weight. It is uncontestable that the crisis itself arose as a
+matter of a sudden fall in foreign confidence. On the flip
+side, the most heavily struck states of Korea, Thailand, and
+Indonesia did have heavy and often off-the-books relationships
+between large corporations and the state that resulted in large
+and unrestricted loans, in Korea through the infammous
+family-run _chaebol_ groups and their champion
+dictator-president Park Chung Hee. This undoubtedly did
+contribute to the high debt-equity ratios in 1997, and could
+also have made the precipitation of the crisis much worse.
 
-The other effect of the miracle story is to obscure the
+Though this paper leans towards criticizng the herd behavior of
+investors, my thesis is not an economic one, and it is not my
+goal to conclusively prove which cause is greater or if the
+investors predicted correctly given only the information they
+had.
+
+Until the crisis, Korea was seen to have undergone a harsh
+period of state-fueled development that was just outside of the
+logic posed by the capitalist West. This process was often
+nicknamed "the miracle of the Han River," or its various
+aliases including the "East Asian miracle" or the success of
+the "Asian Tigers," all suggesting not only the perceived
+economic success of Korea and its neighbors but how unexpected
+they were. The success of these countries should not have
+happened; they seemed supernatural and beyond reason, and it
+should have been impossible for countries torn apart by war and
+dictatorship to enter the same market and on a level playing
+field as that of Western capitalist nations. To use the
+language of da Silva, Korea was preconfigured as a nation of
+improper economic subjects. To use the language of Alice
+Amsden, prominent scholar of the "Asian Tigers," [quote form
+asias next giant].
+
+The converse effect of the miracle story is to obscure the
 profoundly unmiraculous and violent processes that led to
 economic success. Korea sent 300,000 troops to support the
 United States during the Vietnam War, for which the United
@@ -416,15 +546,47 @@ States repaid through billions of dollars of economic
 assistance and invaluable technological resources. Park Chung
 Hee's police state consciously traded social rights for
 
-The crisis was unexpected to foreigners that had confidence in
-their investments in the Korean economy, but it was necessary
-for Western capitalism to triumphantly unmask Korea's economic
-success as not even a miracle but a facade, something hidden by
-four decades of state intervention. The disbelief one might
-have in the miracle would not
+This narrative of national failure rests on the commonly
+recognized archetypes of the "model minority" and the "yellow
+peril" deployed and extended at the national level, deemed here
+as a status of "model modernity." The "seamless continuum," to
+use Gary Okihiro's words, between the former two statuses form
+a single challenge to the Western, white idea of success, one
+that must be contained if peace were to be maintained. As
+Okihiro writes, "the very indices of Asian American "success"
+can imperil the good order of race relations when the margins
+lay claim to the privileges of the mainstream." The model
+modernity status extends this challenge to the international
+level, posing "miracles" that emerged becasue
 
-But of course, the crisis itself came from speculation and
-discourse, being introduced first by foreign speculation and
-solved by the IMF convincing foreigners to remain in Korea. It
-was a self-fulfilling prophecy; a large stepping stone in a
-logical foundation too big to fail.
+The onset of the crisis simultaneously shattered and fulfilled
+this narrative. In the immediate sense, the crisis revealed
+nations in Asia to have failed economically, ending the year
+after year of unexpectedly high growth [find quote for this].
+On the other hand and in the much more fundamental sense, that
+failure was necessary for Western capitalism to triumphantly
+unmask Korea's economic success as not a miracle but a facade
+hidden by four decades of state intervention. The miracle of
+Asian economic success had been seemingly defying the logic of
+capital because it had in fact been too good to be true.
+
+As I show above, the crisis formed not because of
+
+- it was all narrative, not material underperformance
+  - yung chul park and comparison to other countries (1
+    paragraph)
+  - chaebol crackdown leading to brief instability, not the
+    chaebol itself (1 paragraph)
+  - speculation and the self-fulfilling narrative (1 paragraph)
+- their narrative had to be derived from something, it rests on
+  preconditions that didn't just appear from nothing
+  - ## asian tigers
+  - model minority / model modernity
+    - yellow peril <-> model minority
+      - incomprehensible logic that is secondary to the logic
+        of western capital
+      - reducing into horde of workers
+  - chaebol corporations
+- these preconditions fueled the process of accumulation by
+  dispossession
+  - notably _not_ accumulation of capital, but accumulation of
