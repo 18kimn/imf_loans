@@ -449,32 +449,63 @@ around a program of economic "liberalization" that mainly
 involved opening the country for foreign investment. The
 ceiling on foreign ownership in Korean equities and listed
 Korean shares would be raised from 7 percent and 26 percent to
-fifty percent by the end of 1997, which would entail quite a
-dramatic shift considering this agreement was finalized at the
-beginning of December 1997.^[Fifty percent sounds ridiculous to
-me, but even crazier is that the ceiling on foreign investment
-in listed shares would actually be removed by the Korean
-government altogether in 1998. I haven't been able to find data
-on if the proportion of foreign investment even approached any
-of these limits, but the fact that the Korean government saw it
-fit and useful to raise the limits indicates that a very high
-proportion of foreign investment was desired.] Besides these
-general ceiling adjustments, other major barriers to foreign
-investment were also modified, including foreign access to
-domestic money market instruments^[Money market instruments are
-short-term loans, typically to bridge two payments. A company
-might use this kind of device if they had to pay a supplier one
-week to make a product but would only receive customer payment
-for that product in the next week after.], foreign access to
-corporate bonds, and general simplification of approval
-procedures.
+fifty percent by the end of the year.^[Fifty percent sounds
+ridiculous to me, but even crazier is that the ceiling on
+foreign investment in listed shares would actually be removed
+by the Korean government altogether in 1998. I haven't been
+able to find data on if the proportion of foreign investment
+even approached any of these limits, but the fact that the
+Korean government saw it fit and useful to raise the limits
+indicates that a very high proportion of foreign investment was
+desired.] Besides these general ceiling adjustments, other
+major barriers to foreign investment were also modified,
+including foreign access to domestic money market
+instruments^[Money market instruments are short-term loans,
+useful for bridging two payments. A company might use this kind
+of device if they had to pay a supplier one week to make a
+product but would only receive customer payment for that
+product in the next week after.], foreign access to corporate
+bonds, and general simplification of approval procedures.
 
-- both candidates pledge to soften imf reforms, but kiwhan kim
-  asks larry summers to help persuade banks to roll over loans
-  in exchange for toguher program. everyone else in korea also
-  jumps on board near the end in december
-- kim dae-jung wins election
-- joseph stiglitz, jeffrey sachs, and others start protesting
+The IMF's
+
+The total number of conditions totaled 140 for Indonesia, 94
+for South Korea and 73 for Thailand, much more than those
+imposed for other countries in previous crises.
+
+These policy measures stung hard. Renewed loans from banks
+charged incredibly high interest rates, from 2.25% to 2.75%
+higher than the preceding averages of around 5%.^[Kihwan Kim,
+https://www.imf.org/external/np/seminars/eng/2006/cpem/pdf/kihwan.pdf]
+IMF demands to reduce government spending resulted in a 5.7
+percent reduction in GDP, compared to the growth rate of over 6
+percent that Korea had held for the past decade. The suspension
+of the nine banks at the beginning of the crisis and the
+promise that many more could be closed motivated many banks to
+stop lending and build up cash reserves so that they could
+appear stable, which then forced many businesses requiring
+loans into bankruptcy. The Korean government made good on that
+promise, revoking license after license until only three
+merchant banks remained in 2003 from thirty in 1997.^[Merchant
+banks are like investment banks in focusing on much larger
+corporations and capital amounts than in funding individuals or
+small businesses.] The ripple effect from this went on for
+years, with fourteen of the thirty largest corporations either
+declaring bankruptcy or entering merger programs.^[Lim and Hahn
+2004,
+https://ypfsresourcelibrary.blob.core.windows.net/fcic/YPFS/Lim%20and%20Hahm%202004.pdf]
+Of particular note was the collapse of the conglomerate Daewoo
+Motors in 1999, which had issued 17 trillion won of corporate
+bonds before being shut down. The government promised to
+holders of these bonds that up to 95% could be reimbursed, a
+significant amount but still a departure from the full
+guarantees or bailouts the government would have made in prior
+years.^[17 trillion won very, very roughly comes out to about
+$10 billion (an exact conversion is ill-defined given the
+massive fluctuations in the Korean won to the U.S. dollar at
+the time of Daewoo's collapse).]
+
+- worker protest
 
 ## Racialized accumulation by dispossession
 
@@ -519,7 +550,20 @@ Though this paper leans towards criticizng the herd behavior of
 investors, my thesis is not an economic one, and it is not my
 goal to conclusively prove which cause is greater or if the
 investors predicted correctly given only the information they
-had.
+had. I ALREADY SAID THIS WHY AM I SAYING IT AGAIN :(
+
+---
+
+Without trying to resolve this division, my thesis builds on
+the uncontested observation that the crisis and all immediate
+resulting actions from a drop in foreigner confidence. The IMF
+crisis strategy from its initial conception attempted to
+resolve this, first through a logistical strategy and then
+through a policy campaign. Yung-Chul Park, President of the
+Korea Institute of Finance at the time of the crisis, also
+observes that the worst of the crisis passed within six months,
+
+The other observation
 
 Until the crisis, Korea was seen to have undergone a harsh
 period of state-fueled development that was just outside of the
