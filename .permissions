@@ -3,12 +3,12 @@
 .gitignore;644;nathan;nathan
 .permissions;644;nathan;nathan
 README.md;644;nathan;nathan
-content/assets/presentation_cover.png;644;nathan;nathan
 content/figures/code/conditions.R;644;nathan;nathan
 content/figures/code/loans.R;644;nathan;nathan
 content/figures/code/macro.R;644;nathan;nathan
 content/references/annotated.bib;644;nathan;nathan
 content/references/blank.bib;644;nathan;nathan
+content/references/chicago-fullnote-bibliography-short-title-subsequent.csl;644;nathan;nathan
 content/references/chicago-note-bibliography-with-ibid.csl;644;nathan;nathan
 content/references/imf.bib;644;nathan;nathan
 content/references/primary-sources.bib;644;nathan;nathan
@@ -97,27 +97,37 @@ content/text/notes/lit-review/theory/vasudevan - finance, imperialism and the he
 content/text/notes/lit-review/theory/veltmeyer - development and globalization as imperialism.md;644;nathan;nathan
 content/text/notes/lit-review/theory/wilks - race gender comparative black modernism.md;644;nathan;nathan
 content/text/notes/meeting notes/12-1.md;644;nathan;nathan
+content/text/paper/12-04-97.png;644;nathan;nathan
+content/text/paper/1998-5-28.png;644;nathan;nathan
 content/text/paper/after.md;644;nathan;nathan
 content/text/paper/asia-crisis.md;644;nathan;nathan
+content/text/paper/camdessus.png;644;nathan;nathan
 content/text/paper/conclusion.md;644;nathan;nathan
 content/text/paper/frontmatter.tex;644;nathan;nathan
-content/text/paper/imf-background.md;644;nathan;nathan
+content/text/paper/imf-history.md;644;nathan;nathan
+content/text/paper/imfired.jpg;644;nathan;nathan
 content/text/paper/index.md;644;nathan;nathan
 content/text/paper/index.pdf;644;nathan;nathan
 content/text/paper/intro.md;644;nathan;nathan
 content/text/paper/lit-review.md;644;nathan;nathan
+content/text/paper/thanks.md;644;nathan;nathan
+content/text/paper/theory.md;644;nathan;nathan
+content/text/paper/thesis.pdf;644;nathan;nathan
 content/text/render;755;nathan;nathan
 content/text/slides/kr.md;644;nathan;nathan
 content/text/slides/slides-notes.md;644;nathan;nathan
 content/text/slides/slides-notes.pdf;644;nathan;nathan
-content/text/test;644;nathan;nathan
+content/utils/Koreamond/Koreamond-Bold.otf;644;nathan;nathan
+content/utils/Koreamond/Koreamond-Italic.otf;644;nathan;nathan
+content/utils/Koreamond/Koreamond-Regular.otf;644;nathan;nathan
+content/utils/Koreamond/install;755;nathan;nathan
+content/utils/presentation_cover.png;644;nathan;nathan
 data/ArchDescription.csv;644;nathan;nathan
 data/ArchMecon.csv;644;nathan;nathan
 data/ArchQPC_Codes.docx;644;nathan;nathan
 data/ArchSPCPASB.csv;644;nathan;nathan
 data/inetdataset_main.dta;644;nathan;nathan
 data/inetdataset_raw.xlsx;644;nathan;nathan
-frontmatter.tex;644;nathan;nathan
 imf_loans.Rproj;644;nathan;nathan
 index.html;644;nathan;nathan
 package.json;644;nathan;nathan
@@ -200,7 +210,6 @@ src/utils/nextAction.ts;644;nathan;nathan
 tsconfig.json;644;nathan;nathan
 vite.config.ts;644;nathan;nathan
 .;755;nathan;nathan
-content/assets;755;nathan;nathan
 content/figures/code;755;nathan;nathan
 content/references;755;nathan;nathan
 content/text;755;nathan;nathan
@@ -327,7 +336,8 @@ notes;
 content/text/paper;755;nathan;nathan
 content/text;755;nathan;nathan
 content/text/slides;755;nathan;nathan
-content/text;755;nathan;nathan
+content/utils/Koreamond;755;nathan;nathan
+content/utils;755;nathan;nathan
 data;755;nathan;nathan
 .;755;nathan;nathan
 patches;755;nathan;nathan

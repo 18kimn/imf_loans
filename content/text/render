@@ -7,20 +7,23 @@
 
 cd "$(dirname "$0")"
 basename=$(basename "$1" .md)
-extension=${2:-pdf} #uses pdf as the default extension
+extension=${2:-pdf} # uses pdf as the default extension
 bib=${3:-"../references/imf.bib"}
-bib=$(readlink -f $bib) #get full path
-csl=$(readlink -f ../references/chicago-note-bibliography-with-ibid.csl)
+bib=$(readlink -f $bib) # get full path
+csl=$(readlink -f \
+../references/chicago-fullnote-bibliography-short-title-subsequent.csl)
+# csl=$(readlink -f ../references/chicago-note-bibliography-with-ibid.csl)
 
 cd $(dirname $1)
-pandoc -V geometry:margin=1in \
+pandoc -V geometry:margin=1.5in \
   -f markdown \
   -o "$basename.$extension" \
-  --citeproc \
   --bibliography=$bib \
   --csl=$csl \
   --filter pandoc-include \
-  -V mainfont="EB Garamond" \
+  --citeproc \
+  -V mainfont="Koreamond" \
+  -V mainfontoptions="BoldFont=*-Regular" \
   -V fontsize=12pt \
   --pdf-engine=xelatex \
   $(basename $1)

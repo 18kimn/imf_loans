@@ -1,0 +1,8 @@
+#! /bin/bash
+
+cd "$(dirname "$0")"
+
+sudo mkdir /usr/share/fonts/Koreamond -p
+sudo cp Koreamond* /usr/share/fonts/Koreamond
+fc-cache -rf
+
