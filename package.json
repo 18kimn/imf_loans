@@ -30,7 +30,7 @@
     "postinstall": "patch-package",
     "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "start": "vite --host",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "serve": "vite preview",
     "render": "bash content/text/render.sh"
   },
