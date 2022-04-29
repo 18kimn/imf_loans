@@ -16,7 +16,6 @@ const currentRouteIndex = ref(0)
 const mainRoutes = routes.filter(
   (route) => !route.name.match(/slides-/)
 )
-console.log(mainRoutes)
 /** Handles site navigation via arrow keys */
 function onKeyDown(event: KeyboardEvent): void {
   // triple-check that we're on the correct route

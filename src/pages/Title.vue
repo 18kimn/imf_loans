@@ -7,6 +7,13 @@
         <div style="padding: 5%">
           <h1>The IMF and <br />Global Dispossession</h1>
           <h2>Nathan Kim</h2>
+          <p>
+            This site is a just-barely-started accompaniment to my
+            thesis. Some sketches and ideas for maps are illustrated
+            here, but everything here is subject to change. Feel free
+            to take a look, though!
+          </p>
+          <p>Press the right arrow key to go to the next map.</p>
         </div>
       </div>
     </div>

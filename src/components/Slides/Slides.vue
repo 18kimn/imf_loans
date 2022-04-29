@@ -19,6 +19,7 @@
       <component :is="slides[currentIndex]" :key="currentIndex" />
     </transition>
   </transition>
+  <Titlemap />
 </template>
 
 <script setup lang="ts">
@@ -59,6 +60,8 @@ onMounted(async () => {
   display: flex;
   place-content: center;
   place-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .background {

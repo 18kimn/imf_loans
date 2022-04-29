@@ -6,16 +6,15 @@
 import { onMounted, ref } from "vue"
 import { useStore } from "vuex"
 import { select } from "d3-selection"
-import { ExtendedFeatureCollection, GeoProjection } from "d3-geo"
-import drawFrame from "./drawFrame"
 import {
-  zoom,
-  zoomIdentity,
-  csv,
   geoEquirectangular,
   geoPath,
-  timer,
-} from "d3"
+  ExtendedFeatureCollection,
+  GeoProjection,
+} from "d3-geo"
+import drawFrame from "./drawFrame"
+import { zoom, zoomIdentity } from "d3-zoom"
+import { csv } from "d3-fetch"
 
 const activeIndex = ref(0)
 const story = ref([] as any)
@@ -105,7 +104,9 @@ async function drawMap(
   // note that drawFrame is accepting the raw refs so that updates can be
   // automagically passed down (objects are copied by reference etc etc)
   let lastIndex = 0
-  timer((elapsed) => {
+
+  /** @param elapsed time in ms */
+  function animate(elapsed) {
     // goes from 0 to 1 and repeats
     const time = elapsed / 1000 - Math.floor(elapsed / 1000)
     const location = story.value[activeIndex.value]
@@ -122,7 +123,9 @@ async function drawMap(
       pixelCoords,
       currentTransform.value
     )
-  })
+    return requestAnimationFrame(animate)
+  }
+  requestAnimationFrame(animate)
 }
 
 const store = useStore()

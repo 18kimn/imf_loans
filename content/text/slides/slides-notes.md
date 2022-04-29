@@ -1,117 +1,167 @@
-- accumulation requires either 1) more raw material or 2)
-  larger consumer base
-- capital 1: 1867
-- Marx notes gold and silver taken from America, enslavement
-  and murder of indigenous populations in america, the looting
-  of the east indies, the transatlantic slave trade, and the
-  forceful expropriation of land from the english peasantry to
-  a few landowners
+# Intro
 
-- harvey notes that these processes don't just happen in the
-  primitive sense but are ongoing, now, as always
-- 13357 citations (!)
+Hi everyone! My name's Nathan, and I'm a senior at Yale College
+double majoring in Ethnicity, Race, & Migration and Statistics
+& Data Science. Today I'll be presenting work from my senior
+thesis, titled _The IMF and Global Dispossession_. A version of
+this project was originally begun in Professor Gary Okihiro's
+_Fruits of Empire_, and the thesis itself was completed with
+the guidance of Professor Lowe. So a quick shout out to them --
+much of the "meat," or argument, or punch would not have been
+created without their insight; if they're in.
 
-Chakravartty, Paula, and Denise Ferreira Da Silva.
-"Accumulation, dispossession, and debt: The racial logic of
-global capitalism—an introduction." American Quarterly 64.3
-(2012): 361-385.
+Okay, so, my thesis. My thesis is about the 1997 Asian
+financial crisis, and the steps the International Monetary Fund
+took to "rescue" the region. My goal with the thesis is to
+explore the logic and orientation of the IMF as not an
+objectively beneficial or simply an economic project, but as a
+deeply insidious one to advance the goals of empires past and
+present, and promote a world order where white, modern, Western
+nations are privileged as creditor nations to nonwhite nations
+including those that were hit during the Asian financial
+crisis. But all of those intentions are masked partly through
+institutional structure and history, and in even larger part
+because of the universalizing, colorblind, objective, economic,
+discourse of capitalist success and the road to modernity.
+
+That's how empire operates today -- often, rather than stating
+that one race is biologically deficient as eugenicists of
+colonial regimes might have said a century prior, the same
+sorts of claims of inherent deficiency are made through
+economic and objective discourse. The same sorts of claims are
+made and reified through investment banks and bodies like the
+IMF that both lift some nations up through waves of investment
+and push them down during crises through a mixture of
+unreasonable interest rates and disciplinary policies. These
+practices are informed by a presumption of racial difference,
+but they in turn create those presumptions of racial difference
+by casting them as of financial capability or deficiency.
+
+# this presentation
+
+So this presentation will proceed in four parts. First, just to
+make sense of everything, I'll discuss a little bit about what
+the IMF actually is and how it has come to be that way. Second,
+I'll discuss the events of the Asian financial crisis and how
+it made its way to Korea. Third, I'll discuss the IMF
+intervention. Finally, I'll discuss the sort of racial logic
+this crisis and intervention builds upon and reinforces, namely
+that of Asian nations like Korea as forever "adjacent" to but
+always outside of modernity, and used as a sort of peg or
+marker to denigrate other nonwhite nations. This depiction,
+which I'll refer to as the "model modernity" narrative,
+parallels the racialization of Asian immigrants in the US and
+elsewhere through (for example) the "model minority" myth that
+similarly places Asian immigrants adjacent to but forever
+aberrant to whiteness and capitalist success.
+
+# What is the IMF?
+
+To avoid confusing anyone any further, I should explain what
+the IMF actually is. The IMF, or the International Monetary
+Fund, gives loans to countries during times of crisis. It has
+about $940 billion, so it's pretty rich. But during crises, and
+especially big crises, it's hesitant to give out all of this
+money and leave themselves with nothing, so the IMF turns
+towards investment banks in creditor countries and gets them to
+give or renew loans. Partly becuase it needs to attract and
+satisfy these banks, partly because it wants to (quote unquote)
+ensure repayment of these loans by building up countries'
+economies towards a budget surplus
+
+It also requires these policies for insidious reasons like
+fulfilling the economic needs of the Global North. One example
+of this is that it often pushes Third World countries towards
+the exports of raw materials to the global north, at face value
+just because these are stable and in-demand industries, but in
+reality recapitulating old colonial relations. By imposing
+these kinds of policies during times of crises when countries
+are sort of most vulnerable, it serves as a regressive
+reorganizing force to push third world countries to serve the
+needs of first world countries.
+
+# The Asian Financial Crisis
+
+An example of such a crisis, and the main moment I discuss in
+my thesis, came in 1997 with the asian financial crisis.
+
+The buildup of the crisis itself came from sort of exploitative
+and extractive relationships between Asia and the Global North,
+mediated by a currency system that was born alongside the IMF.
+
+Banks in America thought that investments and loans to Asia
+were safe, and guaranteed by governments to not fail, and would
+often roll over loans for more time when it did appear that
+companies couldn't pay. This led to hundreds of billions of
+dollars in debt piling high, with often more loans being made
+being pulled in to cover the end of one loan, and so on.
+
+This went on continuously since the 1980s, but it became
+especially problematic after US fed chair alan greenspan raised
+interest rates and tried to boost the US dollar in the
+mid-1990s, which in turn made Asian exports comparatively less
+attractive and made several more companies fail.
+
+Some companies began making arrangements taht pushed Asian
+economies to fall so that they could profit from it; George
+Soros' Quantun Fund took out $1 billion agains the Thai baht,
+and Julia Robertson's Tiger Fund took out $3 billion. Other
+firms began pulling out in general, and especially after the
+Thai baht was devalued on july 2 1997.
+
+These firms began buying the Thai government's dollars with
+bahts, predicting that the baht would fall precipitously in
+comparison tot eh dollar because the Thai government would not
+have any more US dollars.
+
+From July to October, these worries steadily escalated.
+Investors began pulling out and lenders stopped rolling over
+loans, just as they had in Thailand. On October 17th, Taiwan
+followed Thailand's lead in floating its currency. On October
+23rd, the Hong Kong stock market dropped 10.4 percent, the
+worst drop in ten years. On October 25, the S&P downgraded
+Korea from a rating of AA- to A+, to A- at the end of November.
+Kyong Shik Kang attempted to send a negotiator to Tokyo to
+hopefully prevent Japanese banks from withdrawing funds, but
+Japan's central banks tated they would only do so with an
+IMF-supported program.
 
 ---
 
-I read some of this stuff last semester, and started thinking
-through it, and there were some spots where it could definitely
-be expanded:
+# Korea and intervention
 
-- global nature
-- other crises besides 2008
-- how does that racial logic function
+On December 3rd, the IMF and Korean authorities finalized a $55
+billion loan package, of which $21 billion would come from the
+IMF, $10 billion would come from the World Bank, $4 billion
+from the Asian Develpopment Bank, and the remaining $20 billion
+as a contingency pledge from banks in twelve nations. Both the
+overall loan amount and the IMF's contribution were
+unprecedented. This was also one of the first times the IMF
+would lend to a nation in the OECD instead of a firmly
+designated "developing" country.
 
----
+These reforms entailed the immediate suspension of nine
+financial institutions, and their closure if they did not
+submit "appropriate restructuring plans."
 
-(history)
-
-- if I had an banana valued at $1 today, but the US dollar is
-  being pumped up in value so that tomorrow this price of $1
-  actually represents $10, nobody will want to buy my banana
-
----
-
-- model modernity
-  - racial hierarchy made this, this makes racial hierarchy
-  - universalizing - differentiating
-
-as important as the actual events that led to the crisis
-actually are, what I am much more interested in explaining and
-understanding and making a thesis about is the logic behind all
-of this
-
----
-
-- if that doesn't make sense, it's because I have no idea what
-  I'm talking about
-- pictures sometimes are better than words
+Besides reforms specifically for the financial sector, the IMF
+also prescribed general structural reforms. These all center
+around a program of economic "liberalization" that mainly
+involved opening the country for foreign investment. The
+ceiling on foreign ownership in Korean equities and listed
+Korean shares would be raised from 7 percent and 26 percent to
+fifty percent by the end of the year.^[Fifty percent might seem
+high, but in 1998 the Kim administration would remove that
+ceiling on foreign investment altogether.] Besides these
+general ceiling adjustments, other major barriers to foreign
+investment were also modified, including foreign access to
+domestic money market instruments, foreign access to corporate
+bonds, and general simplification of approval procedures.
 
 ---
 
-in the midst of my thesis i have become frustrated and have
-been searching for a better way to do scholarship. one that
-opens up the humanities, from being focused on a canon, from
-providing little new theory and being scholarship for the sake
-of scholarship, from being distributed in the same inaccessible
-mediums,
+(explanation of pictures and quotes)
 
-I want a humanities for everybody, a humanities for the public
-instead of a humanities limited by the all of the walls in the
-ivory tower. In the process, in the theory, in the methods, in
-the sources, in the conclusions -- all of these should point
-outwards. The arbitrary divisions that structure each of them
-have to be torn down. We need to open up the humanities.
+---
 
-These are some reflections on how I am doing this project in
-this pursuit. In this project, they have boiled down so far to
-four claims:
-
-1. Accessible tools
-2. Accessible products
-3. Accessible processes
-4. Accessible presentations
-
-Or to state it in a single sentence, _we should open up the
-humanities_.
-
-### we should document the process
-
-Theoretically: Writing a history is itself a historical event.
-When I'm writing about the IMF and the Asian financial crisis,
-what is relevant are not the events of 1997, but also the
-thoughts and notes I am writing right now in 2021. The
-historian is very much implicated in the process of creating
-history, because history is not only those that "do the events"
-but also the ones that make these events knowable and known to
-others.
-
-This is a statement every historian and scholar in the
-humanties can agree with, but still the process of writing
-history is not one that in my view is treated as a history. We
-should be creating and documenting archives while we write. We
-should be reflecting, self-critiquing, tracking.
-
-Morally: Writing a history right now occurs by one person one
-their computer, typing away on microsoft word. The process of
-writing history is locked in the ivory tower, to only those
-academicians and putting these characters on the page. It's
-impossible to see the development of research from outside
-this. We need the documentation of the process as it happens
-right now.
-
-Conclusion: we should document, journal, log our own processes
-and how they come to be; and through all of this make it freely
-accessible and
-
-### we should use freely accessible resources to make research
-
-### we should make our resources freely accessible
-
-### we should use more accessible mediums of presentation
-
-We have coalesced to a defined canon of presentation as well
+Okay, to reflect a little bit on all of that. The quotes
