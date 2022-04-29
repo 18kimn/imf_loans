@@ -28,8 +28,8 @@
   "scripts": {
     "preinstall": "git config core.hooksPath src/githooks",
     "postinstall": "patch-package",
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "start": "vite --host",
-    "dev": "yarn start",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "render": "bash content/text/render.sh"
