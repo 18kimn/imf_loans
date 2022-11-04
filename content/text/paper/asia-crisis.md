@@ -216,15 +216,17 @@ Korean Central Intelligence Agency (KCIA).
 
 Of the most prominent of these detainees was Kim Dae-Jung, a
 presidential candidate in 1971 that became the face of the
-opposition against Park Chung Hee. He was nearly assassinated
-after the election results showed much closer than the Park
-regime was expected, then was kidnapped in 1973 by the KCIA
-after he fled form the country. He was sentenced to death by
-Park's successor, Chun Doo Hwan, in 1980, after which Kim fled
-to the United States. Kim's continued criticism against these
-regimes was that economic success was absolutely not contingent
-on the restriction of human rights. [some other stuff] He
-gained
+opposition against dictator Park Chung Hee, and later Chun Doo
+Hwan. He was nearly assassinated after the election results
+were much closer than the Park regime was expected, then was
+kidnapped in 1973 by the KCIA after he fled form the country.
+He was sentenced to death by Park's successor, Chun Doo Hwan,
+in 1980, after which Kim fled to the United States. Kim's
+continued criticism against these regimes was that economic
+success was absolutely not contingent on the restriction of
+human rights. He gained international support after his
+assassination attempt and kidnapping, with even Pope John Paul
+writing to Korea in support of his freedom.
 
 Kim's election was part of many developments symbolizing
 Korea's arrival to modernity. Decades of protest culminated in
@@ -272,32 +274,36 @@ at 5% per year, but the news of the failure of these large
 companies made foreigners cautious. Short-term loans that had
 previously been supplied to Korean banks began to stop being
 rolled over. When Thailand declared on July 2nd, 1997 that it
-would float the baht, foreigners began to panic. Perhaps the
-largest cause for alarm came on July 15th, when Kia Motors
-declared bankruptcy and control was handed to a
-government-formed bankruptcy protection committee. Kia was the
-eighth-largest _chaebol_ in Korea and much larger than any of
-the preceding bankrupt groups,
+would float the baht, foreigners began to panic, and the value
+of the baht dropped twenty percent overnight. It became clear
+that a crisis was at hand and precipitous losses would soon
+emerge unless investors took action. Perhaps the loudest alarm
+for Korea came on July 15th, when Kia Motors declared
+bankruptcy and control was handed to a government-formed
+bankruptcy protection committee. Kia was the eighth-largest
+_chaebol_ in Korea and much larger than any of the preceding
+bankrupt groups, and its fall was especially worrying with the
+context of Thailand floating the baht.
 
 The fall of Hanbo, Sammi, Jinro, and Kia stand out not because
 they were triggered by the foreign capital crisis escalating in
-Thailand, nor that their fall was triggered by a corrupt
-corporate practice, but because they were not rescued as they
-had been in the four decades prior. Kang Kyong Shik stated this
-bluntly in response to the fall of Sammi, saying that "the
-government is no longer able or willing to rescue poorly
-managed, bankrupt companies with taxpayer's money." Even in the
-leadup to the crisis, the massive debts incurred by Sammi,
-Hanbo, and Kia especially occurred not because of a
-macroeconomic problem but because the steel industry as a whole
-had been producing more than ever before, and thus previous
-giants in steel had to sell steel for lower. In the conclusive
-words of Robert Feenstra, Gary Hamilton, and Eun Mie Lim,
-"[r]ather than regarding these events as a _failure_ of the
-capital market, we could instead view them as an initially
-_successful_ attempt to separate corporate and political
-control, by allowing bankrupt groups to work with creditors
-with the government coming in as a last resort."
+Thailand, nor that they were triggered by a corrupt corporate
+practice, but because they were not rescued as they had been in
+the four decades prior. Kang Kyong Shik stated this bluntly in
+response to the fall of Sammi, saying that "the government is
+no longer able or willing to rescue poorly managed, bankrupt
+companies with taxpayer's money." Even in the leadup to the
+crisis, the massive debts incurred by Sammi, Hanbo, and Kia
+especially occurred not because of a macroeconomic problem but
+because the steel industry as a whole had been producing more
+than ever before, and thus previous giants in steel had to sell
+steel for lower. In the conclusive words of Robert Feenstra,
+Gary Hamilton, and Eun Mie Lim, "[r]ather than regarding these
+events as a _failure_ of the capital market, we could instead
+view them as an initially _successful_ attempt to separate
+corporate and political control, by allowing bankrupt groups to
+work with creditors with the government coming in as a last
+resort."
 
 But international observers took the opposite view. "Crony
 capitalism" appeared to have taken its toll, and rather than
