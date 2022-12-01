@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
 
-html, body {
-   margin: 0;
-   padding: 0;
-   height: 100%;
-   overflow-y: hidden;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: hidden;
 }
 
 svg {
@@ -13,12 +14,6 @@ svg {
   z-index: 3;
   position: fixed;
 }
-
-text {
-  font-family: "Lato", sans-serif;
-}
-
-
 
 /* EVERYTHING IN THE SIDEBAR SHOULD BE HASHED OUT HERE
 */
@@ -30,16 +25,14 @@ text {
   width: 30%;
   z-index: 4;
   display: grid;
-  grid-template-rows: [title] 10% [story-body] auto [nextButton] 5% [attribution] 5%;
+  grid-template-rows: [title] 10% [story-body] auto;
   justify-content: left;
 }
 
-#projectTitle{
+#projectTitle {
   grid-row-start: title;
   grid-row-end: story-body;
 }
-
-
 
 .map-overlay {
   position: absolute;
@@ -52,7 +45,7 @@ text {
   z-index: 5;
 }
 
-.nation:hover{
+.nation:hover {
   stroke: #000000;
   stroke-width: 1px;
 }
@@ -63,36 +56,36 @@ text {
 }
 
 .slider {
-    -webkit-appearance: none;
-    position: absolute;
-    width: 50%;
-    left: 40%;
-    height: 25px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+  -webkit-appearance: none;
+  position: absolute;
+  width: 50%;
+  left: 40%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 .slider:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #838383;
-    cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #838383;
+  cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #838383;
-    cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background: #838383;
+  cursor: pointer;
 }
 
 #sliderLabel {
