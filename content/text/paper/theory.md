@@ -52,7 +52,8 @@ in providing new consumers, Lenin saw expansion as capitalism's
 temporary "fix" in providing new resources and workers from
 which a larger array of products could be generated. Both saw
 the events of the time, like Japan's annexation of Korea and
-intrusion into China,
+intrusion into China, as driven by capitalist's ever-increasing
+need for both labor and consumption.
 
 Over a hundred years after Marx first wrote about
 overaccumulation, David Harvey revisited these works and

@@ -34,7 +34,12 @@ adjustment programs (SAPs).^[@griesgraber, @bird2017,
 @stone2004, @feldstein1998] The most regular players here come
 from the IMF itself, as well as associated parties like the
 World Trade Organization and the US Treasury. The consensus of
-these parties, even after the Asian financial crisis,
+these parties held that "crony capitalism," or the corrupt
+nature of Korea's mega-corporations and their close affiliation
+with the South Korean state, deserved the largest blame.
+Internal criticism of the IMF and U.S. involvement in the
+crisis was present, but even after the crisis these parties
+generally defended the IMF's response.
 
 The second group are critical of the IMF, and through both
 quantitative and qualitative analyses try to identify the
